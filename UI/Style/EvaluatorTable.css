@@ -1,0 +1,69 @@
+﻿
+.my_table
+{
+    border:none; 
+    padding:0;   
+    margin:0 auto;  
+    border-collapse: collapse;
+}
+.my_table td
+{
+    border: 1px solid #a3c0e8;  
+    font-size:12px;  
+    padding: 3px 3px 3px 3px;
+}
+
+.td_title
+{
+    font-weight:bold;
+    padding: 3px 3px 3px 3px;
+    background-color:#e8ebee;
+    text-align:center; 
+}
+
+.td_score_type
+{
+    text-align:center;
+    width:120px;
+}
+
+.td_fun
+{
+    width:60px;
+    background-color:#eaf2fe;
+    margin:0px auto;
+    text-align:center;
+}
+
+.td_label_no_content
+{
+    
+}
+
+.td_reminder
+{
+    background-color:#eaf2fe;
+    color:Red;
+}
+
+.td_weight
+{
+    text-align:center;
+}
+
+.my_table th
+{
+    border:none;
+    font-size:14px;   
+}
+
+.td_score
+{
+    width:58px;
+    text-align:center;
+    color:Red;
+}
+.my_combobox
+{
+    width:25px;
+}

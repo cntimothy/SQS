@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructure", "DataStructure\DataStructure.csproj", "{554B3AC6-1C5A-4AF7-8159-A7E703680D7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controls\Controller.csproj", "{6DC15947-F158-4679-98B1-4F26B0CD9D56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{4E741CCD-C334-49FD-BA0E-8C8E343FBC51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{554B3AC6-1C5A-4AF7-8159-A7E703680D7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{554B3AC6-1C5A-4AF7-8159-A7E703680D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{554B3AC6-1C5A-4AF7-8159-A7E703680D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{554B3AC6-1C5A-4AF7-8159-A7E703680D7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DC15947-F158-4679-98B1-4F26B0CD9D56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC15947-F158-4679-98B1-4F26B0CD9D56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC15947-F158-4679-98B1-4F26B0CD9D56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC15947-F158-4679-98B1-4F26B0CD9D56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E741CCD-C334-49FD-BA0E-8C8E343FBC51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E741CCD-C334-49FD-BA0E-8C8E343FBC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E741CCD-C334-49FD-BA0E-8C8E343FBC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E741CCD-C334-49FD-BA0E-8C8E343FBC51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

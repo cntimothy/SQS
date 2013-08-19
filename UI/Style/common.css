@@ -1,0 +1,35 @@
+﻿.Hidden
+{
+	display:none;
+}
+
+.ToolBar
+{
+    background:#336699 url(../../images/toolbar_bg.gif) repeat-x;
+    height:30px;
+    width:100%;
+    border:1px solid #a3c0e8;
+    vertical-align:middle;
+}
+
+.tool_bar_table
+{
+	border:none;
+	margin:0 auto;
+	vertical-align:middle;
+	text-align:center;
+}
+.tool_bar_td
+{
+	padding:5px;
+}
+
+.tableKey
+{
+    font-size:16px;    
+}
+
+.tableValue
+{
+    font-size:16px;    
+}

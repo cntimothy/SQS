@@ -1,0 +1,46 @@
+﻿body {
+}
+
+.label1
+{
+    font-size:16px;
+    text-align:center;
+    width:200px;
+}
+.textbox1
+{
+    position:relative;
+    text-align:left;
+    border-bottom-width:inherit;
+    border-left-width:inherit;
+    border-right-width:inherit;
+    border-top-width:inherit;
+   
+    width:800px;
+    height:100px;          
+}
+.textbox2
+{
+    position:relative;
+    text-align:left;
+    border-bottom-width:inherit;
+    border-left-width:inherit;
+    border-right-width:inherit;
+    border-top-width:inherit;
+   
+    width:400px;
+   
+}
+
+.textbox3
+{
+    position:relative;
+    text-align:left;
+    border-bottom-width:inherit;
+    border-left-width:inherit;
+    border-right-width:inherit;
+    border-top-width:inherit;
+   
+    width:800px; 
+}
+

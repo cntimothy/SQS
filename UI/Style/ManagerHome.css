@@ -1,0 +1,50 @@
+﻿body,html
+{
+    height:100%;
+}
+
+body
+{ 
+    padding:0px; 
+    margin:0;   
+    overflow:hidden;
+    background:#EAEEF5;
+}
+
+
+.l-topmenu
+{ 
+    margin:0; 
+    padding:0;
+    height:61px; 
+    line-height:61px; 
+    background:url('../images/Home/top.gif') repeat-x bottom;  
+    position:relative; 
+    border-top:1px solid #1D438B;  
+}
+.l-topmenu-logo
+{ 
+    color:#E7E7E7; 
+    padding-left:35px; 
+    font-size:30px;
+    font-style:inherit;
+}
+.l-topmenu-title
+{ 
+    color:white; 
+    line-height:55px;
+}
+.l-topmenu-welcome
+{  
+    position:absolute; 
+    height:24px; 
+    line-height:24px;  
+    right:30px; 
+    top:30px;
+    color:#070A0C;
+}
+.l-topmenu-welcome a
+{ 
+    color:#E7E7E7; 
+    text-decoration:underline
+}
