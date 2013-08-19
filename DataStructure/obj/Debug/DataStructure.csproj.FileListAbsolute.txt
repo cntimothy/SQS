@@ -1,0 +1,5 @@
+F:\projects\SQS\DataStructure\bin\Debug\DataStructure.dll
+F:\projects\SQS\DataStructure\bin\Debug\DataStructure.pdb
+F:\projects\SQS\DataStructure\obj\Debug\ResolveAssemblyReference.cache
+F:\projects\SQS\DataStructure\obj\Debug\DataStructure.dll
+F:\projects\SQS\DataStructure\obj\Debug\DataStructure.pdb

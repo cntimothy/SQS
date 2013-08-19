@@ -1,0 +1,10 @@
+F:\projects\SQS\Controls\bin\Debug\Controls.dll
+F:\projects\SQS\Controls\bin\Debug\Controls.pdb
+F:\projects\SQS\Controls\bin\Debug\DataStructure.dll
+F:\projects\SQS\Controls\bin\Debug\Ionic.Zip.dll
+F:\projects\SQS\Controls\bin\Debug\NPOI.dll
+F:\projects\SQS\Controls\bin\Debug\DataStructure.pdb
+F:\projects\SQS\Controls\bin\Debug\NPOI.xml
+F:\projects\SQS\Controls\obj\Debug\ResolveAssemblyReference.cache
+F:\projects\SQS\Controls\obj\Debug\Controls.dll
+F:\projects\SQS\Controls\obj\Debug\Controls.pdb
