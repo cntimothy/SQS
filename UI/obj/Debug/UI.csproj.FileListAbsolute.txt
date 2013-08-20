@@ -11,3 +11,16 @@ F:\projects\SQS\UI\bin\Newtonsoft.Json.xml
 F:\projects\SQS\UI\obj\Debug\ResolveAssemblyReference.cache
 F:\projects\SQS\UI\obj\Debug\HRES.dll
 F:\projects\SQS\UI\obj\Debug\HRES.pdb
+D:\cntimothy\privatestuff\SQS\UI\bin\HRES.dll
+D:\cntimothy\privatestuff\SQS\UI\bin\HRES.pdb
+D:\cntimothy\privatestuff\SQS\UI\bin\Controls.dll
+D:\cntimothy\privatestuff\SQS\UI\bin\DataStructure.dll
+D:\cntimothy\privatestuff\SQS\UI\bin\FineUI.dll
+D:\cntimothy\privatestuff\SQS\UI\bin\Newtonsoft.Json.dll
+D:\cntimothy\privatestuff\SQS\UI\bin\Controls.pdb
+D:\cntimothy\privatestuff\SQS\UI\bin\DataStructure.pdb
+D:\cntimothy\privatestuff\SQS\UI\bin\FineUI.xml
+D:\cntimothy\privatestuff\SQS\UI\bin\Newtonsoft.Json.xml
+D:\cntimothy\privatestuff\SQS\UI\obj\Debug\ResolveAssemblyReference.cache
+D:\cntimothy\privatestuff\SQS\UI\obj\Debug\HRES.dll
+D:\cntimothy\privatestuff\SQS\UI\obj\Debug\HRES.pdb

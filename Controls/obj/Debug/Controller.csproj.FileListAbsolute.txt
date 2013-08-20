@@ -8,3 +8,13 @@ F:\projects\SQS\Controls\bin\Debug\NPOI.xml
 F:\projects\SQS\Controls\obj\Debug\ResolveAssemblyReference.cache
 F:\projects\SQS\Controls\obj\Debug\Controls.dll
 F:\projects\SQS\Controls\obj\Debug\Controls.pdb
+D:\cntimothy\privatestuff\SQS\Controls\bin\Debug\Controls.dll
+D:\cntimothy\privatestuff\SQS\Controls\bin\Debug\Controls.pdb
+D:\cntimothy\privatestuff\SQS\Controls\bin\Debug\DataStructure.dll
+D:\cntimothy\privatestuff\SQS\Controls\bin\Debug\Ionic.Zip.dll
+D:\cntimothy\privatestuff\SQS\Controls\bin\Debug\NPOI.dll
+D:\cntimothy\privatestuff\SQS\Controls\bin\Debug\DataStructure.pdb
+D:\cntimothy\privatestuff\SQS\Controls\bin\Debug\NPOI.xml
+D:\cntimothy\privatestuff\SQS\Controls\obj\Debug\ResolveAssemblyReference.cache
+D:\cntimothy\privatestuff\SQS\Controls\obj\Debug\Controls.dll
+D:\cntimothy\privatestuff\SQS\Controls\obj\Debug\Controls.pdb

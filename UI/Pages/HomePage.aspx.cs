@@ -15,8 +15,9 @@ namespace SQS.UI
     {
         #region Page_Init
 
-        protected void Page_Init(object sender, EventArgs e)
+        protected new void Page_Init(object sender, EventArgs e)
         {
+            base.Page_Init(sender, e);
             // 注册客户端脚本，服务器端控件ID和客户端ID的映射关系
             JObject ids = GetClientIDS(mainTabStrip);
 

@@ -15,6 +15,10 @@ namespace SQS.UI
     public class PageBase : System.Web.UI.Page
     {
         #region OnInit
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            checkSession();
+        }
 
         protected override void OnInit(EventArgs e)
         {
@@ -93,6 +97,14 @@ namespace SQS.UI
         #endregion
 
         #region Common Method
+        /// <summary>
+        /// 检查Session中相关字段是否过期，若过期则跳转至登录页面
+        /// </summary>
+        protected void checkSession()
+        { 
+        
+        }
+
         /// <summary>
         /// 检测是否为空字符串，不为空返回true，否则返回false
         /// </summary>

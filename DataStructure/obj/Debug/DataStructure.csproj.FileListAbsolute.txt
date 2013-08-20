@@ -3,3 +3,8 @@ F:\projects\SQS\DataStructure\bin\Debug\DataStructure.pdb
 F:\projects\SQS\DataStructure\obj\Debug\ResolveAssemblyReference.cache
 F:\projects\SQS\DataStructure\obj\Debug\DataStructure.dll
 F:\projects\SQS\DataStructure\obj\Debug\DataStructure.pdb
+D:\cntimothy\privatestuff\SQS\DataStructure\bin\Debug\DataStructure.dll
+D:\cntimothy\privatestuff\SQS\DataStructure\bin\Debug\DataStructure.pdb
+D:\cntimothy\privatestuff\SQS\DataStructure\obj\Debug\ResolveAssemblyReference.cache
+D:\cntimothy\privatestuff\SQS\DataStructure\obj\Debug\DataStructure.dll
+D:\cntimothy\privatestuff\SQS\DataStructure\obj\Debug\DataStructure.pdb
