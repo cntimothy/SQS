@@ -19,11 +19,18 @@ namespace SQS.Controller
         /// <returns></returns>
         public static bool LoginIn(ref UserInfo userInfo, string ID, string passWord, LoginType loginType, ref string exception)
         {
-            userInfo.Id = "admin1";
-            userInfo.Name = "Kaven";
-            userInfo.Depart = "人事处";
-            userInfo.AccessLevel = AccessLevel.secondManager;
-            exception = "不存在该用户";
+            if (loginType == LoginType.visitor)
+            {
+                userInfo.Id = "";
+                userInfo.Name = "游客";
+                userInfo.AccessLevel = AccessLevel.visitor;
+            }
+            else if (loginType == LoginType.manager)
+            {
+                userInfo.Id = "admin1";
+                userInfo.Name = "Kaven";
+                userInfo.AccessLevel = AccessLevel.manager;
+            }
             return true;
         }
     }

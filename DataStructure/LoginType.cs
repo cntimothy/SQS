@@ -10,7 +10,7 @@ namespace SQS.DataStructure
     /// </summary>
     public enum LoginType
     {
-        manager,    //管理员
-        evaluator   //考评人
+        visitor,    //游客
+        manager     //管理员
     }
 }

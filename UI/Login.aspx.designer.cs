@@ -40,31 +40,31 @@ namespace SQS.UI {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// UserName 控件。
+        /// TextBox_UserName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UserName;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_UserName;
         
         /// <summary>
-        /// Password 控件。
+        /// TextBox_Password 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Password;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Password;
         
         /// <summary>
-        /// LoginType 控件。
+        /// DropDownList_LoginType 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList LoginType;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_LoginType;
         
         /// <summary>
         /// ErrorMessage 控件。

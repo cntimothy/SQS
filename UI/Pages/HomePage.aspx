@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>360考核</title>
+    <title>科研成果查询统计系统</title>
     <link href="../css/default.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,12 +21,16 @@
                         </div>
                         <div class="version">
                             <ul class="list">
-                                <li class="list"><x:Label ID="UserName" runat="server" Label="Label" Text="" CssStyle="color: #fff;">
-                                </x:Label></li>
+                                <li class="list">
+                                    <x:Label ID="UserName" runat="server" Label="Label" Text="" CssStyle="color: #fff;">
+                                    </x:Label>
+                                </li>
                                 <li class="list">&nbsp|&nbsp</li>
-                                <li class="list"><x:LinkButton ID="LoginOut" runat="server" Label="Label" Text="注销" ConfirmTitle="提示"
-                                    ConfirmText="确认注销？" OnClick="LoginOut_Click">
-                                </x:LinkButton></li>
+                                <li class="list">
+                                    <x:LinkButton ID="LoginOut" runat="server" Label="Label" Text="注销" ConfirmTitle="提示"
+                                        ConfirmText="确认注销？" OnClick="LoginOut_Click">
+                                    </x:LinkButton>
+                                </li>
                             </ul>
                         </div>
                     </x:ContentPanel>
@@ -72,7 +76,9 @@
             </x:Region>
         </Regions>
     </x:RegionPanel>
-    <asp:XmlDataSource ID="XmlDataSource" runat="server" DataFile="../common/menu.xml">
+    <asp:XmlDataSource ID="XmlDataSource_ForVisitor" runat="server" DataFile="../common/menu_for_visitor.xml">
+    </asp:XmlDataSource>
+    <asp:XmlDataSource ID="XmlDataSource_ForManager" runat="server" DataFile="../common/menu_for_manager.xml">
     </asp:XmlDataSource>
     </form>
     <script src="../js/default.js" type="text/javascript"></script>

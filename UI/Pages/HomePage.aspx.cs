@@ -44,7 +44,15 @@ namespace SQS.UI
             Region2.Items.Add(accordionMenu);
 
             AccessLevel accessLevel = (AccessLevel)Session["AccessLevel"];
-            XmlDocument xmlDoc = XmlDataSource.GetXmlDocument();
+            XmlDocument xmlDoc;
+            if (accessLevel == AccessLevel.manager)
+            {
+                xmlDoc = XmlDataSource_ForManager.GetXmlDocument();
+            }
+            else
+            {
+                xmlDoc = XmlDataSource_ForVisitor.GetXmlDocument();
+            }
             
             XmlNodeList xmlNodes = xmlDoc.SelectNodes("/Tree/TreeNode");
             foreach (XmlNode xmlNode in xmlNodes)
@@ -81,28 +89,6 @@ namespace SQS.UI
             return accordionMenu;
         }
 
-        //private Tree InitTreeMenu()
-        //{
-        //    Tree treeMenu = new Tree();
-        //    treeMenu.ID = "treeMenu";
-        //    treeMenu.EnableArrows = true;
-        //    treeMenu.ShowBorder = false;
-        //    treeMenu.ShowHeader = false;
-        //    treeMenu.EnableIcons = false;
-        //    treeMenu.AutoScroll = true;
-        //    Region2.Items.Add(treeMenu);
-
-        //    // 绑定 XML 数据源到树控件
-        //    treeMenu.DataSource = XmlDataSource1;
-        //    treeMenu.DataBind();
-
-        //    // 重新设置每个节点的图标
-        //    ResolveTreeNode(treeMenu.Nodes);
-
-        //    return treeMenu;
-        //}
-
-
         private JObject GetClientIDS(params ControlBase[] ctrls)
         {
             JObject jo = new JObject();
@@ -133,7 +119,6 @@ namespace SQS.UI
             Session["UserID"] = null;
             Session["UserName"] = null;
             Session["AccessLevel"] = null;
-            Session["Depart"] = null;
             Response.Redirect("../Login.aspx");
         }
 

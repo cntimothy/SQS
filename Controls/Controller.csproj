@@ -8,8 +8,8 @@
     <ProjectGuid>{6DC15947-F158-4679-98B1-4F26B0CD9D56}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Controls</RootNamespace>
-    <AssemblyName>Controls</AssemblyName>
+    <RootNamespace>SQS.Controller</RootNamespace>
+    <AssemblyName>Controller</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

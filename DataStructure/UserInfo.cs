@@ -11,7 +11,6 @@ namespace SQS.DataStructure
         string id;
         string name;
         AccessLevel accessLevel;
-        string depart;
         #endregion
 
         #region Public Field
@@ -40,15 +39,6 @@ namespace SQS.DataStructure
         {
             get { return accessLevel; }
             set { accessLevel = value; }
-        }
-
-        /// <summary>
-        /// 部门
-        /// </summary>
-        public string Depart
-        {
-            get { return depart; }
-            set { depart = value; }
         }
         #endregion
     }

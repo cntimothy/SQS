@@ -8,7 +8,7 @@
     <ProjectGuid>{554B3AC6-1C5A-4AF7-8159-A7E703680D7A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataStructure</RootNamespace>
+    <RootNamespace>SQS.DataStructure</RootNamespace>
     <AssemblyName>DataStructure</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

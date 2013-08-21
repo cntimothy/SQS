@@ -24,16 +24,17 @@
                     <li class="topD">
                         <ul class="login">
                             <li><span class="left">用户名：</span> <span style="left">&nbsp;</span> <span>
-                                <asp:TextBox ID="UserName" runat="server" Style="margin-top: 0px" CssClass="txt"></asp:TextBox>
+                                <asp:TextBox ID="TextBox_UserName" runat="server" Style="margin-top: 0px" CssClass="txt"></asp:TextBox>
                             </span></li>
                             <li><span class="left">密 码：</span> <span style="left">&nbsp;</span> <span>
-                                <asp:TextBox ID="Password" runat="server" Style="margin-top: 0px" CssClass="txt"
+                                <asp:TextBox ID="TextBox_Password" runat="server" Style="margin-top: 0px" CssClass="txt"
                                     TextMode="Password"></asp:TextBox>
                             </span></li>
                             <li><span class="left">登陆身份：</span> <span style="left">&nbsp;</span> <span>
-                                <asp:DropDownList ID="LoginType" runat="server" CssClass="txt">
-                                    <asp:ListItem Value="0">管理员</asp:ListItem>
-                                    <asp:ListItem Value="1" Selected="True">考评者</asp:ListItem>
+                                <asp:DropDownList ID="DropDownList_LoginType" runat="server" CssClass="txt" OnSelectedIndexChanged="DropDownList_LoginType_SelectedChanged"
+                                    AutoPostBack="true">
+                                    <asp:ListItem Value="0" Selected="True">游客登录</asp:ListItem>
+                                    <asp:ListItem Value="1">管理员</asp:ListItem>
                                 </asp:DropDownList>
                             </span></li>
                             <li><span>

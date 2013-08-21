@@ -10,9 +10,7 @@ namespace SQS.DataStructure
     /// </summary>
     public enum AccessLevel
     {
-        evaluator,          //被考评人
-        secondManager,      //系级管理员
-        firstManager,       //人事处管理员
-        superManager        //超级管理员
+        visitor,     //游客
+        manager    //管理员
     }
 }
