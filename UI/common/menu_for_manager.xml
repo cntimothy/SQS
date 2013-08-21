@@ -14,6 +14,10 @@
     <TreeNode Text="导出科研成果统计表" NavigateUrl="~/Pages/OutputManagement/StaticalResultExport.aspx" >
     </TreeNode>
   </TreeNode>
+  <TreeNode Text="公示管理" SingleClickExpand="true">
+    <TreeNode Text="开始/结束公示" NavigateUrl="~/Pages/PublicityManagement/StartOrStop.aspx" >
+    </TreeNode>
+  </TreeNode>
   <TreeNode Text="查询系统" SingleClickExpand="true">
     <TreeNode Text="查询论文统计表" NavigateUrl="~/Pages/SearchManagement/PaperSearch.aspx" >
     </TreeNode>

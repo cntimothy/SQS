@@ -1888,6 +1888,7 @@
     <Content Include="Pages\InputManagement\StaffUpload.aspx" />
     <Content Include="Pages\InputManagement\TopicUpload.aspx" />
     <Content Include="Pages\OutputManagement\StaticalResultExport.aspx" />
+    <Content Include="Pages\PublicityManagement\StartOrStop.aspx" />
     <Content Include="Pages\SearchManagement\BookSearch.aspx" />
     <Content Include="Pages\SearchManagement\PaperSearch.aspx" />
     <Content Include="Pages\SearchManagement\TopicSearch.aspx" />
@@ -1966,6 +1967,13 @@
     </Compile>
     <Compile Include="Pages\OutputManagement\StaticalResultExport.aspx.designer.cs">
       <DependentUpon>StaticalResultExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PublicityManagement\StartOrStop.aspx.cs">
+      <DependentUpon>StartOrStop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PublicityManagement\StartOrStop.aspx.designer.cs">
+      <DependentUpon>StartOrStop.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\SearchManagement\BookSearch.aspx.cs">
       <DependentUpon>BookSearch.aspx</DependentUpon>
