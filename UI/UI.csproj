@@ -60,7 +60,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="common\menu.xml" />
-    <Content Include="common\menu_for_manager.xml" />
+    <Content Include="common\menu_for_manager.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="css\default.css" />
     <Content Include="css\main.css" />
     <Content Include="icon\accept.png" />
@@ -1889,9 +1891,7 @@
     <Content Include="Pages\InputManagement\TopicUpload.aspx" />
     <Content Include="Pages\OutputManagement\StaticalResultExport.aspx" />
     <Content Include="Pages\PublicityManagement\StartOrStop.aspx" />
-    <Content Include="Pages\SearchManagement\BookSearch.aspx" />
-    <Content Include="Pages\SearchManagement\PaperSearch.aspx" />
-    <Content Include="Pages\SearchManagement\TopicSearch.aspx" />
+    <Content Include="Pages\SearchManagement\Search.aspx" />
     <Content Include="Style\alogin.css" />
     <Content Include="Style\CheckPost.css" />
     <Content Include="Style\common.css" />
@@ -1975,26 +1975,12 @@
     <Compile Include="Pages\PublicityManagement\StartOrStop.aspx.designer.cs">
       <DependentUpon>StartOrStop.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SearchManagement\BookSearch.aspx.cs">
-      <DependentUpon>BookSearch.aspx</DependentUpon>
+    <Compile Include="Pages\SearchManagement\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\SearchManagement\BookSearch.aspx.designer.cs">
-      <DependentUpon>BookSearch.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\SearchManagement\PaperSearch.aspx.cs">
-      <DependentUpon>PaperSearch.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\SearchManagement\PaperSearch.aspx.designer.cs">
-      <DependentUpon>PaperSearch.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\SearchManagement\TopicSearch.aspx.cs">
-      <DependentUpon>TopicSearch.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\SearchManagement\TopicSearch.aspx.designer.cs">
-      <DependentUpon>TopicSearch.aspx</DependentUpon>
+    <Compile Include="Pages\SearchManagement\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SQS.UI.Pages.SearchManagement
 {
-    public partial class PaperSearch : PageBase
+    public partial class Search : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

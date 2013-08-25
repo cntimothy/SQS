@@ -1,11 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Tree>
   <TreeNode Text="查询系统" SingleClickExpand="true">
-    <TreeNode Text="查询论文统计表" NavigateUrl="~/Pages/SearchManagement/PaperSearch.aspx" >
-    </TreeNode>
-    <TreeNode Text="查询著作统计表" NavigateUrl="~/Pages/SearchManagement/BookSearch.aspx" >
-    </TreeNode>
-    <TreeNode Text="查询课题统计表" NavigateUrl="~/Pages/SearchManagement/TopicSearch.aspx" >
+    <TreeNode Text="查询论文统计表" NavigateUrl="~/Pages/SearchManagement/Search.aspx" >
     </TreeNode>
   </TreeNode>
 </Tree>

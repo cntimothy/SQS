@@ -10,7 +10,7 @@
 namespace SQS.UI.Pages.SearchManagement {
     
     
-    public partial class BookSearch {
+    public partial class Search {
         
         /// <summary>
         /// form1 控件。
