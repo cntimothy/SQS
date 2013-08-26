@@ -1,13 +1,9 @@
-F:\projects\SQS\Controls\bin\Debug\Controls.dll
-F:\projects\SQS\Controls\bin\Debug\Controls.pdb
 F:\projects\SQS\Controls\bin\Debug\DataStructure.dll
 F:\projects\SQS\Controls\bin\Debug\Ionic.Zip.dll
 F:\projects\SQS\Controls\bin\Debug\NPOI.dll
 F:\projects\SQS\Controls\bin\Debug\DataStructure.pdb
 F:\projects\SQS\Controls\bin\Debug\NPOI.xml
 F:\projects\SQS\Controls\obj\Debug\ResolveAssemblyReference.cache
-F:\projects\SQS\Controls\obj\Debug\Controls.dll
-F:\projects\SQS\Controls\obj\Debug\Controls.pdb
 D:\cntimothy\privatestuff\SQS\Controls\bin\Debug\Controls.dll
 D:\cntimothy\privatestuff\SQS\Controls\bin\Debug\Controls.pdb
 D:\cntimothy\privatestuff\SQS\Controls\bin\Debug\DataStructure.dll
@@ -28,3 +24,7 @@ E:\projects\SQS\Controls\bin\Debug\Controller.dll
 E:\projects\SQS\Controls\bin\Debug\Controller.pdb
 E:\projects\SQS\Controls\obj\Debug\Controller.dll
 E:\projects\SQS\Controls\obj\Debug\Controller.pdb
+F:\projects\SQS\Controls\bin\Debug\Controller.dll
+F:\projects\SQS\Controls\bin\Debug\Controller.pdb
+F:\projects\SQS\Controls\obj\Debug\Controller.dll
+F:\projects\SQS\Controls\obj\Debug\Controller.pdb

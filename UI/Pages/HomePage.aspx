@@ -36,7 +36,7 @@
                     </x:ContentPanel>
                 </Items>
             </x:Region>
-            <x:Region ID="Region2" Split="true" EnableSplitTip="true" CollapseMode="Mini" Width="200px"
+            <x:Region ID="Region2" Split="true" EnableSplitTip="true" CollapseMode="Mini" Width="150px"
                 Margins="0 0 0 0" ShowHeader="false" Title="菜单" EnableLargeHeader="false" Icon="Outline"
                 EnableCollapse="true" Layout="Fit" Position="Left" runat="server">
                 <Toolbars>
