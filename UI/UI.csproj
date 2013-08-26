@@ -1985,7 +1985,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="common\menu_for_visitor.xml" />
+    <Content Include="common\menu_for_visitor.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="images\logo\logo.psd" />
     <None Include="images\logo\logo_127.psd" />
   </ItemGroup>
