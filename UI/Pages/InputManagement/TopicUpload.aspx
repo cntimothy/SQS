@@ -45,7 +45,7 @@
                                     </x:DropDownList>
                                 </Items>
                             </x:SimpleForm>
-                            <x:Grid ID="Grid1" runat="server" Title="著作统计表" EnableRowNumber="true"
+                            <x:Grid ID="Grid1" runat="server" Title="课题统计表" EnableRowNumber="true"
                                 AllowPaging="true" PageSize="20" Height="500px" AutoScroll="true"  >
                                 <Columns>
                                     <x:BoundField Width="150px" DataField="Name" DataFormatString="{0}" HeaderText="部系单位" />
