@@ -39,8 +39,8 @@
                             <x:SimpleForm ID="SimpleForm1" runat="server" BodyPadding="0px" Title="SimpleForm"
                                 ShowBorder="false" ShowHeader="false" CssStyle="width:50%">
                                 <Items>
-                                    <x:DropDownList ID="DropDownList_Depart" runat="server" Label="请选择部门">
-                                        <x:ListItem Selected="true" EnableSelect="true" Text="所有部门" Value="0" />
+                                    <x:DropDownList ID="DropDownList_Depart" runat="server" Label="请选择部系">
+                                        <x:ListItem Selected="true" EnableSelect="true" Text="所有部系" Value="0" />
                                     </x:DropDownList>
                                 </Items>
                             </x:SimpleForm>

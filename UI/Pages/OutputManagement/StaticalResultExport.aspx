@@ -14,7 +14,13 @@
         <Items>
             <x:Toolbar ID="Toolbar1" runat="server">
                 <Items>
-                    <x:Button ID="Button1" runat="server" Text="刷新">
+                    <x:DropDownList ID="DropDownList_StartYear" runat="server" Label="Label">
+                        <x:ListItem EnableSelect="false" Selected="true" Text="选择开始年份" Value="0" />
+                    </x:DropDownList>
+                    <x:DropDownList ID="DropDownList_StopYear" runat="server" Label="Label">
+                        <x:ListItem EnableSelect="false" Selected="true" Text="选择结束年份" Value="0" />
+                    </x:DropDownList>
+                    <x:Button ID="Button1" runat="server" Text="生成总表">
                     </x:Button>
                     <x:ToolbarSeparator ID="ToolbarSeparator1" runat="server">
                     </x:ToolbarSeparator>
