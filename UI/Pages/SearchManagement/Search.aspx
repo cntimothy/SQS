@@ -14,14 +14,24 @@
             <x:Panel ID="Panel2" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
                 Title="Panel">
                 <Items>
-                    <x:Form ID="Form2" runat="server" BodyPadding="0px" Title="Form" ShowBorder="false"
+                    <x:Form ID="Form2" runat="server" BodyPadding="5px" Title="Form" ShowBorder="true"
                         ShowHeader="false" Width="700px">
                         <Rows>
                             <x:FormRow ID="FormRow1" runat="server">
                                 <Items>
                                     <x:TextBox ID="TextBox1" runat="server" Label="请输入姓名" Text="">
                                     </x:TextBox>
-                                    <x:DropDownList ID="DropDownList1" runat="server" Label="请选择年份">
+                                    <x:DropDownList ID="DropDownList1" runat="server" Label="请选择部系">
+                                    </x:DropDownList>
+                                    <x:DropDownList ID="DropDownList2" runat="server" Label="请选择处室" Enabled="false">
+                                    </x:DropDownList>
+                                </Items>
+                            </x:FormRow>
+                            <x:FormRow ID="FormRow2" runat="server">
+                                <Items>
+                                    <x:DropDownList ID="DropDownList_StartYear" runat="server" Label="选择开始年份">
+                                    </x:DropDownList>
+                                    <x:DropDownList ID="DropDownList_StopYear" runat="server" Label="选择结束年份">
                                     </x:DropDownList>
                                 </Items>
                             </x:FormRow>
