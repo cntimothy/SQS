@@ -13,17 +13,17 @@
         <Items>
             <x:Toolbar ID="Toolbar1" runat="server">
                 <Items>
-                    <x:Button ID="Button1" runat="server" Text="开始公示">
+                    <x:Button ID="Button_Start" runat="server" Text="开始公示">
                     </x:Button>
                     <x:ToolbarSeparator ID="ToolbarSeparator1" runat="server">
                     </x:ToolbarSeparator>
-                    <x:Button ID="Button2" runat="server" Text="结束公示">
+                    <x:Button ID="Button_Stop" runat="server" Text="结束公示">
                     </x:Button>
                 </Items>
             </x:Toolbar>
             <x:SimpleForm ID="SimpleForm1" runat="server" BodyPadding="5px" Title="SimpleForm" ShowBorder="false" ShowHeader="false">
                 <Items>
-                    <x:Label ID="Label1" runat="server" Label="当前公示状态" Text="">
+                    <x:Label ID="Label_Status" runat="server" Label="当前公示状态" Text="">
                     </x:Label>
                 </Items>
             </x:SimpleForm>

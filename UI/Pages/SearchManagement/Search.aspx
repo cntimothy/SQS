@@ -19,11 +19,11 @@
                         <Rows>
                             <x:FormRow ID="FormRow1" runat="server">
                                 <Items>
-                                    <x:TextBox ID="TextBox1" runat="server" Label="请输入姓名" Text="">
+                                    <x:TextBox ID="TextBox_Name" runat="server" Label="请输入姓名" Text="">
                                     </x:TextBox>
-                                    <x:DropDownList ID="DropDownList1" runat="server" Label="请选择部系">
+                                    <x:DropDownList ID="DropDownList_Depart" runat="server" Label="请选择部系">
                                     </x:DropDownList>
-                                    <x:DropDownList ID="DropDownList2" runat="server" Label="请选择处室" Enabled="false">
+                                    <x:DropDownList ID="DropDownList_Office" runat="server" Label="请选择处室" Enabled="false">
                                     </x:DropDownList>
                                 </Items>
                             </x:FormRow>

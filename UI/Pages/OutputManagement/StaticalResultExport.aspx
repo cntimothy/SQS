@@ -20,11 +20,11 @@
                     <x:DropDownList ID="DropDownList_StopYear" runat="server" Label="Label">
                         <x:ListItem EnableSelect="false" Selected="true" Text="选择结束年份" Value="0" />
                     </x:DropDownList>
-                    <x:Button ID="Button1" runat="server" Text="生成总表">
+                    <x:Button ID="Button_GetResult" runat="server" Text="生成总表">
                     </x:Button>
                     <x:ToolbarSeparator ID="ToolbarSeparator1" runat="server">
                     </x:ToolbarSeparator>
-                    <x:Button ID="Button2" runat="server" Text="导出">
+                    <x:Button ID="Button_Export" runat="server" Text="导出">
                     </x:Button>
                 </Items>
             </x:Toolbar>

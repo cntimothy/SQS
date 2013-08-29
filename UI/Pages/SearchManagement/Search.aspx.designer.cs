@@ -67,31 +67,31 @@ namespace SQS.UI.Pages.SearchManagement {
         protected global::FineUI.FormRow FormRow1;
         
         /// <summary>
-        /// TextBox1 control.
+        /// TextBox_Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::FineUI.TextBox TextBox1;
+        protected global::FineUI.TextBox TextBox_Name;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// DropDownList_Depart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::FineUI.DropDownList DropDownList1;
+        protected global::FineUI.DropDownList DropDownList_Depart;
         
         /// <summary>
-        /// DropDownList2 control.
+        /// DropDownList_Office control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::FineUI.DropDownList DropDownList2;
+        protected global::FineUI.DropDownList DropDownList_Office;
         
         /// <summary>
         /// FormRow2 control.

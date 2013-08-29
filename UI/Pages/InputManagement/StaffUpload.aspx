@@ -21,15 +21,15 @@
                             </x:FileUpload>
                             <x:ToolbarSeparator ID="ToolbarSeparator1" runat="server">
                             </x:ToolbarSeparator>
-                            <x:Label ID="Label1" runat="server" Label="Label" Text="您选择的文件是：">
+                            <x:Label ID="Label_FileName" runat="server" Label="Label" Text="您选择的文件是：">
                             </x:Label>
                             <x:ToolbarSeparator ID="ToolbarSeparator2" runat="server">
                             </x:ToolbarSeparator>
-                            <x:Button ID="Button1" runat="server" Text="开始上传">
+                            <x:Button ID="Button_StartUpload" runat="server" Text="开始上传">
                             </x:Button>
                             <x:ToolbarFill ID="ToolbarFill1" runat="server">
                             </x:ToolbarFill>
-                            <x:Button ID="Button2" runat="server" Text="下载模板">
+                            <x:Button ID="Button_DownloadTemplate" runat="server" Text="下载模板">
                             </x:Button>
                         </Items>
                     </x:Toolbar>
@@ -38,11 +38,21 @@
                         <Items>
                             <x:SimpleForm ID="SimpleForm1" runat="server" BodyPadding="0px" Title="SimpleForm"
                                 ShowBorder="false" ShowHeader="false" CssStyle="width:50%">
-                                <Items>
-                                    <x:DropDownList ID="DropDownList_Depart" runat="server" Label="请选择部门">
-                                        <x:ListItem Selected="true" EnableSelect="true" Text="所有部门" Value="0" />
-                                    </x:DropDownList>
-                                </Items>
+                                <x:Form ID="Form2" runat="server" BodyPadding="5px" Title="Form" ShowHeader="false"
+                                    ShowBorder="false">
+                                    <rows>
+                                    <x:FormRow ID="FormRow1" runat="server">
+                                        <Items>
+                                            <x:DropDownList ID="DropDownList1" runat="server" Label="请选择部系">
+                                                <x:ListItem Selected="true" EnableSelect="true" Text="所有部系" Value="0" />
+                                            </x:DropDownList>
+                                            <x:DropDownList ID="DropDownList2" runat="server" Label="请选择处室">
+                                                <x:ListItem Selected="true" EnableSelect="true" Text="所有处室" Value="0" />
+                                            </x:DropDownList>
+                                        </Items>
+                                    </x:FormRow>
+                                </rows>
+                                </x:Form>
                             </x:SimpleForm>
                             <x:Grid ID="Grid1" runat="server" Title="单位区分表" EnableRowNumber="true" AllowPaging="true"
                                 PageSize="20" Height="500px" AutoScroll="true">
