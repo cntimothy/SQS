@@ -27,7 +27,7 @@ namespace SQS.Controller
         /// <param name="exception"></param>
         /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
         public static bool GetAllPaperInformation(ref DataTable table, ref string exception)
-        { 
+        {
             return true;
         }
 
@@ -102,7 +102,7 @@ namespace SQS.Controller
 
         #region Book
         /// <summary>
-        /// 根据路径导入论文Excel
+        /// 根据路径导入著作Excel
         /// </summary>
         /// <param name="path">指定的路径</param>
         /// <param name="exception"></param>
@@ -141,6 +141,52 @@ namespace SQS.Controller
         /// <param name="exception"></param>
         /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
         public static bool GetBookInformationByDepartAndOffice(ref DataTable table, ref string exception)
+        {
+            return true;
+        }
+        #endregion
+
+        #region Staff
+        /// <summary>
+        /// 根据路径导入人员Excel
+        /// </summary>
+        /// <param name="path">指定的路径</param>
+        /// <param name="exception"></param>
+        /// <returns>导入成功返回true，否则返回false</returns>
+        public static bool InportStaffExcel(string path, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 获取所有人员信息
+        /// </summary>
+        /// <param name="table">查询结果</param>
+        /// <param name="exception"></param>
+        /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
+        public static bool GetAllStaffInformation(ref DataTable table, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 根据部系获取人员信息
+        /// </summary>
+        /// <param name="table">查询的结果</param>
+        /// <param name="exception"></param>
+        /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
+        public static bool GetStaffInformationByDepart(ref DataTable table, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 根据部系和处室获取人员信息
+        /// </summary>
+        /// <param name="table">查询的结果</param>
+        /// <param name="exception"></param>
+        /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
+        public static bool GetStaffInformationByDepartAndOffice(ref DataTable table, ref string exception)
         {
             return true;
         }

@@ -16,7 +16,7 @@ namespace SQS.Controller
         /// <param name="stopYear">结束年份</param>
         /// <param name="exception"></param>
         /// <returns>查询到非空结果返回true，否则返回false</returns>
-        public static bool GetResult(ref Depart depart, string startYear, string stopYear, ref string exception)
+        public static bool GetResult(ref List<Depart> depart, string startYear, string stopYear, ref string exception)
         {
             return true;
         }

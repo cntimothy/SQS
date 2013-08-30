@@ -58,13 +58,13 @@ namespace SQS.UI.Pages.InputManagement {
         protected global::FineUI.Toolbar Toolbar1;
         
         /// <summary>
-        /// FileUpload1 control.
+        /// FileUpload_ExcelFile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::FineUI.FileUpload FileUpload1;
+        protected global::FineUI.FileUpload FileUpload_ExcelFile;
         
         /// <summary>
         /// ToolbarSeparator1 control.
@@ -74,6 +74,15 @@ namespace SQS.UI.Pages.InputManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::FineUI.ToolbarSeparator ToolbarSeparator1;
+        
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::FineUI.Label Label1;
         
         /// <summary>
         /// Label_FileName control.
@@ -94,13 +103,13 @@ namespace SQS.UI.Pages.InputManagement {
         protected global::FineUI.ToolbarSeparator ToolbarSeparator2;
         
         /// <summary>
-        /// Button_StartUpload control.
+        /// Button_Submit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::FineUI.Button Button_StartUpload;
+        protected global::FineUI.Button Button_Submit;
         
         /// <summary>
         /// ToolbarFill1 control.
