@@ -32,6 +32,17 @@ namespace SQS.Controller
         }
 
         /// <summary>
+        /// 根据姓名获取论文信息
+        /// </summary>
+        /// <param name="table">查询的结果</param>
+        /// <param name="exception"></param>
+        /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
+        public static bool GetPaperInformationByName(ref DataTable table, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
         /// 根据部系获取论文信息
         /// </summary>
         /// <param name="table">查询的结果</param>
@@ -73,6 +84,17 @@ namespace SQS.Controller
         /// <param name="exception"></param>
         /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
         public static bool GetAllTopicInformation(ref DataTable table, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 根据姓名获取课题信息
+        /// </summary>
+        /// <param name="table">查询的结果</param>
+        /// <param name="exception"></param>
+        /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
+        public static bool GetTopicInformationByName(ref DataTable table, ref string exception)
         {
             return true;
         }
@@ -124,6 +146,17 @@ namespace SQS.Controller
         }
 
         /// <summary>
+        /// 根据姓名获取著作信息
+        /// </summary>
+        /// <param name="table">查询的结果</param>
+        /// <param name="exception"></param>
+        /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
+        public static bool GetBookInformationByName(ref DataTable table, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
         /// 根据部系获取著作信息
         /// </summary>
         /// <param name="table">查询的结果</param>
@@ -165,6 +198,17 @@ namespace SQS.Controller
         /// <param name="exception"></param>
         /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
         public static bool GetAllStaffInformation(ref DataTable table, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 根据姓名获取人员信息
+        /// </summary>
+        /// <param name="table">查询的结果</param>
+        /// <param name="exception"></param>
+        /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
+        public static bool GetStaffInformationByName(ref DataTable table, ref string exception)
         {
             return true;
         }

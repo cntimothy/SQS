@@ -39,20 +39,51 @@
                     <x:Panel ID="Panel2" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
                         Title="Panel">
                         <Items>
-                            <x:Form ID="Form2" runat="server" BodyPadding="5px" Title="Form" ShowHeader="false" ShowBorder="false">
-                                <Rows>
-                                    <x:FormRow ID="FormRow1" runat="server">
+                            <x:Panel ID="Panel4" runat="server" BodyPadding="5px" ShowBorder="true" ShowHeader="true"
+                                Title="搜索条件">
+                                <Items>
+                                    <x:Panel ID="Panel7" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
+                                        Title="Panel" Layout="HBox" BoxConfigChildMargin="0 5 0 0">
                                         <Items>
-                                            <x:DropDownList ID="DropDownList1" runat="server" Label="请选择部系">
-                                                <x:ListItem Selected="true" EnableSelect="true" Text="所有部系" Value="0" />
+                                            <x:RadioButton ID="RadioButton_SearchByName" GroupName="SearchType" runat="server"
+                                                Label="" Text="按姓名查找" OnCheckedChanged="SearchType_Changed" AutoPostBack="true"
+                                                Checked="true">
+                                            </x:RadioButton>
+                                            <x:TextBox ID="TextBox_Name" runat="server" Label="" Text="" EmptyText="请输入姓名">
+                                            </x:TextBox>
+                                        </Items>
+                                    </x:Panel>
+                                    <x:Panel ID="Panel6" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
+                                        Title="Panel" Layout="HBox" BoxConfigChildMargin="0 5 0 0">
+                                        <Items>
+                                            <x:RadioButton ID="RadioButton_SearchByDepartAndOffice" GroupName="SearchType" runat="server"
+                                                Label="" Text="按部系处室查找" AutoPostBack="true">
+                                            </x:RadioButton>
+                                            <x:DropDownList ID="DropDownList_Depart" runat="server" Label="" Enabled="false">
+                                                <x:ListItem EnableSelect="false" Selected="true" Text="请选择部系" Value="0" />
                                             </x:DropDownList>
-                                            <x:DropDownList ID="DropDownList2" runat="server" Label="请选择处室">
-                                                <x:ListItem Selected="true" EnableSelect="true" Text="所有处室" Value="0" />
+                                            <x:DropDownList ID="DropDownList_Office" runat="server" Label="" Enabled="false">
+                                                <x:ListItem EnableSelect="false" Selected="true" Text="请选择处室" Value="0" />
                                             </x:DropDownList>
                                         </Items>
-                                    </x:FormRow>
-                                </Rows>
-                            </x:Form>
+                                    </x:Panel>
+                                    <x:Panel ID="Panel5" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false" 
+                                        Title="Panel" Layout="HBox" BoxConfigChildMargin="0 5 0 0">
+                                        <Items>
+                                            <x:Label ID="Label2" runat="server" Label="Label" Text="选择起止年份">
+                                            </x:Label>
+                                            <x:DropDownList ID="DropDownList_StartYear" runat="server" Label="选择开始年份" Width="100px">
+                                            </x:DropDownList>
+                                            <x:Label ID="Label3" runat="server" Label="Label" Text=" 到 ">
+                                            </x:Label>
+                                            <x:DropDownList ID="DropDownList_StopYear" runat="server" Label="选择结束年份" Width="100px">
+                                            </x:DropDownList>
+                                            <x:Button ID="Button_Search" runat="server" Text="搜索">
+                                            </x:Button>
+                                        </Items>
+                                    </x:Panel>
+                                </Items>
+                            </x:Panel>
                             <x:Grid ID="Grid1" runat="server" Title="单位区分表" EnableRowNumber="true" AllowPaging="true"
                                 PageSize="20" Height="500px" AutoScroll="true">
                                 <Columns>

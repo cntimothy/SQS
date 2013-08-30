@@ -1886,6 +1886,9 @@
     <Content Include="Pages\HomePage.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Pages\InputManagement\BookUpload.aspx" />
+    <Content Include="Pages\InputManagement\iframe_ModifyBookInformation.aspx" />
+    <Content Include="Pages\InputManagement\iframe_ModifyPaperInformation.aspx" />
+    <Content Include="Pages\InputManagement\iframe_ModifyTopicInformation.aspx" />
     <Content Include="Pages\InputManagement\PaperUpload.aspx" />
     <Content Include="Pages\InputManagement\StaffUpload.aspx" />
     <Content Include="Pages\InputManagement\TopicUpload.aspx" />
@@ -1939,6 +1942,27 @@
     </Compile>
     <Compile Include="Pages\InputManagement\BookUpload.aspx.designer.cs">
       <DependentUpon>BookUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InputManagement\iframe_ModifyBookInformation.aspx.cs">
+      <DependentUpon>iframe_ModifyBookInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\InputManagement\iframe_ModifyBookInformation.aspx.designer.cs">
+      <DependentUpon>iframe_ModifyBookInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InputManagement\iframe_ModifyPaperInformation.aspx.cs">
+      <DependentUpon>iframe_ModifyPaperInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\InputManagement\iframe_ModifyPaperInformation.aspx.designer.cs">
+      <DependentUpon>iframe_ModifyPaperInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InputManagement\iframe_ModifyTopicInformation.aspx.cs">
+      <DependentUpon>iframe_ModifyTopicInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\InputManagement\iframe_ModifyTopicInformation.aspx.designer.cs">
+      <DependentUpon>iframe_ModifyTopicInformation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\InputManagement\PaperUpload.aspx.cs">
       <DependentUpon>PaperUpload.aspx</DependentUpon>

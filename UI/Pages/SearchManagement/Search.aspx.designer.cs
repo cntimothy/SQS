@@ -49,22 +49,31 @@ namespace SQS.UI.Pages.SearchManagement {
         protected global::FineUI.Panel Panel2;
         
         /// <summary>
-        /// Form2 control.
+        /// Panel4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::FineUI.Form Form2;
+        protected global::FineUI.Panel Panel4;
         
         /// <summary>
-        /// FormRow1 control.
+        /// Panel7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::FineUI.FormRow FormRow1;
+        protected global::FineUI.Panel Panel7;
+        
+        /// <summary>
+        /// RadioButton_SearchByName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::FineUI.RadioButton RadioButton_SearchByName;
         
         /// <summary>
         /// TextBox_Name control.
@@ -74,6 +83,24 @@ namespace SQS.UI.Pages.SearchManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::FineUI.TextBox TextBox_Name;
+        
+        /// <summary>
+        /// Panel6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::FineUI.Panel Panel6;
+        
+        /// <summary>
+        /// RadioButton_SearchByDepartAndOffice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::FineUI.RadioButton RadioButton_SearchByDepartAndOffice;
         
         /// <summary>
         /// DropDownList_Depart control.
@@ -94,13 +121,22 @@ namespace SQS.UI.Pages.SearchManagement {
         protected global::FineUI.DropDownList DropDownList_Office;
         
         /// <summary>
-        /// FormRow2 control.
+        /// Panel5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::FineUI.FormRow FormRow2;
+        protected global::FineUI.Panel Panel5;
+        
+        /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::FineUI.Label Label2;
         
         /// <summary>
         /// DropDownList_StartYear control.
@@ -110,6 +146,15 @@ namespace SQS.UI.Pages.SearchManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::FineUI.DropDownList DropDownList_StartYear;
+        
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::FineUI.Label Label3;
         
         /// <summary>
         /// DropDownList_StopYear control.

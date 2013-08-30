@@ -28,48 +28,83 @@
                             </x:Label>
                             <x:ToolbarSeparator ID="ToolbarSeparator2" runat="server">
                             </x:ToolbarSeparator>
-                            <x:Button ID="Button_Submit" runat="server" Text="开始上传" OnClick="Button_Submit_Click" Enabled="false">
+                            <x:Button ID="Button_Submit" runat="server" Text="开始上传" OnClick="Button_Submit_Click"
+                                Enabled="false">
                             </x:Button>
                             <x:ToolbarFill ID="ToolbarFill1" runat="server">
                             </x:ToolbarFill>
-                            <x:Button ID="Button_DownloadTemplate" runat="server" Text="下载模板" OnClick="Button_DownloadTemplate_Click" EnableAjax="false">
+                            <x:Button ID="Button_DownloadTemplate" runat="server" Text="下载模板" OnClick="Button_DownloadTemplate_Click"
+                                EnableAjax="false">
                             </x:Button>
                         </Items>
                     </x:Toolbar>
                     <x:Panel ID="Panel2" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
                         Title="Panel">
                         <Items>
-                            <x:Form ID="Form2" runat="server" BodyPadding="5px" Title="Form" ShowHeader="false" ShowBorder="false">
-                                <Rows>
-                                    <x:FormRow ID="FormRow1" runat="server">
+                            <x:Panel ID="Panel4" runat="server" BodyPadding="5px" ShowBorder="true" ShowHeader="true"
+                                Title="搜索条件">
+                                <Items>
+                                    <x:Panel ID="Panel7" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
+                                        Title="Panel" Layout="HBox" BoxConfigChildMargin="0 5 0 0">
                                         <Items>
-                                            <x:DropDownList ID="DropDownList1" runat="server" Label="请选择部系">
-                                                <x:ListItem Selected="true" EnableSelect="true" Text="所有部系" Value="0" />
+                                            <x:RadioButton ID="RadioButton_SearchByName" GroupName="SearchType" runat="server"
+                                                Label="" Text="按姓名查找" OnCheckedChanged="SearchType_Changed" AutoPostBack="true"
+                                                Checked="true">
+                                            </x:RadioButton>
+                                            <x:TextBox ID="TextBox_Name" runat="server" Label="" Text="" EmptyText="请输入姓名">
+                                            </x:TextBox>
+                                        </Items>
+                                    </x:Panel>
+                                    <x:Panel ID="Panel6" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
+                                        Title="Panel" Layout="HBox" BoxConfigChildMargin="0 5 0 0">
+                                        <Items>
+                                            <x:RadioButton ID="RadioButton_SearchByDepartAndOffice" GroupName="SearchType" runat="server"
+                                                Label="" Text="按部系处室查找" AutoPostBack="true">
+                                            </x:RadioButton>
+                                            <x:DropDownList ID="DropDownList_Depart" runat="server" Label="" Enabled="false">
+                                                <x:ListItem EnableSelect="false" Selected="true" Text="请选择部系" Value="0" />
                                             </x:DropDownList>
-                                            <x:DropDownList ID="DropDownList2" runat="server" Label="请选择处室">
-                                                <x:ListItem Selected="true" EnableSelect="true" Text="所有处室" Value="0" />
+                                            <x:DropDownList ID="DropDownList_Office" runat="server" Label="" Enabled="false">
+                                                <x:ListItem EnableSelect="false" Selected="true" Text="请选择处室" Value="0" />
                                             </x:DropDownList>
                                         </Items>
-                                    </x:FormRow>
-                                </Rows>
-                            </x:Form>
-                            <x:Grid ID="Grid1" runat="server" Title="论文统计表" EnableRowNumber="true"
-                                AllowPaging="true" PageSize="20" Height="500px" AutoScroll="true"  >
+                                    </x:Panel>
+                                    <x:Panel ID="Panel5" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
+                                        Title="Panel" Layout="HBox" BoxConfigChildMargin="0 5 0 0">
+                                        <Items>
+                                            <x:Label ID="Label2" runat="server" Label="Label" Text="选择起止年份">
+                                            </x:Label>
+                                            <x:DropDownList ID="DropDownList_StartYear" runat="server" Label="选择开始年份" Width="100px">
+                                            </x:DropDownList>
+                                            <x:Label ID="Label3" runat="server" Label="Label" Text=" 到 ">
+                                            </x:Label>
+                                            <x:DropDownList ID="DropDownList_StopYear" runat="server" Label="选择结束年份" Width="100px">
+                                            </x:DropDownList>
+                                            <x:Button ID="Button_Search" runat="server" Text="搜索">
+                                            </x:Button>
+                                        </Items>
+                                    </x:Panel>
+                                </Items>
+                            </x:Panel>
+                            <x:Grid ID="Grid1" runat="server" Title="著作统计表" EnableRowNumber="true" AllowPaging="true"
+                                PageSize="20" Height="500px" AutoScroll="true" DataKeyNames="ID">
                                 <Columns>
-                                    <x:BoundField Width="150px" DataField="Name" DataFormatString="{0}" HeaderText="部系单位" />
-                                    <x:BoundField Width="150px" DataField="Name" DataFormatString="{0}" HeaderText="处室单位" />
+                                    <x:BoundField Width="150px" DataField="ID" DataFormatString="{0}" HeaderText="ID"
+                                        Hidden="true" />
+                                    <x:BoundField Width="150px" DataField="Depart" DataFormatString="{0}" HeaderText="部系单位" />
+                                    <x:BoundField Width="150px" DataField="Office" DataFormatString="{0}" HeaderText="处室单位" />
                                     <x:BoundField Width="100px" DataField="Name" DataFormatString="{0}" HeaderText="姓名" />
-                                    <x:BoundField Width="200px" DataField="Name" DataFormatString="{0}" HeaderText="论文名称" />
-                                    <x:BoundField Width="200px" DataField="Name" DataFormatString="{0}" HeaderText="发表刊物、会议或文集名称" />
-                                    <x:BoundField Width="150px" DataField="Name" DataFormatString="{0}" HeaderText="发表时间（年月）" />
-                                    <x:BoundField Width="80px" DataField="Name" DataFormatString="{0}" HeaderText="发表级别" />
-                                    <x:BoundField Width="80px" DataField="Name" DataFormatString="{0}" HeaderText="奖励级别" />
-                                    <x:BoundField Width="80px" DataField="Name" DataFormatString="{0}" HeaderText="奖励等级" />
-                                    <x:BoundField Width="50px" DataField="Name" DataFormatString="{0}" HeaderText="字数" />
-                                    <x:BoundField Width="80px" DataField="Name" DataFormatString="{0}" HeaderText="作者人数" />
-                                    <x:BoundField Width="80px" DataField="Name" DataFormatString="{0}" HeaderText="第1作者" />
-                                    <x:BoundField Width="80px" DataField="Name" DataFormatString="{0}" HeaderText="第2作者" />
-                                    <x:BoundField Width="80px" DataField="Name" DataFormatString="{0}" HeaderText="第3作者" />
+                                    <x:BoundField Width="200px" DataField="PaperName" DataFormatString="{0}" HeaderText="论文名称" />
+                                    <x:BoundField Width="200px" DataField="JournalName" DataFormatString="{0}" HeaderText="发表刊物、会议或文集名称" />
+                                    <x:BoundField Width="150px" DataField="PublishDate" DataFormatString="{0}" HeaderText="发表时间（年月）" />
+                                    <x:BoundField Width="80px" DataField="PublishGrade" DataFormatString="{0}" HeaderText="发表级别" />
+                                    <x:BoundField Width="80px" DataField="RewardGrade" DataFormatString="{0}" HeaderText="奖励级别" />
+                                    <x:BoundField Width="80px" DataField="RewardClass" DataFormatString="{0}" HeaderText="奖励等级" />
+                                    <x:BoundField Width="50px" DataField="WordCount" DataFormatString="{0}" HeaderText="字数" />
+                                    <x:BoundField Width="80px" DataField="AutherCount" DataFormatString="{0}" HeaderText="作者人数" />
+                                    <x:BoundField Width="80px" DataField="Auther1" DataFormatString="{0}" HeaderText="第1作者" />
+                                    <x:BoundField Width="80px" DataField="Auther2" DataFormatString="{0}" HeaderText="第2作者" />
+                                    <x:BoundField Width="80px" DataField="Auther3" DataFormatString="{0}" HeaderText="第3作者" />
                                 </Columns>
                             </x:Grid>
                         </Items>
