@@ -139,15 +139,6 @@ namespace SQS.UI.Pages.InputManagement {
         protected global::FineUI.Panel Panel2;
         
         /// <summary>
-        /// SimpleForm1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::FineUI.SimpleForm SimpleForm1;
-        
-        /// <summary>
         /// Form2 control.
         /// </summary>
         /// <remarks>

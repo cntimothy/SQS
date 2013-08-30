@@ -64,6 +64,20 @@ namespace SQS.UI.Pages.InputManagement
                 Alert.ShowInTop("上传失败！\n失败原因：" + exception, MessageBoxIcon.Error);
             }
         }
+
+        /// <summary>
+        /// 下载模板事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button_DownloadTemplate_Click(object sender, EventArgs e)
+        {
+            Response.ClearContent();
+            Response.ContentType = "application/x-zip-compressed";
+            Response.AddHeader("content-disposition", "attachment;filename=" + Server.UrlEncode("论文信息模板.zip"));
+            string path = Server.MapPath(@"..\..\downloadfiles\template\论文信息模板.zip");
+            Response.TransmitFile(path);
+        }
         #endregion
 
         #region Private Method

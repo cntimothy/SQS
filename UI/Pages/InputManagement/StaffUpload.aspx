@@ -32,18 +32,15 @@
                             </x:Button>
                             <x:ToolbarFill ID="ToolbarFill1" runat="server">
                             </x:ToolbarFill>
-                            <x:Button ID="Button_DownloadTemplate" runat="server" Text="下载模板">
+                            <x:Button ID="Button_DownloadTemplate" runat="server" Text="下载模板" OnClick="Button_DownloadTemplate_Click" EnableAjax="false">
                             </x:Button>
                         </Items>
                     </x:Toolbar>
                     <x:Panel ID="Panel2" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
                         Title="Panel">
                         <Items>
-                            <x:SimpleForm ID="SimpleForm1" runat="server" BodyPadding="0px" Title="SimpleForm"
-                                ShowBorder="false" ShowHeader="false" CssStyle="width:50%">
-                                <x:Form ID="Form2" runat="server" BodyPadding="5px" Title="Form" ShowHeader="false"
-                                    ShowBorder="false">
-                                    <rows>
+                            <x:Form ID="Form2" runat="server" BodyPadding="5px" Title="Form" ShowHeader="false" ShowBorder="false">
+                                <Rows>
                                     <x:FormRow ID="FormRow1" runat="server">
                                         <Items>
                                             <x:DropDownList ID="DropDownList1" runat="server" Label="请选择部系">
@@ -54,9 +51,8 @@
                                             </x:DropDownList>
                                         </Items>
                                     </x:FormRow>
-                                </rows>
-                                </x:Form>
-                            </x:SimpleForm>
+                                </Rows>
+                            </x:Form>
                             <x:Grid ID="Grid1" runat="server" Title="单位区分表" EnableRowNumber="true" AllowPaging="true"
                                 PageSize="20" Height="500px" AutoScroll="true">
                                 <Columns>

@@ -32,7 +32,7 @@
                             </x:Button>
                             <x:ToolbarFill ID="ToolbarFill1" runat="server">
                             </x:ToolbarFill>
-                            <x:Button ID="Button_DownloadTemplate" runat="server" Text="下载模板">
+                            <x:Button ID="Button_DownloadTemplate" runat="server" Text="下载模板" OnClick="Button_DownloadTemplate_Click" EnableAjax="false">
                             </x:Button>
                         </Items>
                     </x:Toolbar>

@@ -20,6 +20,11 @@ namespace SQS.UI.Pages.InputManagement
         #endregion
 
         #region Event
+        /// <summary>
+        /// 选择上传文件事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void FileUpload_ExcelFile_FileSelected(object sender, EventArgs e)
         {
             if (FileUpload_ExcelFile.HasFile)
@@ -48,6 +53,11 @@ namespace SQS.UI.Pages.InputManagement
             }
         }
 
+        /// <summary>
+        /// 开始上传事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Button_Submit_Click(object sender, EventArgs e)
         {
             string exception = "";
@@ -64,9 +74,26 @@ namespace SQS.UI.Pages.InputManagement
                 Alert.ShowInTop("上传失败！\n失败原因：" + exception, MessageBoxIcon.Error);
             }
         }
+
+        /// <summary>
+        /// 下载模板事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button_DownloadTemplate_Click(object sender, EventArgs e)
+        {
+            Response.ClearContent();
+            Response.ContentType = "application/x-zip-compressed";
+            Response.AddHeader("content-disposition", "attachment;filename=" + Server.UrlEncode("著作信息模板.zip"));
+            string path = Server.MapPath(@"..\..\downloadfiles\template\著作信息模板.zip");
+            Response.TransmitFile(path);
+        }
         #endregion
 
         #region Private Method
+        /// <summary>
+        /// 绑定著作信息到grid
+        /// </summary>
         private void bindBookInformationToGrid()
         { 
         
