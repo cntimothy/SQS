@@ -108,7 +108,7 @@
                                     <x:BoundField Width="100px" DataField="Auther4" DataFormatString="{0}" HeaderText="编4" />
                                     <x:BoundField Width="100px" DataField="Auther5" DataFormatString="{0}" HeaderText="编5以上（含）" />
                                     <x:WindowField ColumnID="WindowField_Modify" TextAlign="Center" Width="80px" WindowID="Window_Modify"
-                                        Text="修改" ToolTip="修改项目" Title="操作" IFrameUrl="iframe_ModifyBookInformation.aspx"
+                                        HeaderText="操作" Text="修改" ToolTip="修改项目" Title="操作" IFrameUrl="iframe_ModifyBookInformation.aspx"
                                         DataIFrameUrlFields="ID" DataIFrameUrlFormatString="iframe_ModifyBookInformation.aspx?id={0}" />
                                 </Columns>
                             </x:Grid>
@@ -118,9 +118,8 @@
             </x:Panel>
         </Items>
     </x:Panel>
-    <x:Window ID="Window_Modify" runat="server" BodyPadding="5px" Height="350px" IsModal="true"
-        Popup="false" Title="修改" Width="500px" Height="360px" EnableClose="false" Target="Top"
-        EnableResize="true">
+    <x:Window ID="Window_Modify" runat="server" BodyPadding="5px" IsModal="true" Popup="false"
+        Title="修改" Width="500px" Height="360px" EnableClose="false" Target="Top" EnableResize="true">
     </x:Window>
     </form>
 </body>
