@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
+using SQS.DataStructure;
 
 namespace SQS.Controller
 {
@@ -13,9 +14,11 @@ namespace SQS.Controller
         /// 根据路径导入论文Excel
         /// </summary>
         /// <param name="path">指定的路径</param>
+        /// <param name="createCount">新增数量</param>
+        /// <param name="updateCount">更新数量</param>
         /// <param name="exception"></param>
         /// <returns>导入成功返回true，否则返回false</returns>
-        public static bool InportPaperExcel(string path, ref string exception)
+        public static bool InportPaperExcel(string path, ref int createCount, ref int updateCount, ref string exception)
         {
             return true;
         }
@@ -32,34 +35,13 @@ namespace SQS.Controller
         }
 
         /// <summary>
-        /// 根据姓名获取论文信息
+        /// 根据搜索条件获取文论信息
         /// </summary>
-        /// <param name="table">查询的结果</param>
+        /// <param name="table">查询结果</param>
+        /// <param name="searchCondition">搜索条件</param>
         /// <param name="exception"></param>
         /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
-        public static bool GetPaperInformationByName(ref DataTable table, ref string exception)
-        {
-            return true;
-        }
-
-        /// <summary>
-        /// 根据部系获取论文信息
-        /// </summary>
-        /// <param name="table">查询的结果</param>
-        /// <param name="exception"></param>
-        /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
-        public static bool GetPaperInformationByDepart(ref DataTable table, ref string exception)
-        {
-            return true;
-        }
-
-        /// <summary>
-        /// 根据部系和处室获取论文信息
-        /// </summary>
-        /// <param name="table">查询的结果</param>
-        /// <param name="exception"></param>
-        /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
-        public static bool GetPaperInformationByDepartAndOffice(ref DataTable table, ref string exception)
+        public static bool GetPaperInformationByCondition(ref DataTable table, SearchCondition searchCondition, ref string exception)
         {
             return true;
         }
@@ -67,12 +49,14 @@ namespace SQS.Controller
 
         #region Topic
         /// <summary>
-        /// 根据路径导入课题Excel
+        /// 根据路径导入Excel
         /// </summary>
         /// <param name="path">指定的路径</param>
+        /// <param name="createCount">新增数量</param>
+        /// <param name="updateCount">更新数量</param>
         /// <param name="exception"></param>
         /// <returns>导入成功返回true，否则返回false</returns>
-        public static bool InportTopicExcel(string path, ref string exception)
+        public static bool InportTopicExcel(string path, ref int createCount, ref int updateCount, ref string exception)
         {
             return true;
         }
@@ -89,34 +73,13 @@ namespace SQS.Controller
         }
 
         /// <summary>
-        /// 根据姓名获取课题信息
+        /// 根据搜索条件获取课题信息
         /// </summary>
-        /// <param name="table">查询的结果</param>
+        /// <param name="table">查询结果</param>
+        /// <param name="searchCondition">搜索条件</param>
         /// <param name="exception"></param>
         /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
-        public static bool GetTopicInformationByName(ref DataTable table, ref string exception)
-        {
-            return true;
-        }
-
-        /// <summary>
-        /// 根据部系获取课题信息
-        /// </summary>
-        /// <param name="table">查询的结果</param>
-        /// <param name="exception"></param>
-        /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
-        public static bool GetTopicInformationByDepart(ref DataTable table, ref string exception)
-        {
-            return true;
-        }
-
-        /// <summary>
-        /// 根据部系和处室获取课题信息
-        /// </summary>
-        /// <param name="table">查询的结果</param>
-        /// <param name="exception"></param>
-        /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
-        public static bool GetTopicInformationByDepartAndOffice(ref DataTable table, ref string exception)
+        public static bool GetTopicInformationByCondition(ref DataTable table, SearchCondition searchCondition, ref string exception)
         {
             return true;
         }
@@ -127,9 +90,11 @@ namespace SQS.Controller
         /// 根据路径导入著作Excel
         /// </summary>
         /// <param name="path">指定的路径</param>
+        /// <param name="createCount">新增数量</param>
+        /// <param name="updateCount">更新数量</param>
         /// <param name="exception"></param>
         /// <returns>导入成功返回true，否则返回false</returns>
-        public static bool InportBookExcel(string path, ref string exception)
+        public static bool InportBookExcel(string path, ref int createCount, ref int updateCount, ref string exception)
         {
             return true;
         }
@@ -146,34 +111,13 @@ namespace SQS.Controller
         }
 
         /// <summary>
-        /// 根据姓名获取著作信息
+        /// 根据搜索条件获取著作信息
         /// </summary>
-        /// <param name="table">查询的结果</param>
+        /// <param name="table">查询结果</param>
+        /// <param name="searchCondition">搜索条件</param>
         /// <param name="exception"></param>
         /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
-        public static bool GetBookInformationByName(ref DataTable table, ref string exception)
-        {
-            return true;
-        }
-
-        /// <summary>
-        /// 根据部系获取著作信息
-        /// </summary>
-        /// <param name="table">查询的结果</param>
-        /// <param name="exception"></param>
-        /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
-        public static bool GetBookInformationByDepart(ref DataTable table, ref string exception)
-        {
-            return true;
-        }
-
-        /// <summary>
-        /// 根据部系和处室获取著作信息
-        /// </summary>
-        /// <param name="table">查询的结果</param>
-        /// <param name="exception"></param>
-        /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
-        public static bool GetBookInformationByDepartAndOffice(ref DataTable table, ref string exception)
+        public static bool GetBookInformationByCondition(ref DataTable table, SearchCondition searchCondition, ref string exception)
         {
             return true;
         }
@@ -194,32 +138,10 @@ namespace SQS.Controller
         /// <summary>
         /// 获取所有人员信息
         /// </summary>
-        /// <param name="table">查询结果</param>
+        /// <param name="departStaffInformation">查询结果</param>
         /// <param name="exception"></param>
         /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
-        public static bool GetAllStaffInformation(ref DataTable table, ref string exception)
-        {
-            return true;
-        }
-
-        /// <summary>
-        /// 根据姓名获取人员信息
-        /// </summary>
-        /// <param name="table">查询的结果</param>
-        /// <param name="exception"></param>
-        /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
-        public static bool GetStaffInformationByName(ref DataTable table, ref string exception)
-        {
-            return true;
-        }
-
-        /// <summary>
-        /// 根据部系获取人员信息
-        /// </summary>
-        /// <param name="table">查询的结果</param>
-        /// <param name="exception"></param>
-        /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
-        public static bool GetStaffInformationByDepart(ref DataTable table, ref string exception)
+        public static bool GetAllStaffInformation(ref DepartStaffInformation departStaffInformation, ref string exception)
         {
             return true;
         }
@@ -228,12 +150,14 @@ namespace SQS.Controller
         /// 根据部系和处室获取人员信息
         /// </summary>
         /// <param name="table">查询的结果</param>
+        /// <param name="departId">部系ID</param>
+        /// <param name="officeId">处室ID（为空时表示该部系下的所有处室）</param>
         /// <param name="exception"></param>
         /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
-        public static bool GetStaffInformationByDepartAndOffice(ref DataTable table, ref string exception)
-        {
-            return true;
-        }
+        //public static bool GetStaffInformationByDepartAndOffice(ref DataTable table, string departId, string officeId, ref string exception)
+        //{
+        //    return true;
+        //}
         #endregion
     }
 }

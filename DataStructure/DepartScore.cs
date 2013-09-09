@@ -5,8 +5,8 @@ using System.Text;
 
 namespace SQS.DataStructure
 {
-    #region class Individual
-    public class Individual
+    #region class IndividualScore
+    public class IndividualScore
     {
         #region private Field
         private string name;        
@@ -72,7 +72,7 @@ namespace SQS.DataStructure
         /// <param name="bookScore">著作得分</param>
         /// <param name="topicScore">课题得分</param>
         /// <param name="totalScore">总分</param>
-        public Individual(string name, float paperScore, float bookScore, float topicScore, float totalScore)
+        public IndividualScore(string name, float paperScore, float bookScore, float topicScore, float totalScore)
         {
             this.Name = name;
             this.PaperScore = paperScore;
@@ -84,12 +84,12 @@ namespace SQS.DataStructure
     }
     #endregion
 
-    #region calss Office
-    public class Office
+    #region calss OfficeScore
+    public class OfficeScore
     {
         #region private Field
         private string officeName;
-        private List<Individual> staff;
+        private List<IndividualScore> staff;
         private float paperTotalScore;
         private float bookTotalScore;
         private float topicTotalScore;
@@ -111,7 +111,7 @@ namespace SQS.DataStructure
         /// <summary>
         /// 人员列表
         /// </summary>
-        public List<Individual> Staff
+        public List<IndividualScore> Staff
         {
             get { return staff; }
             set { staff = value; }
@@ -183,7 +183,7 @@ namespace SQS.DataStructure
         /// <param name="totalScore">处室总分</param>
         /// <param name="averageScore">处室人均成绩</param>
         /// <param name="participateRate">处室参研率</param>
-        public Office(string officeName, float paperTotalScore, float bookTotalScore, float topicTotalScore, float totalScore, float averageScore, float participateRate)
+        public OfficeScore(string officeName, float paperTotalScore, float bookTotalScore, float topicTotalScore, float totalScore, float averageScore, float participateRate)
         {
             this.OfficeName = officeName;
             this.PaperTotalScore = paperTotalScore;
@@ -193,18 +193,18 @@ namespace SQS.DataStructure
             this.AverageScore = averageScore;
             this.ParticipateRate = participateRate;
 
-            this.Staff = new List<Individual>();
+            this.Staff = new List<IndividualScore>();
         }
         #endregion
     }
     #endregion
 
-    #region class Depart
-    public class Depart
+    #region class DepartScore
+    public class DepartScore
     {
         #region private Field
         private string departName;
-        private List<Office> officeList;
+        private List<OfficeScore> officeList;
         private float totalScore;
         private float paperAverageScore;
         private float averageScore;
@@ -223,7 +223,7 @@ namespace SQS.DataStructure
         /// <summary>
         /// 处室列表
         /// </summary>
-        public List<Office> OfficeList
+        public List<OfficeScore> OfficeList
         {
             get { return officeList; }
             set { officeList = value; }
@@ -265,14 +265,14 @@ namespace SQS.DataStructure
         /// <param name="totalScore">部系总成绩</param>
         /// <param name="paperAverageScore">部系论文人均分</param>
         /// <param name="averageScore">部系人均分</param>
-        public Depart(string departName, float totalScore, float paperAverageScore, float averageScore)
+        public DepartScore(string departName, float totalScore, float paperAverageScore, float averageScore)
         {
             this.DepartName = departName;
             this.TotalScore = totalScore;
             this.PaperAverageScore = paperAverageScore;
             this.AverageScore = averageScore;
 
-            this.OfficeList = new List<Office>();
+            this.OfficeList = new List<OfficeScore>();
         }
         #endregion
     }

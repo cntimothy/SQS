@@ -139,31 +139,22 @@ namespace SQS.UI.Pages.InputManagement {
         protected global::FineUI.Panel Panel2;
         
         /// <summary>
-        /// Panel4 控件。
+        /// Form2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Panel Panel4;
+        protected global::FineUI.Form Form2;
         
         /// <summary>
-        /// Panel7 控件。
+        /// FormRow1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Panel Panel7;
-        
-        /// <summary>
-        /// RadioButton_SearchByName 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.RadioButton RadioButton_SearchByName;
+        protected global::FineUI.FormRow FormRow1;
         
         /// <summary>
         /// TextBox_Name 控件。
@@ -175,22 +166,22 @@ namespace SQS.UI.Pages.InputManagement {
         protected global::FineUI.TextBox TextBox_Name;
         
         /// <summary>
-        /// Panel6 控件。
+        /// TextBox_BookName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Panel Panel6;
+        protected global::FineUI.TextBox TextBox_BookName;
         
         /// <summary>
-        /// RadioButton_SearchByDepartAndOffice 控件。
+        /// FormRow3 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.RadioButton RadioButton_SearchByDepartAndOffice;
+        protected global::FineUI.FormRow FormRow3;
         
         /// <summary>
         /// DropDownList_Depart 控件。
@@ -211,49 +202,85 @@ namespace SQS.UI.Pages.InputManagement {
         protected global::FineUI.DropDownList DropDownList_Office;
         
         /// <summary>
-        /// Panel5 控件。
+        /// FormRow2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Panel Panel5;
+        protected global::FineUI.FormRow FormRow2;
         
         /// <summary>
-        /// Label2 控件。
+        /// DatePicker_PublishDateStart 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Label Label2;
+        protected global::FineUI.DatePicker DatePicker_PublishDateStart;
         
         /// <summary>
-        /// DropDownList_StartYear 控件。
+        /// DatePicker_PublishDateStop 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.DropDownList DropDownList_StartYear;
+        protected global::FineUI.DatePicker DatePicker_PublishDateStop;
         
         /// <summary>
-        /// Label3 控件。
+        /// FormRow4 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Label Label3;
+        protected global::FineUI.FormRow FormRow4;
         
         /// <summary>
-        /// DropDownList_StopYear 控件。
+        /// DatePicker_CreateDateStart 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.DropDownList DropDownList_StopYear;
+        protected global::FineUI.DatePicker DatePicker_CreateDateStart;
+        
+        /// <summary>
+        /// DatePicker_CreateDateStop 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.DatePicker DatePicker_CreateDateStop;
+        
+        /// <summary>
+        /// FormRow5 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.FormRow FormRow5;
+        
+        /// <summary>
+        /// DatePicker_UpdateDateStart 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.DatePicker DatePicker_UpdateDateStart;
+        
+        /// <summary>
+        /// DatePicker_UpdateDateStop 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.DatePicker DatePicker_UpdateDateStop;
         
         /// <summary>
         /// Button_Search 控件。

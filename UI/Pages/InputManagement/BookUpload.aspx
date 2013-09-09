@@ -39,53 +39,66 @@
                         </Items>
                     </x:Toolbar>
                     <x:Panel ID="Panel2" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
-                        Title="Panel">
+                        Title="">
                         <Items>
-                            <x:Panel ID="Panel4" runat="server" BodyPadding="5px" ShowBorder="true" ShowHeader="true"
-                                Title="搜索条件">
-                                <Items>
-                                    <x:Panel ID="Panel7" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
-                                        Title="Panel" Layout="HBox" BoxConfigChildMargin="0 5 0 0">
+                            <x:Form ID="Form2" runat="server" BodyPadding="5px" Title="搜索条件" LabelWidth="80px">
+                                <Rows>
+                                    <x:FormRow ID="FormRow1" runat="server">
                                         <Items>
-                                            <x:RadioButton ID="RadioButton_SearchByName" GroupName="SearchType" runat="server"
-                                                Label="" Text="按姓名查找" OnCheckedChanged="SearchType_Changed" AutoPostBack="true"
-                                                Checked="true">
-                                            </x:RadioButton>
-                                            <x:TextBox ID="TextBox_Name" runat="server" Label="" Text="" EmptyText="请输入姓名">
+                                            <x:TextBox ID="TextBox_Name" runat="server" Label="姓名" Text="" EmptyText="请输入姓名">
+                                            </x:TextBox>
+                                            <x:TextBox ID="TextBox_BookName" runat="server" Label="著作名称" Text="" EmptyText="请输入著作名称">
                                             </x:TextBox>
                                         </Items>
-                                    </x:Panel>
-                                    <x:Panel ID="Panel6" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
-                                        Title="Panel" Layout="HBox" BoxConfigChildMargin="0 5 0 0">
+                                    </x:FormRow>
+                                    <x:FormRow ID="FormRow3" runat="server">
                                         <Items>
-                                            <x:RadioButton ID="RadioButton_SearchByDepartAndOffice" GroupName="SearchType" runat="server"
-                                                Label="" Text="按部系处室查找" AutoPostBack="true">
-                                            </x:RadioButton>
-                                            <x:DropDownList ID="DropDownList_Depart" runat="server" Label="" Enabled="false">
-                                                <x:ListItem EnableSelect="false" Selected="true" Text="请选择部系" Value="0" />
+                                            <x:DropDownList ID="DropDownList_Depart" runat="server" Label="部系">
+                                                <x:ListItem Selected="true" EnableSelect="true" Text="所有部系" Value="0" />
                                             </x:DropDownList>
-                                            <x:DropDownList ID="DropDownList_Office" runat="server" Label="" Enabled="false">
-                                                <x:ListItem EnableSelect="false" Selected="true" Text="请选择处室" Value="0" />
+                                            <x:DropDownList ID="DropDownList_Office" runat="server" Label="处室" Enabled="false">
+                                                <x:ListItem Selected="true" EnableSelect="true" Text="所有处室" Value="0" />
                                             </x:DropDownList>
                                         </Items>
-                                    </x:Panel>
-                                    <x:Panel ID="Panel5" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
-                                        Title="Panel" Layout="HBox" BoxConfigChildMargin="0 5 0 0">
+                                    </x:FormRow>
+                                    <x:FormRow ID="FormRow2" runat="server">
                                         <Items>
-                                            <x:Label ID="Label2" runat="server" Label="Label" Text="选择起止年份">
-                                            </x:Label>
-                                            <x:DropDownList ID="DropDownList_StartYear" runat="server" Label="选择开始年份" Width="100px">
-                                            </x:DropDownList>
-                                            <x:Label ID="Label3" runat="server" Label="Label" Text=" 到 ">
-                                            </x:Label>
-                                            <x:DropDownList ID="DropDownList_StopYear" runat="server" Label="选择结束年份" Width="100px">
-                                            </x:DropDownList>
+                                            <x:DatePicker ID="DatePicker_PublishDateStart" runat="server" Label="出版时间 从" EmptyText="点击右边图标选择日期"
+                                                DateFormatString="yyyy-m">
+                                            </x:DatePicker>
+                                            <x:DatePicker ID="DatePicker_PublishDateStop" runat="server" Label="到" EmptyText="点击右边图标选择日期"
+                                                DateFormatString="yyyy-m">
+                                            </x:DatePicker>
+                                        </Items>
+                                    </x:FormRow>
+                                    <x:FormRow ID="FormRow4" runat="server">
+                                        <Items>
+                                            <x:DatePicker ID="DatePicker_CreateDateStart" runat="server" Label="上传时间 从" EmptyText="点击右边图标选择日期"
+                                                DateFormatString="yyyy-m-dd">
+                                            </x:DatePicker>
+                                            <x:DatePicker ID="DatePicker_CreateDateStop" runat="server" Label="到" EmptyText="点击右边图标选择日期"
+                                                DateFormatString="yyyy-m-dd">
+                                            </x:DatePicker>
+                                        </Items>
+                                    </x:FormRow>
+                                    <x:FormRow ID="FormRow5" runat="server">
+                                        <Items>
+                                            <x:DatePicker ID="DatePicker_UpdateDateStart" runat="server" Label="更新时间 从" EmptyText="点击右边图标选择日期"
+                                                DateFormatString="yyyy-m-dd">
+                                            </x:DatePicker>
+                                            <x:DatePicker ID="DatePicker_UpdateDateStop" runat="server" Label="到" EmptyText="点击右边图标选择日期"
+                                                DateFormatString="yyyy-m-dd">
+                                            </x:DatePicker>
+                                        </Items>
+                                    </x:FormRow>
+                                    <x:FormRow>
+                                        <Items>
                                             <x:Button ID="Button_Search" runat="server" Text="搜索">
                                             </x:Button>
                                         </Items>
-                                    </x:Panel>
-                                </Items>
-                            </x:Panel>
+                                    </x:FormRow>
+                                </Rows>
+                            </x:Form>
                             <x:Grid ID="Grid1" runat="server" Title="著作统计表" EnableRowNumber="true" AllowPaging="true"
                                 PageSize="20" Height="500px" AutoScroll="true" DataKeyNames="ID">
                                 <Columns>

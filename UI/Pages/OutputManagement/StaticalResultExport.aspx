@@ -14,12 +14,44 @@
         <Items>
             <x:Toolbar ID="Toolbar1" runat="server">
                 <Items>
-                    <x:DropDownList ID="DropDownList_StartYear" runat="server" Label="Label">
+                    <x:DropDownList ID="DropDownList_StartYear" runat="server" Label="Label" Width="120px">
                         <x:ListItem EnableSelect="false" Selected="true" Text="选择开始年份" Value="0" />
                     </x:DropDownList>
-                    <x:DropDownList ID="DropDownList_StopYear" runat="server" Label="Label">
+                    <x:DropDownList ID="DropDownList_StartMonth" runat="server" Label="Label" Width="50px">
+                        <x:ListItem EnableSelect="true" Selected="true" Text="1" Value="1" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="2" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="3" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="4" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="5" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="6" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="7" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="8" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="9" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="10" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="11" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="12" />
+                    </x:DropDownList>
+                    <x:Label ID="Label1" runat="server" Label="Label" Text="到" Width="40px">
+                    </x:Label>
+                    <x:DropDownList ID="DropDownList_StopYear" runat="server" Label="Label" Width="120px">
                         <x:ListItem EnableSelect="false" Selected="true" Text="选择结束年份" Value="0" />
                     </x:DropDownList>
+                    <x:DropDownList ID="DropDownList_StopMonth" runat="server" Label="Label" Width="50px">
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="1" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="2" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="3" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="4" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="5" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="6" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="7" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="8" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="9" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="10" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="11" />
+                        <x:ListItem EnableSelect="true" Selected="true" Text="1" Value="12" />
+                    </x:DropDownList>
+                    <x:ToolbarSeparator ID="ToolbarSeparator2" runat="server">
+                    </x:ToolbarSeparator>
                     <x:Button ID="Button_GetResult" runat="server" Text="生成总表">
                     </x:Button>
                     <x:ToolbarSeparator ID="ToolbarSeparator1" runat="server">

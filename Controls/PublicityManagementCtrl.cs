@@ -26,5 +26,15 @@ namespace SQS.Controller
         {
             return true;
         }
+
+        /// <summary>
+        /// 查询是否已开始公示
+        /// </summary>
+        /// <param name="exception"></param>
+        /// <returns>已开始返回true，否则返回false</returns>
+        public static bool IsPublicityStarted(ref string exception)
+        {
+            return true;
+        }
     }
 }

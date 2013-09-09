@@ -18,7 +18,6 @@ namespace SQS.UI.Pages.InputManagement
             if (!IsPostBack)
             {
                 bindBookInformationToGrid();
-                bindYearsToDropDownList();
             }
         }
         #endregion
@@ -66,7 +65,8 @@ namespace SQS.UI.Pages.InputManagement
         {
             string exception = "";
             string fileName = Server.MapPath("../../upload/" + ViewState["filename"].ToString());
-            if (InputManagementCtrl.InportBookExcel(fileName, ref exception))
+            int createCount = 0, updateCount = 0;   //新增数量和更新数量
+            if (InputManagementCtrl.InportBookExcel(fileName, ref createCount, ref updateCount, ref exception))
             {
                 FileUpload_ExcelFile.Reset();
                 Alert.ShowInTop("上传成功！", MessageBoxIcon.Information);
@@ -91,26 +91,7 @@ namespace SQS.UI.Pages.InputManagement
             Response.AddHeader("content-disposition", "attachment;filename=" + Server.UrlEncode("著作信息模板.zip"));
             string path = Server.MapPath(@"..\..\downloadfiles\template\著作信息模板.zip");
             Response.TransmitFile(path);
-        }
-
-        /// <summary>
-        /// 搜索类型改变事件
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        protected void SearchType_Changed(object sender, EventArgs e)
-        {
-            if (RadioButton_SearchByName.Checked == true)
-            {
-                TextBox_Name.Enabled = true;
-                DropDownList_Depart.Enabled = false;
-            }
-            else
-            {
-                TextBox_Name.Enabled = false;
-                DropDownList_Depart.Enabled = true;
-            }
-        }
+        }        
         #endregion
 
         #region Private Method
@@ -120,23 +101,6 @@ namespace SQS.UI.Pages.InputManagement
         private void bindBookInformationToGrid()
         { 
         
-        }
-
-        /// <summary>
-        /// 绑定从2013到当前年份到下拉列表
-        /// </summary>
-        private void bindYearsToDropDownList()
-        {
-            string exception = "";
-            List<string> yearList = new List<string>();
-            if (CommonCtrl.GetYearList(ref yearList, ref exception))
-            {
-                DropDownList_StartYear.DataSource = yearList;
-                DropDownList_StartYear.DataBind();
-
-                DropDownList_StopYear.DataSource = yearList;
-                DropDownList_StopYear.DataBind();
-            }
         }
         #endregion
     }

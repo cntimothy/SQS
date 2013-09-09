@@ -41,9 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessLevel.cs" />
-    <Compile Include="Depart.cs" />
+    <Compile Include="DepartStaffInformation.cs" />
+    <Compile Include="DepartScore.cs" />
     <Compile Include="LoginType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchCondition.cs" />
     <Compile Include="UserInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
