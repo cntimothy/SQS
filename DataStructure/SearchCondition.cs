@@ -58,7 +58,7 @@ namespace SQS.DataStructure
         }
 
         /// <summary>
-        /// 发表日期（起）
+        /// 发表、出版、结题日期（起）（年月）
         /// </summary>
         public string PublishDateStart
         {
@@ -67,7 +67,7 @@ namespace SQS.DataStructure
         }
 
         /// <summary>
-        /// 发表日期（止）
+        /// 发表、出版、结题日期（止）（年月）
         /// </summary>
         public string PublishDateStop
         {
@@ -76,7 +76,7 @@ namespace SQS.DataStructure
         }
 
         /// <summary>
-        /// 创建日期（起）
+        /// 创建日期（起）（年月日）
         /// </summary>
         public string CreateDateStart
         {
@@ -85,7 +85,7 @@ namespace SQS.DataStructure
         }
 
         /// <summary>
-        /// 创建日期（止）
+        /// 创建日期（止）（年月日）
         /// </summary>
         public string CreateDateStop
         {
@@ -94,7 +94,7 @@ namespace SQS.DataStructure
         }
 
         /// <summary>
-        /// 更新日期（起）
+        /// 更新日期（起）（年月日）
         /// </summary>
         public string UpdateDateStart
         {
@@ -103,7 +103,7 @@ namespace SQS.DataStructure
         }
 
         /// <summary>
-        /// 更新日期（止）
+        /// 更新日期（止）（年月日）
         /// </summary>
         public string UpdateDateStop
         {
@@ -113,6 +113,19 @@ namespace SQS.DataStructure
         #endregion
 
         #region Constructor
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="name">姓名</param>
+        /// <param name="workName">著作、论文、课题名</param>
+        /// <param name="departId">部系id</param>
+        /// <param name="officeId">处室id</param>
+        /// <param name="publishDateStart">发表、出版、结题日期（起）（年月）</param>
+        /// <param name="publishDateStop">发表、出版、结题日期（止）（年月）</param>
+        /// <param name="createDateStart">创建日期（起）（年月日）</param>
+        /// <param name="createDateStop">创建日期（止）（年月日）</param>
+        /// <param name="updateDateStart">更新日期（起）（年月日）</param>
+        /// <param name="updateDateStop">更新日期（止）（年月日）</param>
         public SearchCondition(string name, string workName, string departId, string officeId, string publishDateStart, string publishDateStop, string createDateStart, string createDateStop, string updateDateStart, string updateDateStop)
         {
             this.Name = name;

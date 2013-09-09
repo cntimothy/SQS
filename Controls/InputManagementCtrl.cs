@@ -45,6 +45,29 @@ namespace SQS.Controller
         {
             return true;
         }
+
+        /// <summary>
+        /// 根据记录ID获取论文信息
+        /// </summary>
+        /// <param name="paper">论文信息</param>
+        /// <param name="id">记录ID</param>
+        /// <param name="exception"></param>
+        /// <returns>获取成功返回true，否则返回false</returns>
+        public static bool GetPaperById(ref Paper paper, string id, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 更新论文信息
+        /// </summary>
+        /// <param name="paper"></param>
+        /// <param name="exception"></param>
+        /// <returns>更新成功返回true，否则返回false</returns>
+        public static bool UpdatePaper(Paper paper, ref string exception)
+        {
+            return true;
+        }
         #endregion Paper
 
         #region Topic
@@ -83,6 +106,29 @@ namespace SQS.Controller
         {
             return true;
         }
+
+        /// <summary>
+        /// 根据记录ID获取课题信息
+        /// </summary>
+        /// <param name="topic">课题信息</param>
+        /// <param name="id">记录ID</param>
+        /// <param name="exception"></param>
+        /// <returns>获取成功返回true，否则返回false</returns>
+        public static bool GetTopicById(ref Topic topic, string id, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 更新课题信息
+        /// </summary>
+        /// <param name="topic"></param>
+        /// <param name="exception"></param>
+        /// <returns>更新成功返回true，否则返回false</returns>
+        public static bool UpdateTopic(Topic topic, ref string exception)
+        {
+            return true;
+        }
         #endregion Topic
 
         #region Book
@@ -118,6 +164,29 @@ namespace SQS.Controller
         /// <param name="exception"></param>
         /// <returns>查询成功且结果不为空返回true，否则返回false</returns>
         public static bool GetBookInformationByCondition(ref DataTable table, SearchCondition searchCondition, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 根据记录ID获取著作信息
+        /// </summary>
+        /// <param name="book">著作信息</param>
+        /// <param name="id">记录ID</param>
+        /// <param name="exception"></param>
+        /// <returns>获取成功返回true，否则返回false</returns>
+        public static bool GetBookById(ref Book book, string id, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 更新著作信息
+        /// </summary>
+        /// <param name="paper"></param>
+        /// <param name="exception"></param>
+        /// <returns>更新成功返回true，否则返回false</returns>
+        public static bool UpdateBook(Book book, ref string exception)
         {
             return true;
         }
