@@ -68,6 +68,17 @@ namespace SQS.Controller
         {
             return true;
         }
+
+        /// <summary>
+        /// 删除指定id的论文
+        /// </summary>
+        /// <param name="idList">ID列表</param>
+        /// <param name="exception"></param>
+        /// <returns>删除成功返回true，否则返回false</returns>
+        public static bool DeletePapersByIds(List<string> idList, ref string exception)
+        {
+            return true;
+        }
         #endregion Paper
 
         #region Topic
@@ -129,6 +140,17 @@ namespace SQS.Controller
         {
             return true;
         }
+
+        /// <summary>
+        /// 删除指定id的课题
+        /// </summary>
+        /// <param name="idList">ID列表</param>
+        /// <param name="exception"></param>
+        /// <returns>删除成功返回true，否则返回false</returns>
+        public static bool DeleteTopicsByIds(List<string> idList, ref string exception)
+        {
+            return true;
+        }
         #endregion Topic
 
         #region Book
@@ -187,6 +209,17 @@ namespace SQS.Controller
         /// <param name="exception"></param>
         /// <returns>更新成功返回true，否则返回false</returns>
         public static bool UpdateBook(Book book, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 删除指定id的著作
+        /// </summary>
+        /// <param name="idList">ID列表</param>
+        /// <param name="exception"></param>
+        /// <returns>删除成功返回true，否则返回false</returns>
+        public static bool DeleteBooksByIds(List<string> idList, ref string exception)
         {
             return true;
         }

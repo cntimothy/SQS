@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructure", "DataStructure\DataStructure.csproj", "{554B3AC6-1C5A-4AF7-8159-A7E703680D7A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQS.DataStructure", "DataStructure\SQS.DataStructure.csproj", "{554B3AC6-1C5A-4AF7-8159-A7E703680D7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controls\Controller.csproj", "{6DC15947-F158-4679-98B1-4F26B0CD9D56}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQS.Controller", "Controls\SQS.Controller.csproj", "{6DC15947-F158-4679-98B1-4F26B0CD9D56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{4E741CCD-C334-49FD-BA0E-8C8E343FBC51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQS.UI", "UI\SQS.UI.csproj", "{4E741CCD-C334-49FD-BA0E-8C8E343FBC51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

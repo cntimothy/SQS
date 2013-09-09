@@ -1883,6 +1883,9 @@
     <Content Include="js\default.js" />
     <Content Include="lib\FineUI.dll" />
     <Content Include="lib\Newtonsoft.Json.dll" />
+    <Content Include="Pages\BasicInformationManagement\GradeManagement.aspx" />
+    <Content Include="Pages\BasicInformationManagement\OfficeManagement.aspx" />
+    <Content Include="Pages\Common\iframe_UpdateGrade.aspx" />
     <Content Include="Pages\HomePage.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Pages\InputManagement\BookUpload.aspx" />
@@ -1892,7 +1895,8 @@
     <Content Include="Pages\InputManagement\PaperUpload.aspx" />
     <Content Include="Pages\InputManagement\StaffUpload.aspx" />
     <Content Include="Pages\InputManagement\TopicUpload.aspx" />
-    <Content Include="Pages\OutputManagement\StaticalResultExport.aspx" />
+    <Content Include="Pages\OutputManagement\StaticalCountExport.aspx" />
+    <Content Include="Pages\OutputManagement\StaticalScoreExport.aspx" />
     <Content Include="Pages\PublicityManagement\StartOrStop.aspx" />
     <Content Include="Pages\SearchManagement\Search.aspx" />
     <Content Include="Style\alogin.css" />
@@ -1921,6 +1925,27 @@
   <ItemGroup>
     <Compile Include="Code\PageBase.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\BasicInformationManagement\GradeManagement.aspx.cs">
+      <DependentUpon>GradeManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\BasicInformationManagement\GradeManagement.aspx.designer.cs">
+      <DependentUpon>GradeManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BasicInformationManagement\OfficeManagement.aspx.cs">
+      <DependentUpon>OfficeManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\BasicInformationManagement\OfficeManagement.aspx.designer.cs">
+      <DependentUpon>OfficeManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Common\iframe_UpdateGrade.aspx.cs">
+      <DependentUpon>iframe_UpdateGrade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Common\iframe_UpdateGrade.aspx.designer.cs">
+      <DependentUpon>iframe_UpdateGrade.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
@@ -1985,12 +2010,19 @@
     <Compile Include="Pages\InputManagement\TopicUpload.aspx.designer.cs">
       <DependentUpon>TopicUpload.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\OutputManagement\StaticalResultExport.aspx.cs">
-      <DependentUpon>StaticalResultExport.aspx</DependentUpon>
+    <Compile Include="Pages\OutputManagement\StaticalCountExport.aspx.cs">
+      <DependentUpon>StaticalCountExport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\OutputManagement\StaticalResultExport.aspx.designer.cs">
-      <DependentUpon>StaticalResultExport.aspx</DependentUpon>
+    <Compile Include="Pages\OutputManagement\StaticalCountExport.aspx.designer.cs">
+      <DependentUpon>StaticalCountExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OutputManagement\StaticalScoreExport.aspx.cs">
+      <DependentUpon>StaticalScoreExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OutputManagement\StaticalScoreExport.aspx.designer.cs">
+      <DependentUpon>StaticalScoreExport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\PublicityManagement\StartOrStop.aspx.cs">
       <DependentUpon>StartOrStop.aspx</DependentUpon>
@@ -2016,11 +2048,11 @@
     <None Include="images\logo\logo_127.psd" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Controls\Controller.csproj">
+    <ProjectReference Include="..\Controls\SQS.Controller.csproj">
       <Project>{6DC15947-F158-4679-98B1-4F26B0CD9D56}</Project>
       <Name>Controller</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataStructure\DataStructure.csproj">
+    <ProjectReference Include="..\DataStructure\SQS.DataStructure.csproj">
       <Project>{554B3AC6-1C5A-4AF7-8159-A7E703680D7A}</Project>
       <Name>DataStructure</Name>
     </ProjectReference>

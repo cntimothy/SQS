@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasicInformationManagementCtrl.cs" />
     <Compile Include="CommonCtrl.cs" />
     <Compile Include="InputManagementCtrl.cs" />
     <Compile Include="LoginManagementCtrl.cs" />
@@ -57,9 +58,9 @@
     <Compile Include="SearchManagementCtrl.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataStructure\DataStructure.csproj">
+    <ProjectReference Include="..\DataStructure\SQS.DataStructure.csproj">
       <Project>{554B3AC6-1C5A-4AF7-8159-A7E703680D7A}</Project>
-      <Name>DataStructure</Name>
+      <Name>SQS.DataStructure</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
