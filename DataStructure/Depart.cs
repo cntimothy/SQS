@@ -33,6 +33,10 @@ namespace SQS.DataStructure
         }
         #endregion
     }
+
+    /// <summary>
+    /// 用于部门处室管理
+    /// </summary>
     public class Depart
     {
         #region Private Field

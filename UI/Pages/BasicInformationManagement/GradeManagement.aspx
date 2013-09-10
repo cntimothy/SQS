@@ -18,9 +18,10 @@
                     <x:Grid ID="Grid1" runat="server" Title="Grid" AllowPaging="false" EnableRowNumber="true"
                         ShowHeader="false">
                         <Columns>
-                            <x:BoundField Width="100px" DataField="ID" DataFormatString="{0}" HeaderText="用户名"
+                            <x:BoundField Width="100px" DataField="ID" DataFormatString="{0}" HeaderText="ID"
                                 Hidden="true" />
-                            <x:BoundField Width="100px" DataField="Name" DataFormatString="{0}" HeaderText="名称" />
+                            <x:BoundField Width="100px" ExpandUnusedSpace="true" DataField="Name" DataFormatString="{0}"
+                                HeaderText="名称" />
                             <x:WindowField ColumnID="WindowField_Update" TextAlign="Center" Width="80px" WindowID="Window_Update"
                                 Text="修改" ToolTip="修改名称" Title="操作" IFrameUrl="iframe_UpdateGrade.aspx" DataIFrameUrlFields="ID"
                                 DataIFrameUrlFormatString="iframe_UpdateGrade.aspx?id={0}&source='Book'" />
@@ -34,12 +35,13 @@
                     <x:Grid ID="Grid2" runat="server" Title="Grid" AllowPaging="false" EnableRowNumber="true"
                         ShowHeader="false">
                         <Columns>
-                            <x:BoundField Width="100px" DataField="ID" DataFormatString="{0}" HeaderText="用户名"
+                            <x:BoundField Width="100px" DataField="ID" DataFormatString="{0}" HeaderText="ID"
                                 Hidden="true" />
-                            <x:BoundField Width="100px" DataField="Name" DataFormatString="{0}" HeaderText="名称" />
+                            <x:BoundField Width="100px" ExpandUnusedSpace="true" DataField="Name" DataFormatString="{0}"
+                                HeaderText="名称" />
                             <x:WindowField ColumnID="WindowField_Update" TextAlign="Center" Width="80px" WindowID="Window_Update"
                                 Text="修改" ToolTip="修改名称" Title="操作" IFrameUrl="iframe_UpdateGrade.aspx" DataIFrameUrlFields="ID"
-                                DataIFrameUrlFormatString="iframe_UpdateGrade.aspx?id={0}&source='Paper'" />
+                                DataIFrameUrlFormatString="iframe_UpdateGrade.aspx?id={0}&source='Book'" />
                         </Columns>
                     </x:Grid>
                 </Items>
@@ -50,12 +52,13 @@
                     <x:Grid ID="Grid3" runat="server" Title="Grid" AllowPaging="false" EnableRowNumber="true"
                         ShowHeader="false">
                         <Columns>
-                            <x:BoundField Width="100px" DataField="ID" DataFormatString="{0}" HeaderText="用户名"
+                            <x:BoundField Width="100px" DataField="ID" DataFormatString="{0}" HeaderText="ID"
                                 Hidden="true" />
-                            <x:BoundField Width="100px" DataField="Name" DataFormatString="{0}" HeaderText="名称" />
+                            <x:BoundField Width="100px" ExpandUnusedSpace="true" DataField="Name" DataFormatString="{0}"
+                                HeaderText="名称" />
                             <x:WindowField ColumnID="WindowField_Update" TextAlign="Center" Width="80px" WindowID="Window_Update"
                                 Text="修改" ToolTip="修改名称" Title="操作" IFrameUrl="iframe_UpdateGrade.aspx" DataIFrameUrlFields="ID"
-                                DataIFrameUrlFormatString="iframe_UpdateGrade.aspx?id={0}&source='Topic'" />
+                                DataIFrameUrlFormatString="iframe_UpdateGrade.aspx?id={0}&source='Book'" />
                         </Columns>
                     </x:Grid>
                 </Items>
@@ -66,12 +69,13 @@
                     <x:Grid ID="Grid4" runat="server" Title="Grid" AllowPaging="false" EnableRowNumber="true"
                         ShowHeader="false">
                         <Columns>
-                            <x:BoundField Width="100px" DataField="ID" DataFormatString="{0}" HeaderText="用户名"
+                            <x:BoundField Width="100px" DataField="ID" DataFormatString="{0}" HeaderText="ID"
                                 Hidden="true" />
-                            <x:BoundField Width="100px" DataField="Name" DataFormatString="{0}" HeaderText="名称" />
+                            <x:BoundField Width="100px" ExpandUnusedSpace="true" DataField="Name" DataFormatString="{0}"
+                                HeaderText="名称" />
                             <x:WindowField ColumnID="WindowField_Update" TextAlign="Center" Width="80px" WindowID="Window_Update"
                                 Text="修改" ToolTip="修改名称" Title="操作" IFrameUrl="iframe_UpdateGrade.aspx" DataIFrameUrlFields="ID"
-                                DataIFrameUrlFormatString="iframe_UpdateGrade.aspx?id={0}&source='rewardgrade'" />
+                                DataIFrameUrlFormatString="iframe_UpdateGrade.aspx?id={0}&source='Book'" />
                         </Columns>
                     </x:Grid>
                 </Items>
@@ -82,12 +86,13 @@
                     <x:Grid ID="Grid5" runat="server" Title="Grid" AllowPaging="false" EnableRowNumber="true"
                         ShowHeader="false">
                         <Columns>
-                            <x:BoundField Width="100px" DataField="ID" DataFormatString="{0}" HeaderText="用户名"
+                            <x:BoundField Width="100px" DataField="ID" DataFormatString="{0}" HeaderText="ID"
                                 Hidden="true" />
-                            <x:BoundField Width="100px" DataField="Name" DataFormatString="{0}" HeaderText="名称" />
+                            <x:BoundField Width="100px" ExpandUnusedSpace="true" DataField="Name" DataFormatString="{0}"
+                                HeaderText="名称" />
                             <x:WindowField ColumnID="WindowField_Update" TextAlign="Center" Width="80px" WindowID="Window_Update"
                                 Text="修改" ToolTip="修改名称" Title="操作" IFrameUrl="iframe_UpdateGrade.aspx" DataIFrameUrlFields="ID"
-                                DataIFrameUrlFormatString="iframe_UpdateGrade.aspx?id={0}&source='rewardclass'" />
+                                DataIFrameUrlFormatString="iframe_UpdateGrade.aspx?id={0}&source='Book'" />
                         </Columns>
                     </x:Grid>
                 </Items>

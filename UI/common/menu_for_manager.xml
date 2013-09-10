@@ -25,9 +25,9 @@
     </TreeNode>
   </TreeNode>
   <TreeNode Text="基础信息维护" SingleClickExpand="true">
-    <TreeNode Text="部系处室维护" NavigateUrl="~/Pages/BasicInformationManagement/GradeManagement.aspx" >
+    <TreeNode Text="等级维护" NavigateUrl="~/Pages/BasicInformationManagement/GradeManagement.aspx" >
     </TreeNode>
-    <TreeNode Text="等级维护" NavigateUrl="~/Pages/BasicInformationManagement/OfficeManagement.aspx" >
+    <TreeNode Text="部系处室维护" NavigateUrl="~/Pages/BasicInformationManagement/OfficeManagement.aspx" >
     </TreeNode>
   </TreeNode>
 </Tree>

@@ -94,6 +94,15 @@ namespace SQS.UI.Pages.OutputManagement {
         protected global::FineUI.DropDownList DropDownList_StopMonth;
         
         /// <summary>
+        /// ToolbarSeparator2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.ToolbarSeparator ToolbarSeparator2;
+        
+        /// <summary>
         /// Button_GetResult 控件。
         /// </summary>
         /// <remarks>

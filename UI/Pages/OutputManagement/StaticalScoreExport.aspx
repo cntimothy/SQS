@@ -18,18 +18,18 @@
                         <x:ListItem EnableSelect="false" Selected="true" Text="选择开始年份" Value="0" />
                     </x:DropDownList>
                     <x:DropDownList ID="DropDownList_StartMonth" runat="server" Label="Label" Width="50px">
-                        <x:ListItem EnableSelect="true" Selected="true" Text="1" Value="1" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="2" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="3" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="4" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="5" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="6" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="7" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="8" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="9" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="10" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="11" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="12" />
+                        <x:ListItem EnableSelect="true" Selected="true" Text="1月" Value="1" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="2月" Value="2" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="3月" Value="3" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="4月" Value="4" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="5月" Value="5" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="6月" Value="6" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="7月" Value="7" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="8月" Value="8" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="9月" Value="9" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="10月" Value="10" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="11月" Value="11" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="12月" Value="12" />
                     </x:DropDownList>
                     <x:Label ID="Label1" runat="server" Label="Label" Text="到" Width="40px">
                     </x:Label>
@@ -37,18 +37,18 @@
                         <x:ListItem EnableSelect="false" Selected="true" Text="选择结束年份" Value="0" />
                     </x:DropDownList>
                     <x:DropDownList ID="DropDownList_StopMonth" runat="server" Label="Label" Width="50px">
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="1" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="2" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="3" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="4" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="5" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="6" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="7" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="8" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="9" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="10" />
-                        <x:ListItem EnableSelect="true" Selected="false" Text="1" Value="11" />
-                        <x:ListItem EnableSelect="true" Selected="true" Text="1" Value="12" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="1月" Value="1" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="2月" Value="2" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="3月" Value="3" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="4月" Value="4" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="5月" Value="5" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="6月" Value="6" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="7月" Value="7" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="8月" Value="8" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="9月" Value="9" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="10月" Value="10" />
+                        <x:ListItem EnableSelect="true" Selected="false" Text="11月" Value="11" />
+                        <x:ListItem EnableSelect="true" Selected="true" Text="12月" Value="12" />
                     </x:DropDownList>
                     <x:ToolbarSeparator ID="ToolbarSeparator2" runat="server">
                     </x:ToolbarSeparator>
@@ -63,7 +63,7 @@
             <x:Panel ID="Panel2" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
                 Title="Panel">
                 <Items>
-                    <x:Grid ID="Grid1" runat="server" Title="输出总表">
+                    <x:Grid ID="Grid1" runat="server" Title="输出总表" AutoScroll="true" Height="500px">
                         <Columns>
                             <x:BoundField Width="100px" DataField="Name" DataFormatString="{0}" HeaderText="部系（大单位）" />
                             <x:BoundField Width="200px" DataField="Name" DataFormatString="{0}" HeaderText="处室（单位）" />

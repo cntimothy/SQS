@@ -18,11 +18,19 @@
                     </x:Button>
                     <x:ToolbarSeparator ID="ToolbarSeparator1" runat="server">
                     </x:ToolbarSeparator>
-                    <x:Button ID="Button2" runat="server" Text="新增">
+                    <x:Button ID="Button2" runat="server" Text="新增部系">
                     </x:Button>
                     <x:ToolbarSeparator ID="ToolbarSeparator2" runat="server">
                     </x:ToolbarSeparator>
                     <x:Button ID="Button3" runat="server" Text="删除部系">
+                    </x:Button>
+                    <x:ToolbarSeparator ID="ToolbarSeparator3" runat="server">
+                    </x:ToolbarSeparator>
+                    <x:Button ID="Button4" runat="server" Text="新增处室">
+                    </x:Button>
+                    <x:ToolbarSeparator ID="ToolbarSeparator4" runat="server">
+                    </x:ToolbarSeparator>
+                    <x:Button ID="Button5" runat="server" Text="删除处室">
                     </x:Button>
                 </Items>
             </x:Toolbar>
@@ -37,8 +45,6 @@
                                 Hidden="true" />
                             <x:BoundField Width="100px" DataField="Depart" DataFormatString="{0}" HeaderText="部系" />
                             <x:BoundField Width="100px" DataField="Office" DataFormatString="{0}" HeaderText="处室" />
-                            <x:LinkButtonField HeaderText="操作" Width="100px" ConfirmText="确定删除？" ConfirmTarget="Top"
-                                CommandName="Delete" Text="删除" />
                         </Columns>
                     </x:Grid>
                 </Items>

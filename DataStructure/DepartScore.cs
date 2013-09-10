@@ -200,6 +200,9 @@ namespace SQS.DataStructure
     #endregion
 
     #region class DepartScore
+    /// <summary>
+    /// 用于分数统计
+    /// </summary>
     public class DepartScore
     {
         #region private Field

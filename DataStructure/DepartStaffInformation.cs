@@ -12,7 +12,7 @@ namespace SQS.DataStructure
         private int staffCount;
         #endregion
 
-        #region Public Field;
+        #region Public Field
         /// <summary>
         /// 处室名称
         /// </summary>
@@ -41,6 +41,9 @@ namespace SQS.DataStructure
         #endregion
     }
 
+    /// <summary>
+    /// 用于人员信息
+    /// </summary>
     public class DepartStaffInformation
     {
         #region Private Field

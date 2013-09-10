@@ -79,6 +79,17 @@ namespace SQS.Controller
         {
             return true;
         }
+
+        /// <summary>
+        /// 获取论文发表级别的名称ID字典
+        /// </summary>
+        /// <param name="nameIdDic"></param>
+        /// <param name="exception"></param>
+        /// <returns>查询成功且非空返回true，否则返回false</returns>
+        public static bool GetPublishGradeNameIdDicForPaper(ref Dictionary<string, string> nameIdDic, ref string exception)
+        {
+            return true;
+        }
         #endregion Paper
 
         #region Topic
@@ -148,6 +159,17 @@ namespace SQS.Controller
         /// <param name="exception"></param>
         /// <returns>删除成功返回true，否则返回false</returns>
         public static bool DeleteTopicsByIds(List<string> idList, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 获取课题级别的名称ID字典
+        /// </summary>
+        /// <param name="nameIdDic"></param>
+        /// <param name="exception"></param>
+        /// <returns>查询成功且非空返回true，否则返回false</returns>
+        public static bool GetTopicGradeNameIdDicForTopic(ref Dictionary<string, string> nameIdDic, ref string exception)
         {
             return true;
         }
@@ -223,6 +245,17 @@ namespace SQS.Controller
         {
             return true;
         }
+
+        /// <summary>
+        /// 获取著作发行级别的名称ID字典
+        /// </summary>
+        /// <param name="nameIdDic"></param>
+        /// <param name="exception"></param>
+        /// <returns>查询成功且非空返回true，否则返回false</returns>
+        public static bool GetPublishGradeNameIdDicForBook(ref Dictionary<string, string> nameIdDic, ref string exception)
+        {
+            return true;
+        }
         #endregion
 
         #region Staff
@@ -260,6 +293,30 @@ namespace SQS.Controller
         //{
         //    return true;
         //}
+        #endregion
+
+        #region Common
+        /// <summary>
+        /// 获取奖励级别级别的名称ID字典
+        /// </summary>
+        /// <param name="nameIdDic"></param>
+        /// <param name="exception"></param>
+        /// <returns>查询成功且非空返回true，否则返回false</returns>
+        public static bool GetRewardGradeNameIdDic(ref Dictionary<string, string> nameIdDic, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 获取奖励等级的名称ID字典
+        /// </summary>
+        /// <param name="nameIdDic"></param>
+        /// <param name="exception"></param>
+        /// <returns>查询成功且非空返回true，否则返回false</returns>
+        public static bool GetRewardClassNameIdDic(ref Dictionary<string, string> nameIdDic, ref string exception)
+        {
+            return true;
+        }
         #endregion
     }
 }

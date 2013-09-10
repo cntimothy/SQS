@@ -42,6 +42,84 @@ namespace SQS.Controller
         }
 
         /// <summary>
+        /// 新增部系
+        /// </summary>
+        /// <param name="newDepartName">新部系名称</param>
+        /// <param name="exception"></param>
+        /// <returns>新增成功返回true，否则返回false</returns>
+        public static bool AddNewDepart(string newDepartName, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 新增处室
+        /// </summary>
+        /// <param name="departId">部系id</param>
+        /// <param name="newOfficeName">新处室名称</param>
+        /// <param name="exception"></param>
+        /// <returns>新增成功返回true，否则返回false</returns>
+        public static bool AddNewDepart(string departId, string newOfficeName, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 获取著作发行级别
+        /// </summary>
+        /// <param name="table">(ID, Name)</param>
+        /// <param name="exception"></param>
+        /// <returns></returns>
+        public static bool GetPublishGradeForBook(ref DataTable table, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 获取论文发表级别
+        /// </summary>
+        /// <param name="table">(ID, Name)</param>
+        /// <param name="exception"></param>
+        /// <returns></returns>
+        public static bool GetPublishGradeForPaper(ref DataTable table, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 获取课题级别
+        /// </summary>
+        /// <param name="table">(ID, Name)</param>
+        /// <param name="exception"></param>
+        /// <returns></returns>
+        public static bool GetTopicGrade(ref DataTable table, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 获取奖励级别
+        /// </summary>
+        /// <param name="table">(ID, Name)</param>
+        /// <param name="exception"></param>
+        /// <returns></returns>
+        public static bool GetRewardGrade(ref DataTable table, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 获取奖励等级
+        /// </summary>
+        /// <param name="table">(ID, Name)</param>
+        /// <param name="exception"></param>
+        /// <returns></returns>
+        public static bool GetRewardClass(ref DataTable table, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
         /// 更新著作发行级别名称
         /// </summary>
         /// <param name="bookPublishGradeId">著作发行级别id</param>
