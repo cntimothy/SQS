@@ -19,13 +19,9 @@ namespace SQS.DataStructure
         private string rewardGradeId;
         private string rewardClassId;
         private string completeType;
-        private string wordCount;
-        private string autherCount;
-        private string auther1;
-        private string auther2;
-        private string auther3;
-        private string auther4;
-        private string auther5;
+        private int wordCount;
+        private int autherCount;
+        private int autherOrder;
         #endregion
 
         #region Public Field
@@ -131,7 +127,7 @@ namespace SQS.DataStructure
         /// <summary>
         /// 字数
         /// </summary>
-        public string WordCount
+        public int WordCount
         {
             get { return wordCount; }
             set { wordCount = value; }
@@ -140,56 +136,20 @@ namespace SQS.DataStructure
         /// <summary>
         /// 参与人数
         /// </summary>
-        public string AutherCount
+        public int AutherCount
         {
             get { return autherCount; }
             set { autherCount = value; }
         }
 
         /// <summary>
-        /// 参与人1
+        /// 第几作者
         /// </summary>
-        public string Auther1
+        public int AutherOrder
         {
-            get { return auther1; }
-            set { auther1 = value; }
-        }
-
-        /// <summary>
-        /// 参与人2
-        /// </summary>
-        public string Auther2
-        {
-            get { return auther2; }
-            set { auther2 = value; }
-        }
-
-        /// <summary>
-        /// 参与人3
-        /// </summary>
-        public string Auther3
-        {
-            get { return auther3; }
-            set { auther3 = value; }
-        }
-
-        /// <summary>
-        /// 参与人4
-        /// </summary>
-        public string Auther4
-        {
-            get { return auther4; }
-            set { auther4 = value; }
-        }
-
-        /// <summary>
-        /// 5人以上（含）
-        /// </summary>
-        public string Auther5
-        {
-            get { return auther5; }
-            set { auther5 = value; }
-        }
+            get { return autherOrder; }
+            set { autherOrder = value; }
+        }        
         #endregion
 
         #region Constructor
@@ -214,7 +174,7 @@ namespace SQS.DataStructure
         /// <param name="auther3">参与人3</param>
         /// <param name="auther4">参与人4</param>
         /// <param name="auther5">5人以上（含）</param>
-        public Topic(string id, string departId, string officeId, string name, string topicName, string topicGradeId, string startTime, string stopTime, string rewardGradeId, string rewardClassId, string completeType, string wordCount, string autherCount, string auther1, string auther2, string auther3, string auther4, string auther5)
+        public Topic(string id, string departId, string officeId, string name, string topicName, string topicGradeId, string startTime, string stopTime, string rewardGradeId, string rewardClassId, string completeType, int wordCount, int autherCount, int autherOrder)
         {
             this.Id = id;
             this.DepartId = departId;
@@ -229,12 +189,14 @@ namespace SQS.DataStructure
             this.CompleteType = completeType;
             this.WordCount = wordCount;
             this.AutherCount = autherCount;
-            this.Auther1 = auther1;
-            this.Auther2 = auther2;
-            this.Auther3 = auther3;
-            this.Auther4 = auther4;
-            this.Auther5 = auther5;
+            this.AutherOrder = autherOrder;
         }
+
+        /// <summary>
+        /// 默认构造函数
+        /// </summary>
+        public Topic()
+        { }
         #endregion
     }
 }

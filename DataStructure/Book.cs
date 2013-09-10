@@ -18,13 +18,9 @@ namespace SQS.Controller
         private string publishGradeId;
         private string rewardGradeId;
         private string rewardClassId;
-        private string wordCount;
-        private string autherCount;
-        private string auther1;
-        private string auther2;
-        private string auther3;
-        private string auther4;
-        private string auther5;
+        private int wordCount;
+        private int autherCount;
+        private int autherOrder;
         #endregion
 
         #region Public Field
@@ -121,7 +117,7 @@ namespace SQS.Controller
         /// <summary>
         /// 字数
         /// </summary>
-        public string WordCount
+        public int WordCount
         {
             get { return wordCount; }
             set { wordCount = value; }
@@ -130,60 +126,40 @@ namespace SQS.Controller
         /// <summary>
         /// 编写人数
         /// </summary>
-        public string AutherCount
+        public int AutherCount
         {
             get { return autherCount; }
             set { autherCount = value; }
         }
 
         /// <summary>
-        /// 编1
+        /// 第几编者
         /// </summary>
-        public string Auther1
+        public int AutherOrder
         {
-            get { return auther1; }
-            set { auther1 = value; }
-        }
-
-        /// <summary>
-        /// 编2
-        /// </summary>
-        public string Auther2
-        {
-            get { return auther2; }
-            set { auther2 = value; }
-        }
-
-        /// <summary>
-        /// 编3
-        /// </summary>
-        public string Auther3
-        {
-            get { return auther3; }
-            set { auther3 = value; }
-        }
-
-        /// <summary>
-        /// 编4
-        /// </summary>
-        public string Auther4
-        {
-            get { return auther4; }
-            set { auther4 = value; }
-        }
-
-        /// <summary>
-        /// 编5以上（含）
-        /// </summary>
-        public string Auther5
-        {
-            get { return auther5; }
-            set { auther5 = value; }
+            get { return autherOrder; }
+            set { autherOrder = value; }
         }
         #endregion
 
         #region Constructor
-        public Book(string id, string departId, string officeId, string name, string bookName, string press, string publishDate, string publishGradeId, string rewardGradeId, string rewardClassId, string wordCount, string autherCount, string auther1, string auther2, string auther3, string auther4, string auther5)
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="id">记录id</param>
+        /// <param name="departId">部系id</param>
+        /// <param name="officeId">处室id</param>
+        /// <param name="name">姓名</param>
+        /// <param name="bookName">著作名称</param>
+        /// <param name="press">出版社</param>
+        /// <param name="publishDate">出版日期</param>
+        /// <param name="publishGradeId">出版级别id</param>
+        /// <param name="rewardGradeId">获奖级别id</param>
+        /// <param name="rewardClassId">获奖等级id</param>
+        /// <param name="wordCount">字数</param>
+        /// <param name="autherCount">作者人数</param>
+        /// <param name="autherOrder">第几作者</param>
+        public Book(string id, string departId, string officeId, string name, string bookName, string press, string publishDate, string publishGradeId, string rewardGradeId, string rewardClassId, int wordCount, int autherCount, int autherOrder)
         {
             this.Id = id;
             this.DepartId = departId;
@@ -197,12 +173,13 @@ namespace SQS.Controller
             this.RewardClassId = rewardClassId;
             this.WordCount = wordCount; ;
             this.AutherCount = autherCount;
-            this.Auther1 = auther1;
-            this.Auther2 = auther2;
-            this.Auther3 = auther3;
-            this.Auther4 = auther4;
-            this.Auther5 = auther5;
+            this.AutherOrder = autherOrder;
         }
+        /// <summary>
+        /// 默认构造函数
+        /// </summary>
+        public Book()
+        { }
         #endregion
     }
 }

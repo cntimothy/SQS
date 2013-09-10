@@ -11,7 +11,9 @@
     </TreeNode>
   </TreeNode>
   <TreeNode Text="导出管理" SingleClickExpand="true">
-    <TreeNode Text="数量统计" NavigateUrl="~/Pages/OutputManagement/StaticalCountExport.aspx" >
+    <TreeNode Text="数量统计（处室）" NavigateUrl="~/Pages/OutputManagement/StaticalCountForOfficeExport.aspx" >
+    </TreeNode>
+    <TreeNode Text="数量统计（部系）" NavigateUrl="~/Pages/OutputManagement/StaticalCountForDepartExport.aspx" >
     </TreeNode>
     <TreeNode Text="分数统计" NavigateUrl="~/Pages/OutputManagement/StaticalScoreExport.aspx" >
     </TreeNode>

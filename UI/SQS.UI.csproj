@@ -1895,7 +1895,8 @@
     <Content Include="Pages\InputManagement\PaperUpload.aspx" />
     <Content Include="Pages\InputManagement\StaffUpload.aspx" />
     <Content Include="Pages\InputManagement\TopicUpload.aspx" />
-    <Content Include="Pages\OutputManagement\StaticalCountExport.aspx" />
+    <Content Include="Pages\OutputManagement\StaticalCountForDepartExport.aspx" />
+    <Content Include="Pages\OutputManagement\StaticalCountForOfficeExport.aspx" />
     <Content Include="Pages\OutputManagement\StaticalScoreExport.aspx" />
     <Content Include="Pages\PublicityManagement\StartOrStop.aspx" />
     <Content Include="Pages\SearchManagement\Search.aspx" />
@@ -2010,12 +2011,19 @@
     <Compile Include="Pages\InputManagement\TopicUpload.aspx.designer.cs">
       <DependentUpon>TopicUpload.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\OutputManagement\StaticalCountExport.aspx.cs">
-      <DependentUpon>StaticalCountExport.aspx</DependentUpon>
+    <Compile Include="Pages\OutputManagement\StaticalCountForDepartExport.aspx.cs">
+      <DependentUpon>StaticalCountForDepartExport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\OutputManagement\StaticalCountExport.aspx.designer.cs">
-      <DependentUpon>StaticalCountExport.aspx</DependentUpon>
+    <Compile Include="Pages\OutputManagement\StaticalCountForDepartExport.aspx.designer.cs">
+      <DependentUpon>StaticalCountForDepartExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OutputManagement\StaticalCountForOfficeExport.aspx.cs">
+      <DependentUpon>StaticalCountForOfficeExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OutputManagement\StaticalCountForOfficeExport.aspx.designer.cs">
+      <DependentUpon>StaticalCountForOfficeExport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\OutputManagement\StaticalScoreExport.aspx.cs">
       <DependentUpon>StaticalScoreExport.aspx</DependentUpon>

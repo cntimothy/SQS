@@ -18,11 +18,9 @@ namespace SQS.DataStructure
         private string publishGradeId;
         private string rewardGradeId;
         private string rewardClassId;
-        private string wordCount;
-        private string autherCount;
-        private string auther1;
-        private string auther2;
-        private string auther3;
+        private int wordCount;
+        private int autherCount;
+        private int autherOrder;
         #endregion
 
         #region Public Field
@@ -119,7 +117,7 @@ namespace SQS.DataStructure
         /// <summary>
         /// 字数
         /// </summary>
-        public string WordCount
+        public int WordCount
         {
             get { return wordCount; }
             set { wordCount = value; }
@@ -128,37 +126,19 @@ namespace SQS.DataStructure
         /// <summary>
         /// 作者人数
         /// </summary>
-        public string AutherCount
+        public int AutherCount
         {
             get { return autherCount; }
             set { autherCount = value; }
         }
 
         /// <summary>
-        /// 第1作者
+        /// 第几作者
         /// </summary>
-        public string Auther1
+        public int AutherOrder
         {
-            get { return auther1; }
-            set { auther1 = value; }
-        }
-
-        /// <summary>
-        /// 第2作者
-        /// </summary>
-        public string Auther2
-        {
-            get { return auther2; }
-            set { auther2 = value; }
-        }
-
-        /// <summary>
-        /// 第3作者
-        /// </summary>
-        public string Auther3
-        {
-            get { return auther3; }
-            set { auther3 = value; }
+            get { return autherOrder; }
+            set { autherOrder = value; }
         }
         #endregion
 
@@ -178,10 +158,8 @@ namespace SQS.DataStructure
         /// <param name="rewardClassId">奖励等级</param>
         /// <param name="wordCount">字数</param>
         /// <param name="autherCount">作者人数</param>
-        /// <param name="auther1">第1作者</param>
-        /// <param name="auther2">第2作者</param>
-        /// <param name="auther3">第3作者</param>
-        public Paper(string id, string departId, string officeId, string name, string paperName, string journalName, string publishDate, string publishGradeId, string rewardGradeId, string rewardClassId, string wordCount, string autherCount, string auther1, string auther2, string auther3)
+        /// <param name="autherOrder">第几作者</param>
+        public Paper(string id, string departId, string officeId, string name, string paperName, string journalName, string publishDate, string publishGradeId, string rewardGradeId, string rewardClassId, int wordCount, int autherCount, int autherOrder)
         {
             this.Id = id;
             this.DepartId = departId;
@@ -195,10 +173,14 @@ namespace SQS.DataStructure
             this.RewardClassId = rewardClassId;
             this.WordCount = wordCount;
             this.AutherCount = autherCount;
-            this.Auther1 = auther1;
-            this.Auther2 = auther2;
-            this.Auther3 = auther3;
+            this.AutherOrder = autherOrder;
         }
+
+        /// <summary>
+        /// 默认构造函数
+        /// </summary>
+        public Paper()
+        { }
         #endregion
     }
 }

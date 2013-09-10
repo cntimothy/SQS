@@ -3,19 +3,57 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
+using SQS.DataStructure;
 
 namespace SQS.Controller
 {
     public class BasicInformationManagementCtrl
     {
         /// <summary>
-        /// 获取所有部系处室信息table
+        /// 获取所有部系处室信息
         /// </summary>
-        /// <param name="table">获取的信息</param>
+        /// <param name="departList"></param>
         /// <param name="exception"></param>
         /// <returns>获取成功且非空返回true，否则返回false</returns>
-        public static bool GetAllDepartOffice(ref DataTable table, ref string exception)
+        public static bool GetAllDepartOffice(ref List<Depart> departList, ref string exception)
         {
+            Office office1 = new Office("政治理论系系部");
+            Office office2 = new Office("学员1队");
+            Office office3 = new Office("学员2队");
+            Office office4 = new Office("学员3队");
+            Office office5 = new Office("哲学教研室");
+            Office office6 = new Office("经济学教研室");
+            Office office7 = new Office("历史学教研室");
+            Depart depart1 = new Depart("政治理论系");
+            depart1.Offices.Add(office1);
+            depart1.Offices.Add(office2);
+            depart1.Offices.Add(office3);
+            depart1.Offices.Add(office4);
+            depart1.Offices.Add(office5);
+            depart1.Offices.Add(office6);
+            depart1.Offices.Add(office7);
+
+            Office office8 = new Office("党建工作系部");
+            Office office9 = new Office("学员4队");
+            Office office10 = new Office("学员5队");
+            Office office11 = new Office("学员6队");
+            Office office12 = new Office("学员7队");
+            Office office13 = new Office("党的建设教研室");
+            Office office14 = new Office("军队党的建设教研室");
+            Office office15 = new Office("党史教研室");
+            Office office16 = new Office("军队党委教研室");
+            Office office17 = new Office("纪律检查教研室");
+            Depart depart2 = new Depart("党建工作系");
+            depart2.Offices.Add(office8);
+            depart2.Offices.Add(office9);
+            depart2.Offices.Add(office10);
+            depart2.Offices.Add(office11);
+            depart2.Offices.Add(office12);
+            depart2.Offices.Add(office13);
+            depart2.Offices.Add(office14);
+            depart2.Offices.Add(office15);
+            depart2.Offices.Add(office16);
+            depart2.Offices.Add(office17);
             return true;
         }
 
@@ -72,6 +110,11 @@ namespace SQS.Controller
         /// <returns></returns>
         public static bool GetPublishGradeForBook(ref DataTable table, ref string exception)
         {
+            table.Columns.Add("ID");
+            table.Columns.Add("Name");
+            table.Rows.Add("1", "正式出版专著");
+            table.Rows.Add("2", "正式出版（编、译著，工具书）");
+            table.Rows.Add("3", "内部印刷");
             return true;
         }
 
@@ -83,6 +126,12 @@ namespace SQS.Controller
         /// <returns></returns>
         public static bool GetPublishGradeForPaper(ref DataTable table, ref string exception)
         {
+            table.Columns.Add("ID");
+            table.Columns.Add("Name");
+            table.Rows.Add("1", "指定报刊");
+            table.Rows.Add("2", "核心报刊");
+            table.Rows.Add("3", "普通报刊");
+            table.Rows.Add("4", "内部期刊");
             return true;
         }
 
@@ -94,6 +143,12 @@ namespace SQS.Controller
         /// <returns></returns>
         public static bool GetTopicGrade(ref DataTable table, ref string exception)
         {
+            table.Columns.Add("ID");
+            table.Columns.Add("Name");
+            table.Rows.Add("1", "国家课题");
+            table.Rows.Add("2", "全军课题");
+            table.Rows.Add("3", "总部课题");
+            table.Rows.Add("4", "院校课题");
             return true;
         }
 
@@ -105,6 +160,11 @@ namespace SQS.Controller
         /// <returns></returns>
         public static bool GetRewardGrade(ref DataTable table, ref string exception)
         {
+            table.Columns.Add("ID");
+            table.Columns.Add("Name");
+            table.Rows.Add("1", "国家级");
+            table.Rows.Add("2", "全军级");
+            table.Rows.Add("3", "总部级");
             return true;
         }
 
@@ -116,6 +176,11 @@ namespace SQS.Controller
         /// <returns></returns>
         public static bool GetRewardClass(ref DataTable table, ref string exception)
         {
+            table.Columns.Add("ID");
+            table.Columns.Add("Name");
+            table.Rows.Add("1", "一等奖");
+            table.Rows.Add("2", "二等奖");
+            table.Rows.Add("3", "三等奖");
             return true;
         }
 
