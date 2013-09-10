@@ -175,6 +175,7 @@ namespace SQS.Controller
             this.AutherCount = autherCount;
             this.AutherOrder = autherOrder;
         }
+       
         /// <summary>
         /// 默认构造函数
         /// </summary>

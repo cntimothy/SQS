@@ -22,7 +22,7 @@ namespace SQS.DataStructure
 
         #region Public Field
         /// <summary>
-        /// 姓名
+        /// 姓名（可模糊搜索）
         /// </summary>
         public string Name
         {
@@ -31,7 +31,7 @@ namespace SQS.DataStructure
         }
 
         /// <summary>
-        /// 著作、论文、课题名称
+        /// 著作、论文、课题名称（可模糊搜索）
         /// </summary>
         public string WorkName
         {
@@ -40,7 +40,7 @@ namespace SQS.DataStructure
         }
 
         /// <summary>
-        /// 部系名称
+        /// 部系id
         /// </summary>
         public string DepartId
         {
@@ -49,7 +49,7 @@ namespace SQS.DataStructure
         }
 
         /// <summary>
-        /// 处室名称
+        /// 处室id
         /// </summary>
         public string OfficeId
         {

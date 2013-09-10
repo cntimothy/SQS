@@ -82,12 +82,20 @@ namespace SQS.DataStructure
         #endregion
 
         #region Constructor
-        public DepartStaffInformation(string name, int staffCount)
+        public DepartStaffInformation(string name)
         {
             this.Name = name;
-            this.StaffCount = staffCount;
+            this.StaffCount = 0;
 
             this.offices = new List<OfficeStaffInformation>();
+        }
+        #endregion
+
+        #region Public Methiod
+        public void AddOffice(OfficeStaffInformation officeStaffInformation)
+        {
+            this.offices.Add(officeStaffInformation);
+            this.StaffCount += officeStaffInformation.StaffCount;
         }
         #endregion
     }
