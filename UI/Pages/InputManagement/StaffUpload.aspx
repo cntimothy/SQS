@@ -31,6 +31,11 @@
                             <x:Button ID="Button_Submit" runat="server" Text="开始上传" OnClick="Button_Submit_Click"
                                 Enabled="false">
                             </x:Button>
+                            <x:ToolbarSeparator ID="ToolbarSeparator4" runat="server">
+                            </x:ToolbarSeparator>
+                            <x:Button ID="Button1_Export" runat="server" Text="导出" OnClick="Button_Export_Click"
+                                EnableAjax="false" DisableControlBeforePostBack="false">
+                            </x:Button>
                             <x:ToolbarFill ID="ToolbarFill1" runat="server">
                             </x:ToolbarFill>
                             <x:Button ID="Button_DownloadTemplate" runat="server" Text="下载模板" OnClick="Button_DownloadTemplate_Click"
@@ -44,10 +49,10 @@
                             <x:Grid ID="Grid1" runat="server" Title="单位区分表" EnableRowNumber="true" AllowPaging="false"
                                 Height="500px" AutoScroll="true">
                                 <Columns>
-                                    <x:BoundField Width="200px" DataField="Name" DataFormatString="{0}" HeaderText="部系" />
-                                    <x:BoundField Width="200px" DataField="Name" DataFormatString="{0}" HeaderText="处室" />
-                                    <x:BoundField Width="150px" DataField="Name" DataFormatString="{0}" HeaderText="处室人数" />
-                                    <x:BoundField Width="150px" DataField="Name" DataFormatString="{0}" HeaderText="部系总人数" />
+                                    <x:BoundField Width="200px" DataField="Depart" DataFormatString="{0}" HeaderText="部系" />
+                                    <x:BoundField Width="200px" DataField="Office" DataFormatString="{0}" HeaderText="处室" />
+                                    <x:BoundField Width="150px" DataField="OfficeStaffCount" DataFormatString="{0}" HeaderText="处室人数" />
+                                    <x:BoundField Width="150px" DataField="DepartStaffCount" DataFormatString="{0}" HeaderText="部系总人数" />
                                 </Columns>
                             </x:Grid>
                         </Items>

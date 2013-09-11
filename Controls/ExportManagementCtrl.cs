@@ -7,6 +7,7 @@ using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
 using NPOI.SS.Util;
 using System.IO;
+using SQS.DataStructure;
 
 namespace SQS.Controller
 {
@@ -46,7 +47,7 @@ namespace SQS.Controller
         }
 
         /// <summary>
-        /// 穿件论文信息Excel
+        /// 创建论文信息Excel
         /// </summary>
         /// <param name="fileName">文件名</param>
         /// <param name="table"></param>
@@ -108,6 +109,168 @@ namespace SQS.Controller
             }
             return returnValue;
         }
+
+        /// <summary>
+        /// 创建人员信息Excel
+        /// </summary>
+        /// <param name="fileName">文件名</param>
+        /// <param name="departList">部门列表</param>
+        /// <param name="exception"></param>
+        /// <returns></returns>
+        public static bool ExportStaffInformation(ref string fileName, List<DepartStaffInformation> departList, ref string exception)
+        {
+            bool returnValue = true;
+
+            HSSFWorkbook hssfworkbook = new HSSFWorkbook();
+            ISheet sheet = hssfworkbook.CreateSheet("人员信息表");
+
+            CellRangeAddress region;
+
+            //设置宽度
+            sheet.SetColumnWidth(0, 18 * 256);
+            sheet.SetColumnWidth(1, 28 * 256);
+            sheet.SetColumnWidth(2, 10 * 256);
+            sheet.SetColumnWidth(3, 10 * 256);
+
+            //标题格式（居中加黑大字）
+            ICellStyle titleStyle = hssfworkbook.CreateCellStyle();
+            titleStyle.Alignment = HorizontalAlignment.CENTER;
+            titleStyle.VerticalAlignment = VerticalAlignment.CENTER;
+            IFont titleFont = hssfworkbook.CreateFont();
+            titleFont.FontName = "宋体";
+            titleFont.FontHeightInPoints = 22;
+            titleFont.Boldweight = (short)FontBoldWeight.BOLD;
+            titleStyle.SetFont(titleFont);
+
+            //表头格式（居中加黑小字）
+            ICellStyle normalBoldStyle = hssfworkbook.CreateCellStyle();
+            normalBoldStyle.Alignment = HorizontalAlignment.CENTER;
+            normalBoldStyle.VerticalAlignment = VerticalAlignment.CENTER;
+            IFont normalBoldFont = hssfworkbook.CreateFont();
+            normalBoldFont.FontName = "宋体";
+            normalBoldFont.FontHeightInPoints = 10;
+            normalBoldFont.Boldweight = (short)FontBoldWeight.BOLD;
+            normalBoldStyle.SetFont(normalBoldFont);
+            normalBoldStyle.BorderTop = BorderStyle.THIN;
+            normalBoldStyle.BorderBottom = BorderStyle.THIN;
+            normalBoldStyle.BorderLeft = BorderStyle.THIN;
+            normalBoldStyle.BorderRight = BorderStyle.THIN;
+
+            //内容格式（居中不加黑小字）
+            ICellStyle normalStyle = hssfworkbook.CreateCellStyle();
+            normalStyle.Alignment = HorizontalAlignment.CENTER;
+            normalStyle.VerticalAlignment = VerticalAlignment.CENTER;
+            IFont normalFont = hssfworkbook.CreateFont();
+            normalFont.FontName = "宋体";
+            normalFont.FontHeightInPoints = 10;
+            normalStyle.SetFont(normalFont);
+            normalStyle.BorderTop = BorderStyle.THIN;
+            normalStyle.BorderBottom = BorderStyle.THIN;
+            normalStyle.BorderLeft = BorderStyle.THIN;
+            normalStyle.BorderRight = BorderStyle.THIN;
+
+            //标题
+            IRow row0 = sheet.CreateRow(0);
+            row0.HeightInPoints = 40;
+            ICell cell00 = row0.CreateCell(0);
+            cell00.SetCellValue("人员信息表");
+            cell00.CellStyle = titleStyle;
+            region = new CellRangeAddress(0, 0, 0, 3);
+            sheet.AddMergedRegion(region);
+
+            //表头
+            IRow row1 = sheet.CreateRow(1);
+            row1.HeightInPoints = 30;
+            ICell cell10 = row1.CreateCell(0);
+            cell10.SetCellValue("部系单位");
+            cell10.CellStyle = normalBoldStyle; 
+            region = new CellRangeAddress(1, 2, 0, 0);
+            sheet.AddMergedRegion(region);
+            ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, BorderStyle.THIN, NPOI.HSSF.Util.HSSFColor.BLACK.index);
+
+            ICell cell11 = row1.CreateCell(1);
+            cell11.SetCellValue("处室单位");
+            cell11.CellStyle = normalBoldStyle;
+            region = new CellRangeAddress(1, 2, 1, 1);
+            sheet.AddMergedRegion(region);
+            ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, BorderStyle.THIN, NPOI.HSSF.Util.HSSFColor.BLACK.index);
+
+            ICell cell12 = row1.CreateCell(2);
+            cell12.SetCellValue("实际在位人数");
+            cell12.CellStyle = normalBoldStyle;
+            region = new CellRangeAddress(1, 1, 2, 3);
+            sheet.AddMergedRegion(region);
+            ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, BorderStyle.THIN, NPOI.HSSF.Util.HSSFColor.BLACK.index);
+
+            IRow row2 = sheet.GetRow(2);
+            ICell cell22 = row2.CreateCell(2);
+            cell22.SetCellValue("处室人数");
+            cell22.CellStyle = normalBoldStyle;
+
+            ICell cell23 = row2.CreateCell(3);
+            cell23.SetCellValue("部系人数");
+            cell23.CellStyle = normalBoldStyle;
+
+            int curRowIndex = 3; //记录当前到第几行了
+
+            foreach (DepartStaffInformation depart in departList)
+            {
+                IRow r1 = sheet.CreateRow(curRowIndex);
+                ICell c10 = r1.CreateCell(0);
+                c10.SetCellValue(depart.Name);
+                c10.CellStyle = normalStyle;
+                region = new CellRangeAddress(curRowIndex, curRowIndex + depart.Offices.Count - 1, 0, 0);
+                sheet.AddMergedRegion(region);
+                ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, BorderStyle.THIN, NPOI.HSSF.Util.HSSFColor.BLACK.index);
+
+                ICell c11 = r1.CreateCell(1);
+                c11.SetCellValue(depart.Offices[0].Name);
+                c11.CellStyle = normalStyle;
+
+                ICell c12 = r1.CreateCell(2);
+                c12.SetCellValue(depart.Offices[0].StaffCount);
+                c12.CellStyle = normalStyle;
+
+                ICell c13 = r1.CreateCell(3);
+                c13.SetCellValue(depart.StaffCount);
+                c13.CellStyle = normalStyle;
+                region = new CellRangeAddress(curRowIndex, curRowIndex + depart.Offices.Count - 1, 3, 3);
+                sheet.AddMergedRegion(region);
+                ((HSSFSheet)sheet).SetEnclosedBorderOfRegion(region, BorderStyle.THIN, NPOI.HSSF.Util.HSSFColor.BLACK.index);
+
+                for (int i = 1; i < depart.Offices.Count; i++)
+                {
+                    IRow r2 = sheet.GetRow(curRowIndex + i);
+                    ICell c21 = r2.CreateCell(1);
+                    c21.SetCellValue(depart.Offices[i].Name);
+                    c21.CellStyle = normalStyle;
+
+                    ICell c22 = r2.CreateCell(2);
+                    c22.SetCellValue(depart.Offices[i].StaffCount);
+                    c22.CellStyle = normalStyle;
+                }
+
+                curRowIndex += depart.Offices.Count;
+            }
+
+            fileName = DateTime.Now.ToString("yyyy-mm-dd-HH-mm-ss") + @"人员信息表.xls";
+            string path = System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"downloadfiles\" + fileName;
+            FileStream file = new FileStream(path, FileMode.Create);
+            try
+            {
+                hssfworkbook.Write(file);
+            }
+            catch (Exception e)
+            {
+                exception = e.Message;
+                returnValue = false;
+            }
+            finally
+            {
+                file.Close();
+            }
+            return returnValue;
+        }
         #endregion
 
         #region Private Method
@@ -137,31 +300,31 @@ namespace SQS.Controller
             titleStyle.SetFont(titleFont);
 
             //表头格式（居中加黑小字）
-            ICellStyle NormalBoldStyle = workBook.CreateCellStyle();
-            NormalBoldStyle.Alignment = HorizontalAlignment.CENTER;
-            NormalBoldStyle.VerticalAlignment = VerticalAlignment.CENTER;
-            IFont NormalBoldFont = workBook.CreateFont();
-            NormalBoldFont.FontName = "宋体";
-            NormalBoldFont.FontHeightInPoints = 10;
-            NormalBoldFont.Boldweight = (short)FontBoldWeight.BOLD;
-            NormalBoldStyle.SetFont(NormalBoldFont);
-            NormalBoldStyle.BorderTop = BorderStyle.THIN;
-            NormalBoldStyle.BorderBottom = BorderStyle.THIN;
-            NormalBoldStyle.BorderLeft = BorderStyle.THIN;
-            NormalBoldStyle.BorderRight = BorderStyle.THIN;
+            ICellStyle normalBoldStyle = workBook.CreateCellStyle();
+            normalBoldStyle.Alignment = HorizontalAlignment.CENTER;
+            normalBoldStyle.VerticalAlignment = VerticalAlignment.CENTER;
+            IFont normalBoldFont = workBook.CreateFont();
+            normalBoldFont.FontName = "宋体";
+            normalBoldFont.FontHeightInPoints = 10;
+            normalBoldFont.Boldweight = (short)FontBoldWeight.BOLD;
+            normalBoldStyle.SetFont(normalBoldFont);
+            normalBoldStyle.BorderTop = BorderStyle.THIN;
+            normalBoldStyle.BorderBottom = BorderStyle.THIN;
+            normalBoldStyle.BorderLeft = BorderStyle.THIN;
+            normalBoldStyle.BorderRight = BorderStyle.THIN;
 
             //内容格式（居左不加黑小字）
-            ICellStyle NormalStyle = workBook.CreateCellStyle();
-            NormalStyle.Alignment = HorizontalAlignment.LEFT;
-            NormalStyle.VerticalAlignment = VerticalAlignment.CENTER;
+            ICellStyle normalStyle = workBook.CreateCellStyle();
+            normalStyle.Alignment = HorizontalAlignment.LEFT;
+            normalStyle.VerticalAlignment = VerticalAlignment.CENTER;
             IFont NormalFont = workBook.CreateFont();
             NormalFont.FontName = "宋体";
             NormalFont.FontHeightInPoints = 10;
-            NormalStyle.SetFont(NormalFont);
-            NormalStyle.BorderTop = BorderStyle.THIN;
-            NormalStyle.BorderBottom = BorderStyle.THIN;
-            NormalStyle.BorderLeft = BorderStyle.THIN;
-            NormalStyle.BorderRight = BorderStyle.THIN;
+            normalStyle.SetFont(NormalFont);
+            normalStyle.BorderTop = BorderStyle.THIN;
+            normalStyle.BorderBottom = BorderStyle.THIN;
+            normalStyle.BorderLeft = BorderStyle.THIN;
+            normalStyle.BorderRight = BorderStyle.THIN;
 
             //标题行
             IRow row0 = sheet.CreateRow(0);
@@ -180,7 +343,7 @@ namespace SQS.Controller
             {
                 ICell cell = row1.CreateCell(columnIndex);
                 cell.SetCellValue(column.ColumnName);
-                cell.CellStyle = NormalBoldStyle;
+                cell.CellStyle = normalBoldStyle;
                 columnIndex++;
             }
 
@@ -192,7 +355,7 @@ namespace SQS.Controller
                 {
                     ICell cell = row.CreateCell(j);
                     cell.SetCellValue(table.Rows[i][j].ToString());
-                    cell.CellStyle = NormalStyle;
+                    cell.CellStyle = normalStyle;
                 }
             }
         }
