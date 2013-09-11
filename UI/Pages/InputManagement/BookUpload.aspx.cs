@@ -120,6 +120,7 @@ namespace SQS.UI.Pages.InputManagement
             if (InputManagementCtrl.DeleteBooksByIds(IDs, ref exception))
             {
                 Alert.ShowInTop("删除成功", MessageBoxIcon.Information);
+                hfSelectedIDS.Text = "";
                 bindBookInformationToGrid();
             }
             else

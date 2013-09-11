@@ -45,7 +45,8 @@
                     <x:Panel ID="Panel2" runat="server" BodyPadding="5px" ShowBorder="false" ShowHeader="false"
                         Title="">
                         <Items>
-                            <x:Form ID="Form2" runat="server" BodyPadding="5px" Title="搜索条件" LabelWidth="80px" LabelAlign="Right">
+                            <x:Form ID="Form2" runat="server" BodyPadding="5px" Title="搜索条件" LabelWidth="80px"
+                                LabelAlign="Right">
                                 <Rows>
                                     <x:FormRow ID="FormRow1" runat="server">
                                         <Items>
@@ -57,7 +58,8 @@
                                     </x:FormRow>
                                     <x:FormRow ID="FormRow3" runat="server">
                                         <Items>
-                                            <x:DropDownList ID="DropDownList_Depart" runat="server" Label="部系" AutoPostBack="true" OnSelectedIndexChanged="DropDownList_Depart_SelectedChanged">
+                                            <x:DropDownList ID="DropDownList_Depart" runat="server" Label="部系" AutoPostBack="true"
+                                                OnSelectedIndexChanged="DropDownList_Depart_SelectedChanged">
                                                 <x:ListItem Selected="true" EnableSelect="true" Text="所有部系" Value="0" />
                                             </x:DropDownList>
                                             <x:DropDownList ID="DropDownList_Office" runat="server" Label="处室" Enabled="false">
@@ -68,30 +70,30 @@
                                     <x:FormRow ID="FormRow2" runat="server">
                                         <Items>
                                             <x:DatePicker ID="DatePicker_PublishDateStart" runat="server" Label="出版时间 从" EmptyText="点击右边图标选择日期"
-                                                DateFormatString="yyyy-m">
+                                                DateFormatString="yyyy-MM">
                                             </x:DatePicker>
                                             <x:DatePicker ID="DatePicker_PublishDateStop" runat="server" Label="到" EmptyText="点击右边图标选择日期"
-                                                DateFormatString="yyyy-m">
+                                                DateFormatString="yyyy-MM">
                                             </x:DatePicker>
                                         </Items>
                                     </x:FormRow>
                                     <x:FormRow ID="FormRow4" runat="server">
                                         <Items>
                                             <x:DatePicker ID="DatePicker_CreateDateStart" runat="server" Label="上传时间 从" EmptyText="点击右边图标选择日期"
-                                                DateFormatString="yyyy-m-dd">
+                                                DateFormatString="yyyy-MM-dd">
                                             </x:DatePicker>
                                             <x:DatePicker ID="DatePicker_CreateDateStop" runat="server" Label="到" EmptyText="点击右边图标选择日期"
-                                                DateFormatString="yyyy-m-dd">
+                                                DateFormatString="yyyy-MM-dd">
                                             </x:DatePicker>
                                         </Items>
                                     </x:FormRow>
                                     <x:FormRow ID="FormRow5" runat="server">
                                         <Items>
                                             <x:DatePicker ID="DatePicker_UpdateDateStart" runat="server" Label="更新时间 从" EmptyText="点击右边图标选择日期"
-                                                DateFormatString="yyyy-m-dd">
+                                                DateFormatString="yyyy-MM-dd">
                                             </x:DatePicker>
                                             <x:DatePicker ID="DatePicker_UpdateDateStop" runat="server" Label="到" EmptyText="点击右边图标选择日期"
-                                                DateFormatString="yyyy-m-dd">
+                                                DateFormatString="yyyy-MM-dd">
                                             </x:DatePicker>
                                         </Items>
                                     </x:FormRow>
@@ -104,7 +106,7 @@
                                 </Rows>
                             </x:Form>
                             <x:Grid ID="Grid1" runat="server" Title="著作统计表" EnableRowNumber="true" AllowPaging="true"
-                                PageSize="20" Height="500px" AutoScroll="true" DataKeyNames="ID" EnableMultiSelect="true"
+                                PageSize="20" Height="520px" AutoScroll="true" DataKeyNames="ID" EnableMultiSelect="true"
                                 CheckBoxSelectOnly="true" EnableCheckBoxSelect="true" OnPageIndexChange="Grid1_PageIndexChange"
                                 ClearSelectedRowsAfterPaging="false">
                                 <Columns>
@@ -140,7 +142,8 @@
     <x:HiddenField ID="hfSelectedIDS" runat="server">
     </x:HiddenField>
     <x:Window ID="Window_Modify" runat="server" BodyPadding="5px" IsModal="true" Popup="false"
-        Title="修改" Width="500px" Height="400px" EnableClose="false" Target="Top" EnableResize="true">
+        Title="修改" Width="500px" Height="400px" EnableClose="false" Target="Top" EnableResize="true"
+        EnableIFrame="true" IFrameUrl="about:blank">
     </x:Window>
     </form>
 </body>
