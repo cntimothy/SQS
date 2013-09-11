@@ -379,7 +379,6 @@ namespace SQS.UI.Pages.InputManagement
             Grid1.SelectedRowIndexArray = nextSelectedRowIndexArray.ToArray();
         }
 
-
         /// <summary>
         /// 将Grid中的数据转化为table
         /// </summary>

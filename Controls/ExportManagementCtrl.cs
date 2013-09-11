@@ -24,9 +24,41 @@ namespace SQS.Controller
         {
             bool returnValue = true;
             HSSFWorkbook hssfworkbook = new HSSFWorkbook();
-            createSheet("著作", "著作统计表", hssfworkbook, table);  //建立sheet
+            createSheetFromDataTable("著作", "著作统计表", hssfworkbook, table);  //建立sheet
 
             fileName = DateTime.Now.ToString("yyyy-mm-dd-HH-mm-ss") + @"著作统计表.xls";
+            string path = System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"downloadfiles\" + fileName;
+            FileStream file = new FileStream(path, FileMode.Create);
+            try
+            {
+                hssfworkbook.Write(file);
+            }
+            catch (Exception e)
+            {
+                exception = e.Message;
+                returnValue = false;
+            }
+            finally
+            {
+                file.Close();
+            }
+            return returnValue;
+        }
+
+        /// <summary>
+        /// 穿件论文信息Excel
+        /// </summary>
+        /// <param name="fileName">文件名</param>
+        /// <param name="table"></param>
+        /// <param name="exception"></param>
+        /// <returns>创建成功返回true，否则返回false</returns>
+        public static bool ExportPaperInformation(ref string fileName, DataTable table, ref string exception)
+        {
+            bool returnValue = true;
+            HSSFWorkbook hssfworkbook = new HSSFWorkbook();
+            createSheetFromDataTable("论文", "论文统计表", hssfworkbook, table);  //建立sheet
+
+            fileName = DateTime.Now.ToString("yyyy-mm-dd-HH-mm-ss") + @"论文统计表.xls";
             string path = System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"downloadfiles\" + fileName;
             FileStream file = new FileStream(path, FileMode.Create);
             try
@@ -47,7 +79,14 @@ namespace SQS.Controller
         #endregion
 
         #region Private Method
-        private static void createSheet(string sheetName, string title, HSSFWorkbook workBook, DataTable table)
+        /// <summary>
+        /// 根据DataTable项workBook中添加sheet，sheet中的列名即为DataTable中的列明
+        /// </summary>
+        /// <param name="sheetName">sheet的名称</param>
+        /// <param name="title">sheet中的标题</param>
+        /// <param name="workBook"></param>
+        /// <param name="table"></param>
+        private static void createSheetFromDataTable(string sheetName, string title, HSSFWorkbook workBook, DataTable table)
         {
             ISheet sheet = workBook.CreateSheet(sheetName);
 

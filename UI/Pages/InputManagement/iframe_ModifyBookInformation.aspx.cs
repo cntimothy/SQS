@@ -54,6 +54,8 @@ namespace SQS.UI.Pages.InputManagement
         {
             Book book = new Book();
             book.Id = ViewState["id"].ToString();
+            book.DepartId = DropDownList_Depart.SelectedValue;
+            book.OfficeId = DropDownList_Office.SelectedValue;
             book.Name = TextBox_Name.Text;
             book.BookName = TextBox_BookName.Text;
             book.Press = TextBox_Press.Text;
@@ -70,6 +72,10 @@ namespace SQS.UI.Pages.InputManagement
             {
                 Alert.ShowInTop("更新成功！\n窗口即将关闭", MessageBoxIcon.Information);
                 PageContext.RegisterStartupScript(ActiveWindow.GetHideRefreshReference());
+            }
+            else
+            {
+                Alert.ShowInTop("更新失败！\n原因：" + exception, MessageBoxIcon.Error);
             }
         }
         #endregion

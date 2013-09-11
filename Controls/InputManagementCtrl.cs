@@ -151,7 +151,7 @@ namespace SQS.Controller
             paper.Name = "高2";
             paper.PaperName = "论文名称";
             paper.JournalName = "会议名称";
-            paper.PublishDate = "发表日期";
+            paper.PublishDate = "1898-3";
             paper.PublishGradeId = "3";
             paper.RewardGradeId = "4";
             paper.RewardClassId = "2";
