@@ -35,6 +35,11 @@
                             </x:ToolbarSeparator>
                             <x:Button ID="Button_Delete" runat="server" Text="删除所选" OnClick="Button_Delete_Click">
                             </x:Button>
+                            <x:ToolbarSeparator ID="ToolbarSeparator4" runat="server">
+                            </x:ToolbarSeparator>
+                            <x:Button ID="Button1_Export" runat="server" Text="导出" OnClick="Button_Export_Click"
+                                EnableAjax="false" DisableControlBeforePostBack="false">
+                            </x:Button>
                             <x:ToolbarFill ID="ToolbarFill1" runat="server">
                             </x:ToolbarFill>
                             <x:Button ID="Button_DownloadTemplate" runat="server" Text="下载模板" OnClick="Button_DownloadTemplate_Click"
@@ -106,9 +111,9 @@
                                 </Rows>
                             </x:Form>
                             <x:Grid ID="Grid1" runat="server" Title="著作统计表" EnableRowNumber="true" AllowPaging="true"
-                                PageSize="20" Height="520px" AutoScroll="true" DataKeyNames="ID" EnableMultiSelect="true"
-                                CheckBoxSelectOnly="true" EnableCheckBoxSelect="true" OnPageIndexChange="Grid1_PageIndexChange"
-                                ClearSelectedRowsAfterPaging="false">
+                                PageSize="20" Height="520px" AutoScroll="true" DataKeyNames="ID,Depart,Office,Name,BookName,Press,PublishDate,PublishGrade,RewardGrade,RewardClass,WordCount,AutherCount,Auther1,Auther2,Auther3,Auther4,Auther5"
+                                EnableMultiSelect="true" CheckBoxSelectOnly="true" EnableCheckBoxSelect="true"
+                                OnPageIndexChange="Grid1_PageIndexChange" ClearSelectedRowsAfterPaging="false">
                                 <Columns>
                                     <x:BoundField Width="150px" DataField="ID" DataFormatString="{0}" HeaderText="ID"
                                         Hidden="true" />

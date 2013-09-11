@@ -9,6 +9,7 @@ using SQS.DataStructure;
 using FineUI;
 using System.Data;
 using System.Web.Script.Serialization;
+using System.Text;
 
 namespace SQS.UI.Pages.InputManagement
 {
@@ -215,6 +216,30 @@ namespace SQS.UI.Pages.InputManagement
             updateSelectedRowIndexArray();
 
         }
+
+        /// <summary>
+        /// 导出事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button_Export_Click(object sender, EventArgs e)
+        {
+            string exception = "";
+            DataTable table = getDataTableFromGrid();
+            string fileName = "";
+            if (ExportManagementCtrl.ExportBookInformation(ref fileName, table, ref exception))
+            {
+                Response.ClearContent();
+                Response.ContentType = "application/excel";
+                Response.AddHeader("content-disposition", "attachment;filename=" + Server.UrlEncode(fileName));
+                string path = Server.MapPath("..\\..\\downloadfiles\\" + fileName);
+                Response.TransmitFile(path);
+            }
+            else
+            {
+                Alert.ShowInTop("导出失败！\n原因：" + exception, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region Private Method
@@ -255,6 +280,9 @@ namespace SQS.UI.Pages.InputManagement
             }
         }
 
+        /// <summary>
+        /// 绑定处室到下拉列表
+        /// </summary>
         private void bindOfficeToDropDownList()
         {
             string departId = DropDownList_Depart.SelectedValue;
@@ -349,6 +377,34 @@ namespace SQS.UI.Pages.InputManagement
                 }
             }
             Grid1.SelectedRowIndexArray = nextSelectedRowIndexArray.ToArray();
+        }
+
+
+        /// <summary>
+        /// 将Grid中的数据转化为table
+        /// </summary>
+        /// <returns></returns>
+        private DataTable getDataTableFromGrid()
+        {
+            DataTable table = new DataTable();
+            foreach (GridColumn column in Grid1.Columns)
+            {
+                if (column.HeaderText == "操作")
+                {
+                    continue;
+                }
+                table.Columns.Add(column.HeaderText);
+            }
+            foreach (GridRow gridRow in Grid1.Rows)
+            {
+                DataRow dataRow = table.NewRow();
+                for (int i = 0; i < gridRow.Values.Length - 1; i++)    //去掉最后一列
+                {
+                    dataRow[i] = gridRow.Values[i];
+                }
+                table.Rows.Add(dataRow);
+            }
+            return table;
         }
         #endregion
     }

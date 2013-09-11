@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="BasicInformationManagementCtrl.cs" />
     <Compile Include="CommonCtrl.cs" />
+    <Compile Include="ExportManagementCtrl.cs" />
     <Compile Include="InputManagementCtrl.cs" />
     <Compile Include="LoginManagementCtrl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
