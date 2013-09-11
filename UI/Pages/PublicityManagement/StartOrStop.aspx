@@ -13,15 +13,17 @@
         <Items>
             <x:Toolbar ID="Toolbar1" runat="server">
                 <Items>
-                    <x:Button ID="Button_Start" runat="server" Text="开始公示">
+                    <x:Button ID="Button_Start" runat="server" Text="开始公示" ConfirmText="确定开始公式？开始公示后，相关人员将能够进行查询"
+                        OnClick="Button_Start_Click">
                     </x:Button>
                     <x:ToolbarSeparator ID="ToolbarSeparator1" runat="server">
                     </x:ToolbarSeparator>
-                    <x:Button ID="Button_Stop" runat="server" Text="结束公示">
+                    <x:Button ID="Button_Stop" runat="server" Text="结束公示" ConfirmText="确定结束公式？结束公示后，相关人员将不能进行查询" OnClick="Button_Stop_Click">
                     </x:Button>
                 </Items>
             </x:Toolbar>
-            <x:SimpleForm ID="SimpleForm1" runat="server" BodyPadding="5px" Title="SimpleForm" ShowBorder="false" ShowHeader="false">
+            <x:SimpleForm ID="SimpleForm1" runat="server" BodyPadding="5px" Title="SimpleForm"
+                ShowBorder="false" ShowHeader="false">
                 <Items>
                     <x:Label ID="Label_Status" runat="server" Label="当前公示状态" Text="">
                     </x:Label>
