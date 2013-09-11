@@ -111,9 +111,9 @@
                                 </Rows>
                             </x:Form>
                             <x:Grid ID="Grid1" runat="server" Title="著作统计表" EnableRowNumber="true" AllowPaging="true"
-                                PageSize="20" Height="520px" AutoScroll="true" DataKeyNames="ID,Depart,Office,Name,BookName,Press,PublishDate,PublishGrade,RewardGrade,RewardClass,WordCount,AutherCount,Auther1,Auther2,Auther3,Auther4,Auther5"
-                                EnableMultiSelect="true" CheckBoxSelectOnly="true" EnableCheckBoxSelect="true"
-                                OnPageIndexChange="Grid1_PageIndexChange" ClearSelectedRowsAfterPaging="false">
+                                PageSize="20" Height="520px" AutoScroll="true" DataKeyNames="ID" EnableMultiSelect="true"
+                                CheckBoxSelectOnly="true" EnableCheckBoxSelect="true" OnPageIndexChange="Grid1_PageIndexChange"
+                                ClearSelectedRowsAfterPaging="false">
                                 <Columns>
                                     <x:BoundField Width="150px" DataField="ID" DataFormatString="{0}" HeaderText="ID"
                                         Hidden="true" />

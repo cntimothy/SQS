@@ -14,7 +14,7 @@ namespace SQS.Controller
     {
         #region Public Method
         /// <summary>
-        /// 穿件著作信息Excel
+        /// 创建著作信息Excel
         /// </summary>
         /// <param name="fileName">文件名</param>
         /// <param name="table"></param>
@@ -59,6 +59,38 @@ namespace SQS.Controller
             createSheetFromDataTable("论文", "论文统计表", hssfworkbook, table);  //建立sheet
 
             fileName = DateTime.Now.ToString("yyyy-mm-dd-HH-mm-ss") + @"论文统计表.xls";
+            string path = System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"downloadfiles\" + fileName;
+            FileStream file = new FileStream(path, FileMode.Create);
+            try
+            {
+                hssfworkbook.Write(file);
+            }
+            catch (Exception e)
+            {
+                exception = e.Message;
+                returnValue = false;
+            }
+            finally
+            {
+                file.Close();
+            }
+            return returnValue;
+        }
+
+        /// <summary>
+        /// 创建课题信息Excel
+        /// </summary>
+        /// <param name="fileName">文件名</param>
+        /// <param name="table"></param>
+        /// <param name="exception"></param>
+        /// <returns>创建成功返回true，否则返回false</returns>
+        public static bool ExportTopicInformation(ref string fileName, DataTable table, ref string exception)
+        {
+            bool returnValue = true;
+            HSSFWorkbook hssfworkbook = new HSSFWorkbook();
+            createSheetFromDataTable("课题", "课题统计表", hssfworkbook, table);  //建立sheet
+
+            fileName = DateTime.Now.ToString("yyyy-mm-dd-HH-mm-ss") + @"课题统计表.xls";
             string path = System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"downloadfiles\" + fileName;
             FileStream file = new FileStream(path, FileMode.Create);
             try

@@ -56,10 +56,10 @@ namespace SQS.UI.Pages.InputManagement
             paper.Id = ViewState["id"].ToString();
             paper.DepartId = DropDownList_Depart.SelectedValue;
             paper.OfficeId = DropDownList_Office.SelectedValue;
-            paper.Name = TextBox_Name.Text;
-            paper.PaperName = TextBox_PaperName.Text;
-            paper.JournalName = TextBox_JournalName.Text;
-            paper.PublishDate = DatePicker_PublishDate.Text;
+            paper.Name = TextBox_Name.Text.Trim();
+            paper.PaperName = TextBox_PaperName.Text.Trim();
+            paper.JournalName = TextBox_JournalName.Text.Trim();
+            paper.PublishDate = DatePicker_PublishDate.Text.Trim();
             paper.PublishGradeId = DropDownList_PublishGrade.SelectedValue;
             paper.RewardGradeId = DropDownList_RewardGrade.SelectedValue;
             paper.RewardClassId = DropDownList_RewardClass.SelectedValue;

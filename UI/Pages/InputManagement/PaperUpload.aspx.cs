@@ -19,6 +19,7 @@ namespace SQS.UI.Pages.InputManagement
         {
             if (!IsPostBack)
             {
+                bindDepartToDropDownList();
                 bindPaperInformationToGrid();
             }
         }
