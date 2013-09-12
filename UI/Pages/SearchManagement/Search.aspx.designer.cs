@@ -76,13 +76,13 @@ namespace SQS.UI.Pages.SearchManagement {
         protected global::FineUI.TextBox TextBox_Name;
         
         /// <summary>
-        /// TextBox_BookName 控件。
+        /// TextBox_WorkName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.TextBox TextBox_BookName;
+        protected global::FineUI.TextBox TextBox_WorkName;
         
         /// <summary>
         /// FormRow3 控件。
@@ -148,30 +148,39 @@ namespace SQS.UI.Pages.SearchManagement {
         protected global::FineUI.Button Button_Search;
         
         /// <summary>
-        /// Grid1 控件。
+        /// Button1_Export 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Grid Grid1;
+        protected global::FineUI.Button Button1_Export;
         
         /// <summary>
-        /// Grid2 控件。
+        /// Grid_Paper 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Grid Grid2;
+        protected global::FineUI.Grid Grid_Paper;
         
         /// <summary>
-        /// Grid3 控件。
+        /// Grid_Book 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Grid Grid3;
+        protected global::FineUI.Grid Grid_Book;
+        
+        /// <summary>
+        /// Grid_Topic 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.Grid Grid_Topic;
     }
 }

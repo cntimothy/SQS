@@ -853,6 +853,40 @@ namespace SQS.Controller
             }
             return returnValue;
         }
+
+        /// <summary>
+        /// 创建搜索结果Excel
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <param name="table"></param>
+        /// <param name="exception"></param>
+        /// <returns></returns>
+        public static bool ExportSearchResult(ref string fileName, DataTable tableForPaper, DataTable tableForBook, DataTable tableForTopic, ref string exception)
+        {
+            bool returnValue = true;
+            HSSFWorkbook hssfworkbook = new HSSFWorkbook();
+            createSheetFromDataTable("论文", "论文搜索结果", hssfworkbook, tableForPaper);  //建立论文sheet
+            createSheetFromDataTable("著作", "著作搜索结果", hssfworkbook, tableForBook);  //建立著作sheet
+            createSheetFromDataTable("课题", "课题搜索结果", hssfworkbook, tableForTopic);  //建立课题sheet
+
+            fileName = DateTime.Now.ToString("yyyy-mm-dd-HH-mm-ss") + @"搜索结果.xls";
+            string path = System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"downloadfiles\" + fileName;
+            FileStream file = new FileStream(path, FileMode.Create);
+            try
+            {
+                hssfworkbook.Write(file);
+            }
+            catch (Exception e)
+            {
+                exception = e.Message;
+                returnValue = false;
+            }
+            finally
+            {
+                file.Close();
+            }
+            return returnValue;
+        }
         #endregion
 
         #region Private Method
