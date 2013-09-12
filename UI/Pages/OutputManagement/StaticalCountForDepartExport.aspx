@@ -52,7 +52,7 @@
                     </x:DropDownList>
                     <x:ToolbarSeparator ID="ToolbarSeparator2" runat="server">
                     </x:ToolbarSeparator>
-                    <x:Button ID="Button_GetResult" runat="server" Text="生成总表">
+                    <x:Button ID="Button_GetResult" runat="server" Text="生成总表" OnClick="Button_GetResult_Click">
                     </x:Button>
                     <x:ToolbarSeparator ID="ToolbarSeparator1" runat="server">
                     </x:ToolbarSeparator>
