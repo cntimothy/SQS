@@ -1884,6 +1884,10 @@
     <Content Include="lib\FineUI.dll" />
     <Content Include="lib\Newtonsoft.Json.dll" />
     <Content Include="Pages\BasicInformationManagement\GradeManagement.aspx" />
+    <Content Include="Pages\BasicInformationManagement\iframe_AddDepart.aspx" />
+    <Content Include="Pages\BasicInformationManagement\iframe_AddOffice.aspx" />
+    <Content Include="Pages\BasicInformationManagement\iframe_DeleteDepart.aspx" />
+    <Content Include="Pages\BasicInformationManagement\iframe_DeleteOffice.aspx" />
     <Content Include="Pages\BasicInformationManagement\iframe_UpdateGrade.aspx" />
     <Content Include="Pages\BasicInformationManagement\OfficeManagement.aspx" />
     <Content Include="Pages\Common\iframe_UpdateGrade.aspx" />
@@ -1934,6 +1938,34 @@
     </Compile>
     <Compile Include="Pages\BasicInformationManagement\GradeManagement.aspx.designer.cs">
       <DependentUpon>GradeManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BasicInformationManagement\iframe_AddDepart.aspx.cs">
+      <DependentUpon>iframe_AddDepart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\BasicInformationManagement\iframe_AddDepart.aspx.designer.cs">
+      <DependentUpon>iframe_AddDepart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BasicInformationManagement\iframe_AddOffice.aspx.cs">
+      <DependentUpon>iframe_AddOffice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\BasicInformationManagement\iframe_AddOffice.aspx.designer.cs">
+      <DependentUpon>iframe_AddOffice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BasicInformationManagement\iframe_DeleteDepart.aspx.cs">
+      <DependentUpon>iframe_DeleteDepart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\BasicInformationManagement\iframe_DeleteDepart.aspx.designer.cs">
+      <DependentUpon>iframe_DeleteDepart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BasicInformationManagement\iframe_DeleteOffice.aspx.cs">
+      <DependentUpon>iframe_DeleteOffice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\BasicInformationManagement\iframe_DeleteOffice.aspx.designer.cs">
+      <DependentUpon>iframe_DeleteOffice.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\BasicInformationManagement\iframe_UpdateGrade.aspx.cs">
       <DependentUpon>iframe_UpdateGrade.aspx</DependentUpon>

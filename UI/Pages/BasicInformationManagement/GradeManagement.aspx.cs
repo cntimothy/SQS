@@ -18,19 +18,31 @@ namespace SQS.UI.Pages.BasicInformationManagement
         {
             if (!IsPostBack)
             {
-                bindPublishGradeForPaperToGrid();
-                bindPublishGradeForBookToGrid();
-                bindTopicGradeToGrid();
-                bindRewardGradeToGrid();
-                bindRewardClassToGrid();
+                bindInformationToGrid();
             }
         }
         #endregion
 
         #region Event
+        protected void Button_Refresh_Click(object sender, EventArgs e)
+        {
+            bindInformationToGrid();
+        }
         #endregion
 
         #region Private Method
+        /// <summary>
+        /// 绑定所有信息到Grid
+        /// </summary>
+        private void bindInformationToGrid()
+        {
+            bindPublishGradeForPaperToGrid();
+            bindPublishGradeForBookToGrid();
+            bindTopicGradeToGrid();
+            bindRewardGradeToGrid();
+            bindRewardClassToGrid();
+        }
+
         /// <summary>
         /// 绑定论文发表级别
         /// </summary>

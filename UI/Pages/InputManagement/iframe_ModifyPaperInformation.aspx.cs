@@ -111,6 +111,7 @@ namespace SQS.UI.Pages.InputManagement
         /// </summary>
         private void bindDepartToDropDownList()
         {
+            DropDownList_Depart.Items.Clear();
             string exception = "";
             Dictionary<string, string> idNameDic = new Dictionary<string, string>();
             if (CommonCtrl.GetDepartIdNameDic(ref idNameDic, ref exception))
@@ -127,6 +128,7 @@ namespace SQS.UI.Pages.InputManagement
         /// </summary>
         private void bindOfficeToDropDownList()
         {
+            DropDownList_Office.Items.Clear();
             string exception = "";
             Dictionary<string, string> idNameDic = new Dictionary<string, string>();
             string departId = DropDownList_Depart.SelectedValue;

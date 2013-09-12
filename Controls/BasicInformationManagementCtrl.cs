@@ -54,6 +54,9 @@ namespace SQS.Controller
             depart2.Offices.Add(office15);
             depart2.Offices.Add(office16);
             depart2.Offices.Add(office17);
+
+            departList.Add(depart1);
+            departList.Add(depart2);
             return true;
         }
 
@@ -71,10 +74,11 @@ namespace SQS.Controller
         /// <summary>
         /// 删除指定id的处室
         /// </summary>
+        /// <param name="departId">部系id</param>
         /// <param name="officeId">处室id</param>
         /// <param name="exception"></param>
         /// <returns>删除成功返回true，否则返回false</returns>
-        public static bool DeleteOffice(string officeId, ref string exception)
+        public static bool DeleteOffice(string departId, string officeId, ref string exception)
         {
             return true;
         }
@@ -97,7 +101,7 @@ namespace SQS.Controller
         /// <param name="newOfficeName">新处室名称</param>
         /// <param name="exception"></param>
         /// <returns>新增成功返回true，否则返回false</returns>
-        public static bool AddNewDepart(string departId, string newOfficeName, ref string exception)
+        public static bool AddNewOffice(string departId, string newOfficeName, ref string exception)
         {
             return true;
         }

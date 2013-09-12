@@ -117,6 +117,8 @@ namespace SQS.UI.Pages.SearchManagement
         /// </summary>
         private void bindDepartToDropDownList()
         {
+            DropDownList_Depart.Items.Clear();
+            DropDownList_Depart.Items.Add("所有部系", "0");
             string exception = "";
             Dictionary<string, string> idNameDic = new Dictionary<string, string>();
             if (CommonCtrl.GetDepartIdNameDic(ref idNameDic, ref exception))
@@ -133,6 +135,8 @@ namespace SQS.UI.Pages.SearchManagement
         /// </summary>
         private void bindOfficeToDropDownList()
         {
+            DropDownList_Office.Items.Clear();
+            DropDownList_Office.Items.Add("所有处室", "0");
             string departId = DropDownList_Depart.SelectedValue;
             if (departId != "0")
             {
