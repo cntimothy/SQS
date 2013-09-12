@@ -197,7 +197,7 @@ namespace SQS.Controller
         /// <param name="stopDate">结束年月</param>
         /// <param name="exception"></param>
         /// <returns>查询到非空结果返回true，否则返回false</returns>
-        public static bool GetCountResultDepart(ref DataTable table, string startDate, string stopDate, ref string exception)
+        public static bool GetCountResultForDepart(ref DataTable table, string startDate, string stopDate, ref string exception)
         {
             table.Columns.Add("Depart");
             table.Columns.Add("PaperPublishGrade1");
@@ -306,7 +306,7 @@ namespace SQS.Controller
         /// <param name="nameList">奖励级别名称列表</param>
         /// <param name="exception"></param>
         /// <returns>查询到非空结果返回true，否则返回false</returns>
-        public static bool GetRewardGrade(ref List<string> nameList, ref string exception)
+        public static bool GetRewardGradeNameList(ref List<string> nameList, ref string exception)
         {
             nameList.Add("国家级");
             nameList.Add("全军级");
@@ -320,7 +320,7 @@ namespace SQS.Controller
         /// <param name="nameList">奖励等级名称列表</param>
         /// <param name="exception"></param>
         /// <returns>查询到非空结果返回true，否则返回false</returns>
-        public static bool GetRewardClass(ref List<string> nameList, ref string exception)
+        public static bool GetRewardClassNameList(ref List<string> nameList, ref string exception)
         {
             nameList.Add("一等奖");
             nameList.Add("二等奖");

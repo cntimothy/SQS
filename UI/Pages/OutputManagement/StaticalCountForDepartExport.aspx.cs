@@ -24,6 +24,11 @@ namespace SQS.UI.Pages.OutputManagement
         #endregion
 
         #region Event
+        /// <summary>
+        /// 生成结果事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Button_GetResult_Click(object sender, EventArgs e)
         {
             if (DropDownList_StartYear.SelectedValue == "0")
@@ -49,7 +54,7 @@ namespace SQS.UI.Pages.OutputManagement
 
             DataTable table = new DataTable();
             string exception = "";
-            if (OutputManagementCtrl.GetCountResultDepart(ref table, startTime, stopTime, ref exception))
+            if (OutputManagementCtrl.GetCountResultForDepart(ref table, startTime, stopTime, ref exception))
             {
                 Grid1.DataSource = table;
                 Grid1.DataBind();
@@ -60,6 +65,30 @@ namespace SQS.UI.Pages.OutputManagement
                 table.Clear();
                 Grid1.DataSource = table;
                 Grid1.DataBind();
+            }
+        }
+
+        /// <summary>
+        /// 导出事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button_Export_Click(object sender, EventArgs e)
+        {
+            string exception = "";
+            DataTable table = getDataTableFromGrid();
+            string fileName = "";
+            if (ExportManagementCtrl.ExportStaticalCountForDepart(ref fileName, table, ref exception))
+            {
+                Response.ClearContent();
+                Response.ContentType = "application/excel";
+                Response.AddHeader("content-disposition", "attachment;filename=" + Server.UrlEncode(fileName));
+                string path = Server.MapPath("..\\..\\downloadfiles\\" + fileName);
+                Response.TransmitFile(path);
+            }
+            else
+            {
+                Alert.ShowInTop("导出失败！\n原因：" + exception, MessageBoxIcon.Error);
             }
         }
         #endregion
@@ -92,19 +121,79 @@ namespace SQS.UI.Pages.OutputManagement
             List<string> publishGradeNameListForPaper = new List<string>();
             List<string> publishGradeNameListForBook = new List<string>();
             List<string> topicGradeNameList = new List<string>();
-            DataTable table = new DataTable();
-            foreach (GridColumn column in Grid1.Columns)
+            List<string> rewardGradeNameList = new List<string>();
+            List<string> rewardClassNameList = new List<string>();
+            if(!OutputManagementCtrl.GetPublishGradeNameListForPaper(ref publishGradeNameListForPaper, ref exception))
             {
-                if (column.HeaderText == "操作")
-                {
-                    continue;
-                }
-                table.Columns.Add(column.HeaderText);
+                Alert.ShowInTop("获取发表级别失败！", MessageBoxIcon.Error);
+                return null;
+            }
+            if(!OutputManagementCtrl.GetPublishGradeNameListForBook(ref publishGradeNameListForBook, ref exception))
+            {
+                Alert.ShowInTop("获取发行级别失败！", MessageBoxIcon.Error);
+                return null;
+            }
+            if (!OutputManagementCtrl.GetTopicGradeNameList(ref topicGradeNameList, ref exception))
+            {
+                Alert.ShowInTop("获取课题级别失败！", MessageBoxIcon.Error);
+                return null;
+            }
+            if (!OutputManagementCtrl.GetRewardGradeNameList(ref rewardGradeNameList, ref exception))
+            {
+                Alert.ShowInTop("获取获奖级别失败！", MessageBoxIcon.Error);
+                return null;
+            }
+            if (!OutputManagementCtrl.GetRewardClassNameList(ref rewardClassNameList, ref exception))
+            {
+                Alert.ShowInTop("获取获奖等级失败！", MessageBoxIcon.Error);
+                return null;
+            }
+
+            //构造table
+            DataTable table = new DataTable();
+            table.Columns.Add("部系");
+            foreach (string name in publishGradeNameListForPaper)
+            {
+                table.Columns.Add("论文" + name);
+            }
+            foreach (string name in rewardGradeNameList)
+            {
+                table.Columns.Add("论文" + name);
+            }
+            foreach (string name in rewardClassNameList)
+            {
+                table.Columns.Add("论文" + name);
+            }
+
+            foreach (string name in publishGradeNameListForBook)
+            {
+                table.Columns.Add("著作" + name);
+            }
+            foreach (string name in rewardGradeNameList)
+            {
+                table.Columns.Add("著作" + name);
+            }
+            foreach (string name in rewardClassNameList)
+            {
+                table.Columns.Add("著作" + name);
+            }
+
+            foreach (string name in topicGradeNameList)
+            {
+                table.Columns.Add("课题" + name);
+            }
+            foreach (string name in rewardGradeNameList)
+            {
+                table.Columns.Add("课题" + name);
+            }
+            foreach (string name in rewardClassNameList)
+            {
+                table.Columns.Add("课题" + name);
             }
             foreach (GridRow gridRow in Grid1.Rows)
             {
                 DataRow dataRow = table.NewRow();
-                for (int i = 0; i < gridRow.Values.Length - 1; i++)    //去掉最后一列
+                for (int i = 0; i < gridRow.Values.Length; i++)    
                 {
                     dataRow[i] = gridRow.Values[i];
                 }

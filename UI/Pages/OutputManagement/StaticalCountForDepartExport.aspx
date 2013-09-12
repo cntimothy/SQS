@@ -56,7 +56,8 @@
                     </x:Button>
                     <x:ToolbarSeparator ID="ToolbarSeparator1" runat="server">
                     </x:ToolbarSeparator>
-                    <x:Button ID="Button_Export" runat="server" Text="导出">
+                    <x:Button ID="Button_Export" runat="server" Text="导出" OnClick="Button_Export_Click"
+                        EnableAjax="false" DisableControlBeforePostBack="false">
                     </x:Button>
                 </Items>
             </x:Toolbar>

@@ -271,6 +271,70 @@ namespace SQS.Controller
             }
             return returnValue;
         }
+
+        /// <summary>
+        /// 创建部系数量统计Excel
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <param name="table"></param>
+        /// <param name="exception"></param>
+        /// <returns></returns>
+        public static bool ExportStaticalCountForDepart(ref string fileName, DataTable table, ref string exception)
+        {
+            bool returnValue = true;
+            HSSFWorkbook hssfworkbook = new HSSFWorkbook();
+            createSheetFromDataTable("部系", "部系成果统计表", hssfworkbook, table);  //建立sheet
+
+            fileName = DateTime.Now.ToString("yyyy-mm-dd-HH-mm-ss") + @"部系成果统计表.xls";
+            string path = System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"downloadfiles\" + fileName;
+            FileStream file = new FileStream(path, FileMode.Create);
+            try
+            {
+                hssfworkbook.Write(file);
+            }
+            catch (Exception e)
+            {
+                exception = e.Message;
+                returnValue = false;
+            }
+            finally
+            {
+                file.Close();
+            }
+            return returnValue;
+        }
+
+        /// <summary>
+        /// 创建处室数量统计Excel
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <param name="table"></param>
+        /// <param name="exception"></param>
+        /// <returns></returns>
+        public static bool ExportStaticalCountForOffice(ref string fileName, DataTable table, ref string exception)
+        {
+            bool returnValue = true;
+            HSSFWorkbook hssfworkbook = new HSSFWorkbook();
+            createSheetFromDataTable("处室", "处室成果统计表", hssfworkbook, table);  //建立sheet
+
+            fileName = DateTime.Now.ToString("yyyy-mm-dd-HH-mm-ss") + @"处室成果统计表.xls";
+            string path = System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"downloadfiles\" + fileName;
+            FileStream file = new FileStream(path, FileMode.Create);
+            try
+            {
+                hssfworkbook.Write(file);
+            }
+            catch (Exception e)
+            {
+                exception = e.Message;
+                returnValue = false;
+            }
+            finally
+            {
+                file.Close();
+            }
+            return returnValue;
+        }
         #endregion
 
         #region Private Method
