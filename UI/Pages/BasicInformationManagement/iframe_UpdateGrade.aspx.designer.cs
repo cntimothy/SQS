@@ -10,7 +10,7 @@
 namespace SQS.UI.Pages.BasicInformationManagement {
     
     
-    public partial class GradeManegement {
+    public partial class iframe_UpdateGrade {
         
         /// <summary>
         /// form1 控件。
@@ -40,102 +40,57 @@ namespace SQS.UI.Pages.BasicInformationManagement {
         protected global::FineUI.Panel Panel1;
         
         /// <summary>
-        /// Panel3 控件。
+        /// Toolbar1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Panel Panel3;
+        protected global::FineUI.Toolbar Toolbar1;
         
         /// <summary>
-        /// Grid_PublishGradeForPaper 控件。
+        /// Button_Update 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Grid Grid_PublishGradeForPaper;
+        protected global::FineUI.Button Button_Update;
         
         /// <summary>
-        /// Panel2 控件。
+        /// ToolbarSeparator1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Panel Panel2;
+        protected global::FineUI.ToolbarSeparator ToolbarSeparator1;
         
         /// <summary>
-        /// Grid_PublishGradeForBook 控件。
+        /// Button_Cancel 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Grid Grid_PublishGradeForBook;
+        protected global::FineUI.Button Button_Cancel;
         
         /// <summary>
-        /// Panel4 控件。
+        /// SimpleForm1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Panel Panel4;
+        protected global::FineUI.SimpleForm SimpleForm1;
         
         /// <summary>
-        /// Grid_TopicGrade 控件。
+        /// TextBox_NewName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Grid Grid_TopicGrade;
-        
-        /// <summary>
-        /// Panel5 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.Panel Panel5;
-        
-        /// <summary>
-        /// Grid_RewardGrade 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.Grid Grid_RewardGrade;
-        
-        /// <summary>
-        /// Panel6 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.Panel Panel6;
-        
-        /// <summary>
-        /// Grid_RewardClass 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.Grid Grid_RewardClass;
-        
-        /// <summary>
-        /// Window_Update 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.Window Window_Update;
+        protected global::FineUI.TextBox TextBox_NewName;
     }
 }

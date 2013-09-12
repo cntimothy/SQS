@@ -1884,6 +1884,7 @@
     <Content Include="lib\FineUI.dll" />
     <Content Include="lib\Newtonsoft.Json.dll" />
     <Content Include="Pages\BasicInformationManagement\GradeManagement.aspx" />
+    <Content Include="Pages\BasicInformationManagement\iframe_UpdateGrade.aspx" />
     <Content Include="Pages\BasicInformationManagement\OfficeManagement.aspx" />
     <Content Include="Pages\Common\iframe_UpdateGrade.aspx" />
     <Content Include="Pages\HomePage.aspx" />
@@ -1933,6 +1934,13 @@
     </Compile>
     <Compile Include="Pages\BasicInformationManagement\GradeManagement.aspx.designer.cs">
       <DependentUpon>GradeManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BasicInformationManagement\iframe_UpdateGrade.aspx.cs">
+      <DependentUpon>iframe_UpdateGrade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\BasicInformationManagement\iframe_UpdateGrade.aspx.designer.cs">
+      <DependentUpon>iframe_UpdateGrade.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\BasicInformationManagement\OfficeManagement.aspx.cs">
       <DependentUpon>OfficeManagement.aspx</DependentUpon>
