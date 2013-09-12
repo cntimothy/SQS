@@ -52,11 +52,12 @@
                     </x:DropDownList>
                     <x:ToolbarSeparator ID="ToolbarSeparator2" runat="server">
                     </x:ToolbarSeparator>
-                    <x:Button ID="Button_GetResult" runat="server" Text="生成总表">
+                    <x:Button ID="Button_GetResult" runat="server" Text="生成总表" OnClick="Button_GetResult_Click">
                     </x:Button>
                     <x:ToolbarSeparator ID="ToolbarSeparator1" runat="server">
                     </x:ToolbarSeparator>
-                    <x:Button ID="Button_Export" runat="server" Text="导出">
+                    <x:Button ID="Button_Export" runat="server" Text="导出" OnClick="Button_Export_Click"
+                        EnableAjax="false" DisableControlBeforePostBack="false">
                     </x:Button>
                 </Items>
             </x:Toolbar>
@@ -65,22 +66,22 @@
                 <Items>
                     <x:Grid ID="Grid1" runat="server" Title="输出总表" AutoScroll="true" Height="500px">
                         <Columns>
-                            <x:BoundField Width="100px" DataField="Name" DataFormatString="{0}" HeaderText="部系（大单位）" />
-                            <x:BoundField Width="200px" DataField="Name" DataFormatString="{0}" HeaderText="处室（单位）" />
+                            <x:BoundField Width="100px" DataField="Depart" DataFormatString="{0}" HeaderText="部系（大单位）" />
+                            <x:BoundField Width="200px" DataField="Office" DataFormatString="{0}" HeaderText="处室（单位）" />
                             <x:BoundField Width="100px" DataField="Name" DataFormatString="{0}" HeaderText="姓名" />
-                            <x:BoundField Width="80px" DataField="Name" DataFormatString="{0}" HeaderText="论文得分" />
-                            <x:BoundField Width="80px" DataField="Name" DataFormatString="{0}" HeaderText="著作得分" />
-                            <x:BoundField Width="80px" DataField="Name" DataFormatString="{0}" HeaderText="课题得分" />
-                            <x:BoundField Width="80px" DataField="Name" DataFormatString="{0}" HeaderText="总分" />
-                            <x:BoundField Width="100px" DataField="Name" DataFormatString="{0}" HeaderText="处室论文总分" />
-                            <x:BoundField Width="100px" DataField="Name" DataFormatString="{0}" HeaderText="处室著作总分" />
-                            <x:BoundField Width="100px" DataField="Name" DataFormatString="{0}" HeaderText="处室课题总分" />
-                            <x:BoundField Width="100px" DataField="Name" DataFormatString="{0}" HeaderText="处室总分" />
-                            <x:BoundField Width="100px" DataField="Name" DataFormatString="{0}" HeaderText="处室人均成绩" />
-                            <x:BoundField Width="100px" DataField="Name" DataFormatString="{0}" HeaderText="处室参研率" />
-                            <x:BoundField Width="100px" DataField="Name" DataFormatString="{0}" HeaderText="部系总成绩" />
-                            <x:BoundField Width="100px" DataField="Name" DataFormatString="{0}" HeaderText="部系论文人均分" />
-                            <x:BoundField Width="100px" DataField="Name" DataFormatString="{0}" HeaderText="部系人均分" />
+                            <x:BoundField Width="80px" DataField="PaperScore" DataFormatString="{0}" HeaderText="论文得分" />
+                            <x:BoundField Width="80px" DataField="BookScore" DataFormatString="{0}" HeaderText="著作得分" />
+                            <x:BoundField Width="80px" DataField="TopicScore" DataFormatString="{0}" HeaderText="课题得分" />
+                            <x:BoundField Width="80px" DataField="TotalScore" DataFormatString="{0}" HeaderText="总分" />
+                            <x:BoundField Width="100px" DataField="OfficePaperScore" DataFormatString="{0}" HeaderText="处室论文总分" />
+                            <x:BoundField Width="100px" DataField="OfficeBookScore" DataFormatString="{0}" HeaderText="处室著作总分" />
+                            <x:BoundField Width="100px" DataField="OfficeTopicScore" DataFormatString="{0}" HeaderText="处室课题总分" />
+                            <x:BoundField Width="100px" DataField="OfficeTotalScore" DataFormatString="{0}" HeaderText="处室总分" />
+                            <x:BoundField Width="100px" DataField="OfficeAverageScore" DataFormatString="{0}" HeaderText="处室人均成绩" />
+                            <x:BoundField Width="100px" DataField="OfficeParticipateRate" DataFormatString="{0}" HeaderText="处室参研率" />
+                            <x:BoundField Width="100px" DataField="DepartTotalScore" DataFormatString="{0}" HeaderText="部系总成绩" />
+                            <x:BoundField Width="100px" DataField="DepartPaperAverageScore" DataFormatString="{0}" HeaderText="部系论文人均分" />
+                            <x:BoundField Width="100px" DataField="DepartAverageScore" DataFormatString="{0}" HeaderText="部系人均分" />
                         </Columns>
                     </x:Grid>
                 </Items>
