@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using SQS.DataStructure;
+using System.IO;
 
 namespace SQS.Controller
 {
@@ -245,6 +246,30 @@ namespace SQS.Controller
         /// <returns>更新成功返回true，否则返回false</returns>
         public static bool UpdateRewardClassName(string rewardClassId, string newRewardClassName, ref string exception)
         {
+            return true;
+        }
+
+        /// <summary>
+        /// 删除所有临时文件，成功返回true，否则返回false。（已实现）
+        /// </summary>
+        /// <param name="exception"></param>
+        /// <returns></returns>
+        public static bool ClearTempFiles(ref string exception)
+        {
+            DirectoryInfo folder = new DirectoryInfo(System.AppDomain.CurrentDomain.BaseDirectory.ToString() + @"downloadfiles\");
+            FileInfo[] files = folder.GetFiles();
+            try
+            {
+                foreach (FileInfo file in files)
+                {
+                    file.Delete();
+                }
+            }
+            catch (Exception e)
+            {
+                exception = e.Message;
+                return false;
+            }
             return true;
         }
     }

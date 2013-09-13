@@ -1883,6 +1883,7 @@
     <Content Include="js\default.js" />
     <Content Include="lib\FineUI.dll" />
     <Content Include="lib\Newtonsoft.Json.dll" />
+    <Content Include="Pages\BasicInformationManagement\DeleteTempFile.aspx" />
     <Content Include="Pages\BasicInformationManagement\GradeManagement.aspx" />
     <Content Include="Pages\BasicInformationManagement\iframe_AddDepart.aspx" />
     <Content Include="Pages\BasicInformationManagement\iframe_AddOffice.aspx" />
@@ -1931,6 +1932,13 @@
   <ItemGroup>
     <Compile Include="Code\PageBase.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\BasicInformationManagement\DeleteTempFile.aspx.cs">
+      <DependentUpon>DeleteTempFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\BasicInformationManagement\DeleteTempFile.aspx.designer.cs">
+      <DependentUpon>DeleteTempFile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\BasicInformationManagement\GradeManagement.aspx.cs">
       <DependentUpon>GradeManagement.aspx</DependentUpon>

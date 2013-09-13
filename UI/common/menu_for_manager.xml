@@ -31,5 +31,7 @@
     </TreeNode>
     <TreeNode Text="部系处室维护" NavigateUrl="~/Pages/BasicInformationManagement/OfficeManagement.aspx" >
     </TreeNode>
+    <TreeNode Text="删除临时文件" NavigateUrl="~/Pages/BasicInformationManagement/DeleteTempFile.aspx" >
+    </TreeNode>
   </TreeNode>
 </Tree>
