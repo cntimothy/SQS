@@ -79,7 +79,7 @@ namespace SQS.Controller
         /// <param name="officeId">处室id</param>
         /// <param name="exception"></param>
         /// <returns>删除成功返回true，否则返回false</returns>
-        public static bool DeleteOffice(string departId, string officeId, ref string exception)
+        public static bool DeleteOffice(string officeId, ref string exception)
         {
             return true;
         }

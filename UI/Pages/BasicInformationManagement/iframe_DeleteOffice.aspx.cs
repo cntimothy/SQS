@@ -36,10 +36,9 @@ namespace SQS.UI.Pages.BasicInformationManagement
 
         protected void Button_Delete_Click(object sender, EventArgs e)
         {
-            string departId = DropDownList_Depart.SelectedValue;
             string officeId = DropDownList_Office.SelectedValue;
             string exception = "";
-            if (BasicInformationManagementCtrl.DeleteOffice(departId, officeId, ref exception))
+            if (BasicInformationManagementCtrl.DeleteOffice(officeId, ref exception))
             {
                 Alert.ShowInTop("删除成功！", MessageBoxIcon.Information);
                 PageContext.RegisterStartupScript(ActiveWindow.GetHideReference());
