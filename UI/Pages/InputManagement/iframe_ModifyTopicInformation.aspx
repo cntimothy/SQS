@@ -49,10 +49,8 @@
                             <x:DatePicker ID="DatePicker_StopTime" runat="server" Label="结题时间（年月）" Width="150px" DateFormatString="yyyy-MM">
                             </x:DatePicker>
                             <x:DropDownList ID="DropDownList_RewardGrade" runat="server" Label="奖励级别" Width="200px">
-                                <x:ListItem Text="无" Value="-1" />
                             </x:DropDownList>
                             <x:DropDownList ID="DropDownList_RewardClass" runat="server" Label="奖励等级" Width="200px">
-                                <x:ListItem Text="无" Value="-1" />
                             </x:DropDownList>
                             <x:TextBox ID="TextBox_CompleteType" runat="server" Label="完成形式" Text="" Width="200px">
                             </x:TextBox>

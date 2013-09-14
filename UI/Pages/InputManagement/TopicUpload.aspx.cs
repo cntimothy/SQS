@@ -136,39 +136,24 @@ namespace SQS.UI.Pages.InputManagement
         /// <param name="e"></param>
         protected void Button_Search_Click(object sender, EventArgs e)
         {
-            //检测是否为空
-            if (TextBox_Name.Text.Trim() == "" && TextBox_TopicName.Text.Trim() == ""
-                && DropDownList_Depart.SelectedValue == "0"
-                && !DatePicker_PublishDateStart.SelectedDate.HasValue
-                && !DatePicker_PublishDateStop.SelectedDate.HasValue
-                && !DatePicker_CreateDateStart.SelectedDate.HasValue
-                && !DatePicker_CreateDateStop.SelectedDate.HasValue
-                && !DatePicker_UpdateDateStart.SelectedDate.HasValue
-                && !DatePicker_UpdateDateStop.SelectedDate.HasValue)
+            string errorMessage = "";
+            if (!checkAvailable(ref errorMessage))
             {
-                Alert.ShowInTop("请至少填写一项!", MessageBoxIcon.Error);
-                return;
-            }
-
-            //检测结束日期是否大于开始日期
-            if (DatePicker_PublishDateStart.SelectedDate > DatePicker_PublishDateStop.SelectedDate
-                || DatePicker_CreateDateStart.SelectedDate > DatePicker_CreateDateStop.SelectedDate
-                || DatePicker_UpdateDateStart.SelectedDate > DatePicker_UpdateDateStop.SelectedDate)
-            {
-                Alert.ShowInTop("结束日期需大于开始日期，请重新选择！", MessageBoxIcon.Error);
+                Alert.ShowInTop(errorMessage, MessageBoxIcon.Warning);
                 return;
             }
 
             //构造搜索条件
-            SearchCondition searchCondition = new SearchCondition(TextBox_Name.Text.Trim(),
-                TextBox_TopicName.Text.Trim(), DropDownList_Depart.SelectedValue,
-                DropDownList_Office.SelectedValue, DatePicker_PublishDateStart.Text.Trim(),
-                DatePicker_PublishDateStop.Text.Trim(), DatePicker_CreateDateStart.Text.Trim(),
-                DatePicker_CreateDateStop.Text.Trim(), DatePicker_UpdateDateStart.Text.Trim(),
-                DatePicker_UpdateDateStop.Text.Trim());
+            string departId = DropDownList_Depart.SelectedValue == "0" ? "" : DropDownList_Depart.SelectedValue;
+            string officeId = DropDownList_Office.SelectedValue == "0" ? "" : DropDownList_Office.SelectedValue;
+            SearchCondition searchCondition = new SearchCondition(TextBox_Name.Text.Trim(), TextBox_TopicName.Text.Trim(),
+                departId, officeId,
+                DatePicker_PublishDateStart.Text.Trim(), DatePicker_PublishDateStop.Text.Trim(),
+                DatePicker_CreateDateStart.Text.Trim(), DatePicker_CreateDateStop.Text.Trim(),
+                DatePicker_UpdateDateStart.Text.Trim(), DatePicker_UpdateDateStop.Text.Trim());
             string exception = "";
             DataTable table = new DataTable();
-            if (InputManagementCtrl.GetTopicInformationByCondition(ref table, searchCondition, ref exception))
+            if (InputManagementCtrl.GetBookInformationByCondition(ref table, searchCondition, ref exception))
             {
                 Grid1.DataSource = table;
                 Grid1.DataBind();
@@ -404,6 +389,74 @@ namespace SQS.UI.Pages.InputManagement
                 table.Rows.Add(dataRow);
             }
             return table;
+        }
+
+        /// <summary>
+        /// 检测搜索条件是否合法,合法返回true，否则返回false
+        /// </summary>
+        /// <param name="errorEessage">错误信息</param>
+        /// <returns>合法返回true，否则返回false</returns>
+        private bool checkAvailable(ref string errorEessage)
+        {
+            //检测是否为空
+            if (TextBox_Name.Text.Trim() == "" && TextBox_TopicName.Text.Trim() == ""
+                && DropDownList_Depart.SelectedValue == "0"
+                && !DatePicker_PublishDateStart.SelectedDate.HasValue
+                && !DatePicker_PublishDateStop.SelectedDate.HasValue
+                && !DatePicker_CreateDateStart.SelectedDate.HasValue
+                && !DatePicker_CreateDateStop.SelectedDate.HasValue
+                && !DatePicker_UpdateDateStart.SelectedDate.HasValue
+                && !DatePicker_UpdateDateStop.SelectedDate.HasValue)
+            {
+                errorEessage = "请至少选择一项！";
+                return false;
+            }
+
+            if (DatePicker_PublishDateStart.Text == "" && DatePicker_PublishDateStop.Text != "")
+            {
+                errorEessage = "请选择出版时间（始）！";
+                return false;
+            }
+
+            if (DatePicker_PublishDateStart.Text != "" && DatePicker_PublishDateStop.Text == "")
+            {
+                errorEessage = "请选择出版时间（止）！";
+                return false;
+            }
+
+            if (DatePicker_CreateDateStart.Text == "" && DatePicker_CreateDateStop.Text != "")
+            {
+                errorEessage = "请选择上传时间（始）！";
+                return false;
+            }
+
+            if (DatePicker_CreateDateStart.Text != "" && DatePicker_CreateDateStop.Text == "")
+            {
+                errorEessage = "请选择上传出版时间（止）";
+                return false;
+            }
+
+            if (DatePicker_UpdateDateStart.Text == "" && DatePicker_UpdateDateStop.Text != "")
+            {
+                errorEessage = "请选择更新时间（始）！";
+                return false;
+            }
+
+            if (DatePicker_UpdateDateStart.Text != "" && DatePicker_UpdateDateStop.Text == "")
+            {
+                errorEessage = "请选择更新时间（止）！";
+                return false;
+            }
+
+            //检测结束日期是否大于开始日期
+            if (DatePicker_PublishDateStart.SelectedDate > DatePicker_PublishDateStop.SelectedDate
+                || DatePicker_CreateDateStart.SelectedDate > DatePicker_CreateDateStop.SelectedDate
+                || DatePicker_UpdateDateStart.SelectedDate > DatePicker_UpdateDateStop.SelectedDate)
+            {
+                errorEessage = "结束日期需大于开始日期，请重新选择！";
+                return false;
+            }
+            return true;
         }
         #endregion
     }

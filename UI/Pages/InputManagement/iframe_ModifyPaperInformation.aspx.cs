@@ -18,7 +18,7 @@ namespace SQS.UI.Pages.InputManagement
             if (!IsPostBack)
             {
                 //注册关闭按钮事件
-                Button_Close.OnClientClick = ActiveWindow.GetConfirmHideRefreshReference();
+                Button_Close.OnClientClick = ActiveWindow.GetConfirmHideReference();
                 bindDepartToDropDownList();
                 bindOfficeToDropDownList();
                 bindPublishGradeToDropDownList();

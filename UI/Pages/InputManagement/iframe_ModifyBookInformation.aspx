@@ -49,10 +49,8 @@
                             <x:DropDownList ID="DropDownList_PublishGrade" runat="server" Label="发行级别" Width="200px">
                             </x:DropDownList>
                             <x:DropDownList ID="DropDownList_RewardGrade" runat="server" Label="奖励级别" Width="200px">
-                                <x:ListItem Text="无" Value="-1" />
                             </x:DropDownList>
                             <x:DropDownList ID="DropDownList_RewardClass" runat="server" Label="奖励等级" Width="200px">
-                                <x:ListItem Text="无" Value="-1" />
                             </x:DropDownList>
                             <x:NumberBox ID="NumberBox_WordCount" runat="server" Label="字数" Width="100px">
                             </x:NumberBox>
