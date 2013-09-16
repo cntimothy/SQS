@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using SQS.DataStructure;
+using NPOI.HSSF.UserModel;
+using NPOI.SS.UserModel;
+using System.IO;
+using NPOI.SS.Util;
 
 namespace SQS.Controller
 {
@@ -568,6 +572,48 @@ namespace SQS.Controller
         /// <returns>导入成功返回true，否则返回false</returns>
         public static bool InportStaffExcel(string path, ref string exception)
         {
+            HSSFWorkbook workBook = initWorkBook(path);
+            ISheet sheet = workBook.GetSheetAt(0);
+            System.Collections.IEnumerator rows = sheet.GetRowEnumerator();
+
+            List<DepartStaffInformation> departList = new List<DepartStaffInformation>();
+
+            //跳过前面三行
+            rows.MoveNext();
+            rows.MoveNext();
+            rows.MoveNext();
+
+            DepartStaffInformation depart;
+            OfficeStaffInformation office;
+            try
+            {
+                while (rows.MoveNext())
+                {
+                    IRow row = (HSSFRow)rows.Current;
+                    ICell cell1 = row.GetCell(0);
+                    ICell cell2 = row.GetCell(1);
+                    ICell cell3 = row.GetCell(2);
+                    string departName = cell1.StringCellValue;
+                    string officeName = cell2.StringCellValue;
+                    int officeStaffCount = Convert.ToInt32(cell3.NumericCellValue);
+                    if (departName != "")   //新部系
+                    {
+                        depart = new DepartStaffInformation(departName);
+                        departList.Add(depart);
+                    }
+                    office = new OfficeStaffInformation(officeName, officeStaffCount);
+                    departList.Last().AddOffice(office);
+                }
+            }
+            catch (Exception e)
+            {
+                exception = e.Message;
+                return false;
+            }
+            if (!writeToDataBase(departList, ref exception))
+            {
+                return false;
+            }
             return true;
         }
 
@@ -607,11 +653,11 @@ namespace SQS.Controller
             OfficeStaffInformation office26 = new OfficeStaffInformation("处室26", 2);
 
             DepartStaffInformation depart1 = new DepartStaffInformation("部系1");
-            DepartStaffInformation depart2 = new DepartStaffInformation("部系1");
-            DepartStaffInformation depart3 = new DepartStaffInformation("部系1");
-            DepartStaffInformation depart4 = new DepartStaffInformation("部系1");
-            DepartStaffInformation depart5 = new DepartStaffInformation("部系1");
-            DepartStaffInformation depart6 = new DepartStaffInformation("部系1");
+            DepartStaffInformation depart2 = new DepartStaffInformation("部系2");
+            DepartStaffInformation depart3 = new DepartStaffInformation("部系3");
+            DepartStaffInformation depart4 = new DepartStaffInformation("部系4");
+            DepartStaffInformation depart5 = new DepartStaffInformation("部系5");
+            DepartStaffInformation depart6 = new DepartStaffInformation("部系6");
 
             depart1.AddOffice(office1);
             depart1.AddOffice(office2);
@@ -652,6 +698,34 @@ namespace SQS.Controller
 
         #region Common
 
+        #endregion
+
+        #region Private Method
+        /// <summary>
+        /// 从excel初始化一个workbook
+        /// </summary>
+        /// <param name="path">excel文件的路径</param>
+        /// <returns>HSSFWorkbook</returns>
+        private static HSSFWorkbook initWorkBook(string path)
+        {
+            HSSFWorkbook hssfworkbook = null; ;
+            using (FileStream file = new FileStream(path, FileMode.Open, FileAccess.Read))
+            {
+                hssfworkbook = new HSSFWorkbook(file);
+            }
+            return hssfworkbook;
+        }
+
+        /// <summary>
+        /// 将人员信息写入数据库,成功返回true，否则返回false
+        /// </summary>
+        /// <param name="departList">人员信息</param>
+        /// <param name="exception"></param>
+        /// <returns></returns>
+        private static bool writeToDataBase(List<DepartStaffInformation> departList, ref string exception)
+        {
+            return true;
+        }
         #endregion
     }
 }
