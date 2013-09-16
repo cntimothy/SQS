@@ -72,7 +72,8 @@ namespace SQS.UI.Pages.InputManagement
             if (InputManagementCtrl.InportPaperExcel(fileName, ref createCount, ref updateCount, ref exception))
             {
                 FileUpload_ExcelFile.Reset();
-                Alert.ShowInTop("上传成功！", MessageBoxIcon.Information);
+                string alertMessage = "上传成功！\n新增" + createCount + "条，更新" + updateCount + "条";
+                Alert.ShowInTop(alertMessage, MessageBoxIcon.Information);
                 bindPaperInformationToGrid();
             }
             else

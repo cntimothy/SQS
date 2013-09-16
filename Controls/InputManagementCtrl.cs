@@ -389,6 +389,8 @@ namespace SQS.Controller
         /// <returns>导入成功返回true，否则返回false</returns>
         public static bool InportBookExcel(string path, ref int createCount, ref int updateCount, ref string exception)
         {
+            createCount = 30;
+            updateCount = 50;
             return true;
         }
 
