@@ -213,7 +213,7 @@ namespace SQS.UI.Pages.InputManagement
             string exception = "";
             DataTable table = getDataTableFromGrid();
             string fileName = "";
-            if (ExportManagementCtrl.ExportStaticalCountForDepart(ref fileName, table, ref exception))
+            if (ExportManagementCtrl.ExportBookInformation(ref fileName, table, ref exception))
             {
                 Response.ClearContent();
                 Response.ContentType = "application/excel";

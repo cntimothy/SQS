@@ -25,6 +25,7 @@ namespace SQS.Controller
         {
             bool returnValue = true;
             HSSFWorkbook hssfworkbook = new HSSFWorkbook();
+            manageDataTable(ref table);
             createSheetFromDataTable("著作", "著作统计表", hssfworkbook, table);  //建立sheet
 
             fileName = DateTime.Now.ToString("yyyy-mm-dd-HH-mm-ss") + @"著作统计表.xls";
@@ -57,6 +58,7 @@ namespace SQS.Controller
         {
             bool returnValue = true;
             HSSFWorkbook hssfworkbook = new HSSFWorkbook();
+            manageDataTable(ref table);
             createSheetFromDataTable("论文", "论文统计表", hssfworkbook, table);  //建立sheet
 
             fileName = DateTime.Now.ToString("yyyy-mm-dd-HH-mm-ss") + @"论文统计表.xls";
@@ -89,6 +91,7 @@ namespace SQS.Controller
         {
             bool returnValue = true;
             HSSFWorkbook hssfworkbook = new HSSFWorkbook();
+            manageDataTable(ref table);
             createSheetFromDataTable("课题", "课题统计表", hssfworkbook, table);  //建立sheet
 
             fileName = DateTime.Now.ToString("yyyy-mm-dd-HH-mm-ss") + @"课题统计表.xls";
@@ -980,10 +983,11 @@ namespace SQS.Controller
         /// 给table增加序号列
         /// </summary>
         /// <param name="table"></param>
-        private void manageDataTable(ref DataTable table)
+        private static void manageDataTable(ref DataTable table)
         {
-            table.Columns.Remove("ID");
-            table.Columns.Add("序号");
+            //table.Columns.Remove("ID");
+            //table.Columns.Add("序号");
+            table.Columns[0].ColumnName = "序号";
             int index = 1;
             foreach (DataRow row in table.Rows)
             {
