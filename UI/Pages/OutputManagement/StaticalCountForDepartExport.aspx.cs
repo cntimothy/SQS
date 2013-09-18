@@ -191,6 +191,23 @@ namespace SQS.UI.Pages.OutputManagement
             {
                 table.Columns.Add("课题" + name);
             }
+            //DataTable table = new DataTable();
+            //foreach (GridColumn column in Grid1.GroupColumns[0].Columns)
+            //{
+            //    table.Columns.Add(column.HeaderText);
+            //}
+            //foreach (GridColumn column in Grid1.GroupColumns[1].Columns)
+            //{
+            //    table.Columns.Add(Grid1.GroupColumns[1].HeaderText + column.HeaderText);
+            //}
+            //foreach (GridColumn column in Grid1.GroupColumns[2].Columns)
+            //{
+            //    table.Columns.Add(Grid1.GroupColumns[2].HeaderText + column.HeaderText);
+            //}
+            //foreach (GridColumn column in Grid1.GroupColumns[3].Columns)
+            //{
+            //    table.Columns.Add(Grid1.GroupColumns[3].HeaderText + column.HeaderText);
+            //}
             foreach (GridRow gridRow in Grid1.Rows)
             {
                 DataRow dataRow = table.NewRow();
