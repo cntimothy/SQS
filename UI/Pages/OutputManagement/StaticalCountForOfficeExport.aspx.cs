@@ -19,6 +19,7 @@ namespace SQS.UI.Pages.OutputManagement
             if (!IsPostBack)
             {
                 bindYearToDropDownList();
+                bindGridColumnName();
             }
         }
         #endregion
@@ -201,6 +202,74 @@ namespace SQS.UI.Pages.OutputManagement
                 table.Rows.Add(dataRow);
             }
             return table;
+        }
+
+        /// <summary>
+        /// 绑定Grid标题栏
+        /// </summary>
+        private void bindGridColumnName()
+        {
+            //构造标题
+            string exception = "";
+            List<string> publishGradeNameListForPaper = new List<string>();
+            List<string> publishGradeNameListForBook = new List<string>();
+            List<string> topicGradeNameList = new List<string>();
+            List<string> rewardGradeNameList = new List<string>();
+            List<string> rewardClassNameList = new List<string>();
+            if (!OutputManagementCtrl.GetPublishGradeNameListForPaper(ref publishGradeNameListForPaper, ref exception))
+            {
+                Alert.ShowInTop("获取发表级别失败！", MessageBoxIcon.Error);
+                return;
+            }
+            if (!OutputManagementCtrl.GetPublishGradeNameListForBook(ref publishGradeNameListForBook, ref exception))
+            {
+                Alert.ShowInTop("获取发行级别失败！", MessageBoxIcon.Error);
+                return;
+            }
+            if (!OutputManagementCtrl.GetTopicGradeNameList(ref topicGradeNameList, ref exception))
+            {
+                Alert.ShowInTop("获取课题级别失败！", MessageBoxIcon.Error);
+                return;
+            }
+            if (!OutputManagementCtrl.GetRewardGradeNameList(ref rewardGradeNameList, ref exception))
+            {
+                Alert.ShowInTop("获取获奖级别失败！", MessageBoxIcon.Error);
+                return;
+            }
+            if (!OutputManagementCtrl.GetRewardClassNameList(ref rewardClassNameList, ref exception))
+            {
+                Alert.ShowInTop("获取获奖等级失败！", MessageBoxIcon.Error);
+                return;
+            }
+
+            List<string> headersForPaper = new List<string>();
+            List<string> headersForBook = new List<string>();
+            List<string> headersForTopic = new List<string>();
+            headersForPaper.AddRange(publishGradeNameListForPaper);
+            headersForPaper.AddRange(rewardGradeNameList);
+            headersForPaper.AddRange(rewardClassNameList);
+            headersForBook.AddRange(publishGradeNameListForBook);
+            headersForBook.AddRange(rewardGradeNameList);
+            headersForBook.AddRange(rewardClassNameList);
+            headersForTopic.AddRange(topicGradeNameList);
+            headersForTopic.AddRange(rewardGradeNameList);
+            headersForTopic.AddRange(rewardClassNameList);
+
+            //设置标题
+            for (int i = 0; i < Grid1.GroupColumns[1].Columns.Count; i++)
+            {
+                Grid1.GroupColumns[1].Columns[i].HeaderText = headersForPaper[i];
+            }
+
+            for (int i = 0; i < Grid1.GroupColumns[2].Columns.Count; i++)
+            {
+                Grid1.GroupColumns[2].Columns[i].HeaderText = headersForBook[i];
+            }
+
+            for (int i = 0; i < Grid1.GroupColumns[3].Columns.Count; i++)
+            {
+                Grid1.GroupColumns[3].Columns[i].HeaderText = headersForTopic[i];
+            }
         }
         #endregion
     }
