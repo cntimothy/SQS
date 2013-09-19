@@ -2104,11 +2104,11 @@
     <None Include="images\logo\logo_127.psd" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Controls\SQS.Controller.csproj">
+    <ProjectReference Include="..\SQS.Controls\SQS.Controller.csproj">
       <Project>{6DC15947-F158-4679-98B1-4F26B0CD9D56}</Project>
       <Name>Controller</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataStructure\SQS.DataStructure.csproj">
+    <ProjectReference Include="..\SQS.DataStructure\SQS.DataStructure.csproj">
       <Project>{554B3AC6-1C5A-4AF7-8159-A7E703680D7A}</Project>
       <Name>DataStructure</Name>
     </ProjectReference>

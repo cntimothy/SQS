@@ -59,7 +59,7 @@
     <Compile Include="SearchManagementCtrl.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataStructure\SQS.DataStructure.csproj">
+    <ProjectReference Include="..\SQS.DataStructure\SQS.DataStructure.csproj">
       <Project>{554B3AC6-1C5A-4AF7-8159-A7E703680D7A}</Project>
       <Name>SQS.DataStructure</Name>
     </ProjectReference>
