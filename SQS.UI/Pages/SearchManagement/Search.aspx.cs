@@ -45,6 +45,13 @@ namespace SQS.UI.Pages.SearchManagement
 
         protected void Button_Search_Click(object sender, EventArgs e)
         {
+            if (DatePicker_PublishDateStart.Text == "" && DatePicker_PublishDateStop.Text == "" 
+                && TextBox_Name.Text == "" && TextBox_WorkName.Text == "" 
+                && DropDownList_Depart.SelectedValue == "0" && DropDownList_Depart.SelectedValue == "0")
+            {
+                Alert.ShowInTop("请至少选择一项！！", MessageBoxIcon.Error);
+                return;
+            }
             if (DatePicker_PublishDateStart.Text != "" && DatePicker_PublishDateStop.Text == "")
             {
                 Alert.ShowInTop("请选择结束时间！", MessageBoxIcon.Error);
@@ -55,9 +62,13 @@ namespace SQS.UI.Pages.SearchManagement
                 Alert.ShowInTop("请选择开始时间！", MessageBoxIcon.Error);
                 return;
             }
-            SearchCondition searchCondition = new SearchCondition(TextBox_Name.Text, TextBox_WorkName.Text, 
-                                                    DropDownList_Depart.SelectedValue, DropDownList_Office.SelectedValue, 
-                                                    DatePicker_PublishDateStart.Text, DatePicker_PublishDateStop.Text, 
+            string name = TextBox_Name.Text;
+            string workName = TextBox_WorkName.Text;
+            string departId = DropDownList_Depart.SelectedValue == "0" ? "" : DropDownList_Depart.SelectedValue;
+            string officeId = DropDownList_Office.SelectedValue == "0" ? "" : DropDownList_Office.SelectedValue;
+            string publishDateStart = DatePicker_PublishDateStart.Text;
+            string publishDataStop = DatePicker_PublishDateStop.Text;
+            SearchCondition searchCondition = new SearchCondition(name, workName, departId, officeId, publishDateStart, publishDataStop, 
                                                     "", "", "", "");
             string exception = "";
             DataTable tableForPaper = new DataTable();

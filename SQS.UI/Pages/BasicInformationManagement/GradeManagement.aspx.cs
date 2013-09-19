@@ -52,6 +52,9 @@ namespace SQS.UI.Pages.BasicInformationManagement
             DataTable table = new DataTable();
             if (BasicInformationManagementCtrl.GetPublishGradeForPaper(ref table, ref exception))
             {
+                DataView dv = table.DefaultView;
+                dv.Sort = "id Asc";
+                table = dv.ToTable();
                 Grid_PublishGradeForPaper.DataSource = table;
                 Grid_PublishGradeForPaper.DataBind();
             }
@@ -66,6 +69,9 @@ namespace SQS.UI.Pages.BasicInformationManagement
             DataTable table = new DataTable();
             if (BasicInformationManagementCtrl.GetPublishGradeForBook(ref table, ref exception))
             {
+                DataView dv = table.DefaultView;
+                dv.Sort = "id Asc";
+                table = dv.ToTable();
                 Grid_PublishGradeForBook.DataSource = table;
                 Grid_PublishGradeForBook.DataBind();
             }
@@ -80,6 +86,9 @@ namespace SQS.UI.Pages.BasicInformationManagement
             DataTable table = new DataTable();
             if (BasicInformationManagementCtrl.GetTopicGrade(ref table, ref exception))
             {
+                DataView dv = table.DefaultView;
+                dv.Sort = "id Asc";
+                table = dv.ToTable();
                 Grid_TopicGrade.DataSource = table;
                 Grid_TopicGrade.DataBind();
             }
@@ -94,6 +103,9 @@ namespace SQS.UI.Pages.BasicInformationManagement
             DataTable table = new DataTable();
             if (BasicInformationManagementCtrl.GetRewardGrade(ref table, ref exception))
             {
+                DataView dv = table.DefaultView;
+                dv.Sort = "id Asc";
+                table = dv.ToTable();
                 Grid_RewardGrade.DataSource = table;
                 Grid_RewardGrade.DataBind();
             }
@@ -108,6 +120,9 @@ namespace SQS.UI.Pages.BasicInformationManagement
             DataTable table = new DataTable();
             if (BasicInformationManagementCtrl.GetRewardClass(ref table, ref exception))
             {
+                DataView dv = table.DefaultView;
+                dv.Sort = "id Asc";
+                table = dv.ToTable();
                 Grid_RewardClass.DataSource = table;
                 Grid_RewardClass.DataBind();
             }

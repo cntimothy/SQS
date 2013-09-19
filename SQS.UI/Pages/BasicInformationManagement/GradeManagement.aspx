@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
     <x:PageManager ID="PageManager1" runat="server" AutoSizePanelID="Panel7" />
     <x:Panel ID="Panel7" runat="server" BodyPadding="0px" ShowBorder="false" ShowHeader="false"
-        Title="Panel">
+        Title="Panel" AutoScroll="true">
         <Items>
             <x:Toolbar ID="Toolbar1" runat="server">
                 <Items>
