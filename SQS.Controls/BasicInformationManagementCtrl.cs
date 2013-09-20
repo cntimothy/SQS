@@ -272,5 +272,29 @@ namespace SQS.Controller
             }
             return true;
         }
+
+        /// <summary>
+        /// 向指定的部系中增加处室
+        /// </summary>
+        /// <param name="OfficeNameList">处室名称列表</param>
+        /// <param name="departId">部系id</param>
+        /// <param name="exception"></param>
+        /// <returns>新增成功返回true，否则返回false</returns>
+        public static bool AddOfficeToDepart(List<string> officeNameList, string departId, ref string exception)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 新增部系，并向其中新增处室
+        /// </summary>
+        /// <param name="departName">部系名称</param>
+        /// <param name="officeNameList">处室名称列表</param>
+        /// <param name="exception"></param>
+        /// <returns>新增成功返回true，否则返回false</returns>
+        public static bool AddDepartOffice(string departName, List<string> officeNameList, ref string exception)
+        {
+            return true;
+        }
     }
 }
